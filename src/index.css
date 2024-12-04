@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.no-scrollbar{
-    scrollbar-width: none;
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.trans {
+  transition: all 0.3s;
+}
+.hoverBlue:hover {
+  color: #0078f2;
 }
 
-.trans{
-    transition: right .3s, opacity .05s, top .3s;
-}

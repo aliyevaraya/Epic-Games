@@ -171,7 +171,7 @@ function Header() {
             </svg>
           </button>
         </div>
-        <ul className="tracking-[0.02em] px-5 sm:px-[3rem] py-[4rem] flex flex-col gap-10 fixed w-full h-screen top-[8%] left-0  overscroll-contain overflow-y-auto no-scrollbar">
+        <ul className="tracking-[0.02em] p-4 pb-[4rem] sm:p-[4rem] flex flex-col gap-10 fixed w-full h-screen top-[8%] left-0  overscroll-contain overflow-y-auto no-scrollbar">
           <li className="text-[32px] font-extrabold px-2">Epic Games</li>
           {data.map((section, i) => (
             <li key={i}>

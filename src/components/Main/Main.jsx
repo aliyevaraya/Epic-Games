@@ -1,6 +1,6 @@
 function Main() {
   return (
-    <div className="h-screen">Main</div>
+    <div className="h-screen bg-[#101014]">Main</div>
   )
 }
 

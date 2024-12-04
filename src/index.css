@@ -5,3 +5,7 @@
 .no-scrollbar{
     scrollbar-width: none;
 }
+
+.trans{
+    transition: right .3s, opacity .05s, top .3s;
+}

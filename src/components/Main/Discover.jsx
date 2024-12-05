@@ -66,7 +66,6 @@ function Discover() {
             </div>
           </div>
         </div>
-        <div className="h-[50vh] bg-red-600"></div>
       </div>
       {discover ? (
         <div className="block lg:hidden fixed top-0 left-0 w-[100vw] h-screen bg-[#000000b3] z-[1]"></div>

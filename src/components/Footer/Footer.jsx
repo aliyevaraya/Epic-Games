@@ -2,6 +2,10 @@ import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import { LiaCaretSquareUp } from "react-icons/lia";
 
 function Footer() {
+  const handleScrollToTop = () =>{
+    scrollTo({top: 0, behavior: 'smooth'})
+  }
+  
   return (
     <footer className="bg-[#202020] text-white  p-[1.5em] lg:px-[40px] leading-[1.5rem]">
       <div className="flex justify-between items-center text-[#ccc] text-[1.75em] px-4">
@@ -11,7 +15,7 @@ function Footer() {
           <FaYoutube className="hover:text-[#0078f2] trans" />
         </div>
         <div className="text-[38px]">
-          <LiaCaretSquareUp className="hover:text-[#0078f2] trans" />
+          <LiaCaretSquareUp onClick={handleScrollToTop} className="hover:text-[#0078f2] trans" />
         </div>
       </div>
       <div className="text-[#e7e7e7] text-[.86em] font-semibold py-5 px-4">

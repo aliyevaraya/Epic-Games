@@ -3,8 +3,8 @@ import { LiaCaretSquareUp } from "react-icons/lia";
 
 function Footer() {
   return (
-    <footer className="bg-[#202020] text-white  p-[2em] lg:px-[3em] leading-[1.5rem]">
-      <div className="flex justify-between items-center text-[#ccc] text-[1.75em]">
+    <footer className="bg-[#202020] text-white  p-[1.5em] lg:px-[40px] leading-[1.5rem]">
+      <div className="flex justify-between items-center text-[#ccc] text-[1.75em] px-4">
         <div className="flex gap-3">
           <FaFacebook className="hover:text-[#0078f2] trans" />
           <FaTwitter className="hover:text-[#0078f2] trans" />
@@ -14,7 +14,7 @@ function Footer() {
           <LiaCaretSquareUp className="hover:text-[#0078f2] trans" />
         </div>
       </div>
-      <div className="text-[#e7e7e7] text-[.86em] font-semibold py-5">
+      <div className="text-[#e7e7e7] text-[.86em] font-semibold py-5 px-4">
         <div className="pb-4">
           <div className="text-[#ccc] opacity-[.4] text-[.9rem]">Resources</div>
           <div className="xxs:flex">
@@ -121,7 +121,7 @@ function Footer() {
         </div>
       </div>
       <hr className="border border-[#333]" />
-      <div className="w-full xl:w-1/2 text-[.71em] leading-[2em] text-[#ccc] py-4">
+      <div className="w-full xl:w-1/2 text-[.71em] leading-[2em] px-4 text-[#ccc] py-4 mt-4">
         <p>
           © 2024, Epic Games, Inc. All rights reserved. Epic, Epic Games, the
           Epic Games logo, Fortnite, the Fortnite logo, Unreal, Unreal Engine,
@@ -138,13 +138,13 @@ function Footer() {
           damage that may arise from your use of them.
         </p>
       </div>
-      <div className="text-center md:flex items-center justify-between">
+      <div className="text-center md:flex items-center justify-between px-4">
         <div className="md:flex items-center gap-4 text-[.75em] text-[#e7e7e7] my-4">
           <p className="hoverBlue trans">Terms of Service</p>
           <p className="hoverBlue trans">Privacy Policy</p>
           <p className="hoverBlue trans">Store Refund Policy</p>
         </div>
-        <div className="flex justify-center py-3">
+        <div className="flex justify-center pt-3">
           <a href="">
             <img
               width="65px"

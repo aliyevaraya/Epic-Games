@@ -10,7 +10,7 @@ function MobileMenu({showMenu, setShowMenu}) {
   const [dropdown, setDropdown] = useState(false);
   return (
     <div
-      className={`text-white bg-[#101014] fixed top-0 left-0 w-full h-screen ${
+      className={`text-white bg-[#101014] fixed top-0 left-0 w-full h-screen z-[5] ${
         showMenu ? "block lg:hidden" : "hidden"
       }`}
     >

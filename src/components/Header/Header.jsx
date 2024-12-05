@@ -16,7 +16,7 @@ function Header() {
   return (
     <>
       <header
-        className={`bg-[#121216] flex justify-between py-1 px-3 sm:px-[20px] text-white ${
+        className={`bg-[#121216] flex justify-between py-1 px-3 sm:px-[20px] text-white relative z-[5] ${
           showEpic ? `hidden lg:flex` : "flex"
         } ${showMenu ? "hidden lg:flex" : "flex"}`}
       >

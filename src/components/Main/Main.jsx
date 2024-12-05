@@ -1,7 +1,12 @@
+import Discover from "./Discover";
+
 function Main() {
   return (
-    <div className="h-screen bg-[#65656c]">Main</div>
-  )
+    <main>
+      <Discover />
+      
+    </main>
+  );
 }
 
-export default Main
+export default Main;

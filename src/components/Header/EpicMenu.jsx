@@ -8,7 +8,7 @@ function EpicMenu({showEpic,setShowEpic}) {
         showEpic ? `block lg:hidden` : "hidden"
       }`}
     >
-      <div className="bg-[#101014] flex justify-between p-[20px] absolute top-0  w-full z-[2]">
+      <div className="bg-[#101014] flex justify-between p-[20px] absolute top-0  w-full z-[5]">
         <button
           onClick={() => setShowEpic(!showEpic)}
           className="flex items-center"

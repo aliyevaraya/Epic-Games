@@ -4,7 +4,7 @@ import { data } from "../../services/epicData";
 function EpicMenu({showEpic,setShowEpic}) {
   return (
     <div
-      className={`text-white relative ${
+      className={`text-white relative z-[7] ${
         showEpic ? `block lg:hidden` : "hidden"
       }`}
     >

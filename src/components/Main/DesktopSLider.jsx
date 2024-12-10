@@ -10,8 +10,9 @@ function DesktopSLider() {
   return (
     <Swiper
       cssMode={true}
+      loop={true}
       pagination={{
-        // pagination: true,
+        pagination: true,
         clickable: true,
         renderBullet: (index, className) => {
           return `<div class="${className} custom-pagination">
@@ -23,9 +24,9 @@ function DesktopSLider() {
                 </div>`;
         },
       }}
-      // autoplay={{
-      //     delay: 7000
-      // }}
+      autoplay={{
+          delay: 7000
+      }}
 
       modules={[Autoplay, Navigation, Pagination]}
       className="mySwiper desktop-slider"
@@ -35,11 +36,11 @@ function DesktopSLider() {
           key={i}
           className="text-white rounded-[16px] overflow-hidden cursor-pointer"
         >
-          <div className="relative">
+          <div className="relative z-[2]">
             <img src={item.imagePc} alt={item.title} />
             <div className="linear-bg-right absolute w-[40%] h-full top-0 left-0"></div>
           </div>
-          <div className="w-[400px] absolute bottom-0 left-0 sm:p-[35px] px-5 py-[25px]">
+          <div className="w-[400px] absolute bottom-0 left-0 sm:p-[35px] px-5 py-[25px] z-[2]">
             <div
               style={{ backgroundImage: `url(${item.logo})` }}
               className={`bg-no-repeat bg-contain w-[140px] h-[55px] sm:w-[180px] sm:h-[80px] mb-5`}

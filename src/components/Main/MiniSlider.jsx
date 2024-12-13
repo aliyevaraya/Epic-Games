@@ -5,14 +5,11 @@ import { Pagination } from "swiper/modules";
 
 function MiniSlider() {
   return (
-    <div className="px-4 lg:px-0 pb-[64px] relative mini-slider">
+    <div className="px-4 lg:px-0 pb-[64px]">
       <Swiper
         slidesPerView={"auto"}
         spaceBetween={"20px"}
-        pagination={{
-          pagination: true,
-          clickable: true,
-        }}
+        pagination={true}
         breakpoints={{
           768: {
             slidesPerView: 3,
@@ -21,7 +18,7 @@ function MiniSlider() {
           },
         }}
         modules={[Pagination]}
-        className="mySwiper !px-[15px] lg:!px-0 "
+        className="mini-slider !px-[15px] lg:!px-0 "
       >
         <SwiperSlide>
           <img

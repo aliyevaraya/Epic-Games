@@ -11,22 +11,26 @@
 .hoverBlue:hover {
   color: #0078f2;
 }
+.swiper {
+  width: 100%;
+  height: 100%;
+}
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.swiper-pagination {
+.mini-slider .swiper-pagination {
   position: static !important;
   padding: 5px 0 !important;
 }
-.swiper-pagination-bullet {
+.mini-slider .swiper-pagination-bullet {
   height: 5px !important;
   width: 5px !important;
   margin: 0 6px !important;
 }
-.swiper-pagination-bullet {
+.mini-slider .swiper-pagination-bullet, .big-slider .swiper-pagination-bullet {
   background: #fff !important;
 }
 .mini-slider .swiper-wrapper {
@@ -66,6 +70,7 @@
 .desktop-slider .swiper-pagination {
   width: 20% !important;
   display: flex !important;
+  position: static !important;
   flex-direction: column;
   gap: 3px;
   font-size: 14px !important;
@@ -87,7 +92,7 @@
 .desktop-slider .swiper-pagination-bullet:hover {
   background: #ffffff15 !important;
 }
-.swiper-pagination-bullet img {
+.desktop-slider .swiper-pagination-bullet img {
   height: 40px;
   border-radius: 4px;
   margin: 0 10px;
@@ -112,6 +117,10 @@
   animation: move 7000ms linear;
   opacity: 0.5;
 }
+.discover:hover .move-right {
+  margin-left: 12px;
+  transition: all 0.3s linear;
+}
 @keyframes move {
   from {
     transform: translate3d(-100%, 0, 0);
@@ -119,4 +128,41 @@
   to {
     transform: translate3d(0, 0, 0);
   }
+}
+.discover-slider.swiper{
+  display: flex !important;
+  flex-direction: column-reverse !important;
+}
+.discover-slider .swiper-wrapper{
+  width: 60% !important;
+}
+.discover-slider .swiper-button-next,
+.discover-slider .swiper-button-prev {
+  position: relative;
+}
+.discover-slider .swiper-button-next {
+  margin: 5px !important;
+  left: 90% !important;
+}
+.discover-slider .swiper-button-prev{
+  left: 82% !important;
+  top: -27px !important;
+}
+.discover-slider .swiper-button-next::after,
+.discover-slider .swiper-button-prev::after {
+  font-size: 12px !important;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  background: #ffffff24;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .discover-slider .swiper-button-next,
+.discover-slider .swiper-button-prev{
+  display: none;
+}
 }

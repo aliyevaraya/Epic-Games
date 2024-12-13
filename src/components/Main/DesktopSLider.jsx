@@ -10,7 +10,6 @@ function DesktopSLider() {
   return (
     <Swiper
       cssMode={true}
-      loop={true}
       pagination={{
         pagination: true,
         clickable: true,
@@ -29,7 +28,7 @@ function DesktopSLider() {
       }}
 
       modules={[Autoplay, Navigation, Pagination]}
-      className="mySwiper desktop-slider"
+      className="desktop-slider"
     >
       {sliderData.map((item, i) => (
         <SwiperSlide

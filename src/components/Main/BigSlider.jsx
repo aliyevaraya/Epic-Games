@@ -6,6 +6,7 @@ import { MdAddCircle } from "react-icons/md";
 import { sliderData } from "../../services/silderData";
 import DesktopSLider from "./DesktopSLider";
 
+
 function BigSlider() {
   return (
     <>
@@ -14,6 +15,7 @@ function BigSlider() {
           <Swiper
             slidesPerView={"auto"}
             spaceBetween={"10px"}
+            loop={true}
             pagination={{
               pagination: true,
               clickable: true,
@@ -30,7 +32,7 @@ function BigSlider() {
                   <img src={item.image} alt={item.title} />
                   <div className="linear-bg absolute w-full h-[80%] bottom-0 left-0"></div>
                 </div>
-                <div className="absolute top-[10px] right-[10px]">
+                <div className="absolute top-[10px] right-[10px] z-[2]">
                   <MdAddCircle className="fill-black w-[30px] h-[34px] rounded-[50%]" />
                 </div>
                 <div className="sm:max-w-[360px] absolute bottom-0 left-0 sm:p-[35px] px-5 py-[25px]">

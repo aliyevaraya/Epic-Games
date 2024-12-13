@@ -23,7 +23,7 @@
 }
 .mini-slider .swiper-pagination {
   position: static !important;
-  padding: 5px 0 !important;
+  padding: 5px 0 !important;  
 }
 .mini-slider .swiper-pagination-bullet {
   height: 5px !important;

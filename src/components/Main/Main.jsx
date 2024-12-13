@@ -1,6 +1,7 @@
 import BigSlider from "./BigSlider";
 import Discover from "./Discover";
 import DiscoverSomething from "./DiscoverSomething";
+import LinkSlider from "./LinkSlider";
 import MiniSlider from "./MiniSlider";
 
 function Main() {
@@ -11,6 +12,7 @@ function Main() {
         <MiniSlider />
         <BigSlider />
         <DiscoverSomething />
+        <LinkSlider />
       </div>
     </main>
   );

@@ -1,0 +1,2542 @@
+{
+  "elements": [
+    {
+      "_id": "8449827184",
+      "id": "88d7e33248ec4acebb187a2241333eea",
+      "namespace": "b61e8ddd14e94619b7a74cf9d73f86b5",
+      "title": "EA SPORTS FC™ 25 Standard Edition",
+      "description": "EA SPORTS FC™ 25 gives you more ways to win for the club. Team up with friends in your favourite modes with the new 5v5 Rush, and manage your club to victory as FC IQ delivers more tactical control than ever before.",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2024-09-27T04:00:00.000Z",
+      "creationDate": "2024-05-28T20:47:03.895Z",
+      "lastModifiedDate": "2024-12-12T11:20:23.272Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/offer/b61e8ddd14e94619b7a74cf9d73f86b5/EGS_EASPORTSFC25StandardEdition_EACanada_S2_1200x1600-6e6b5c1d5d30e15b1dbdde721c6bc544",
+          "md5": "6e6b5c1d5d30e15b1dbdde721c6bc544"
+        },
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/offer/b61e8ddd14e94619b7a74cf9d73f86b5/EGS_EASPORTSFC25StandardEdition_EACanada_S1_2560x1440-f650d1a50a08e78279071d931145822a",
+          "md5": "f650d1a50a08e78279071d931145822a"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/offer/b61e8ddd14e94619b7a74cf9d73f86b5/EGS_EASPORTSFC25StandardEdition_EACanada_S2_1200x1600-6e6b5c1d5d30e15b1dbdde721c6bc544",
+          "md5": "6e6b5c1d5d30e15b1dbdde721c6bc544"
+        }
+      ],
+      "seller": {
+        "id": "o-vtqh9b4lk8n4jpadfv6cphqs9hsly9",
+        "name": "Electronic Arts"
+      },
+      "productSlug": "ea-sports-fc-25",
+      "urlSlug": "ea-sports-fc-25",
+      "url": null,
+      "tags": [
+        {
+          "id": "21122",
+          "name": "Diverse Characters"
+        },
+        {
+          "id": "21125",
+          "name": "Competitive Community"
+        },
+        {
+          "id": "32709",
+          "name": "EA Play"
+        },
+        {
+          "id": "19847",
+          "name": "Achievements"
+        },
+        {
+          "id": "34568",
+          "name": "EA Play Discount"
+        },
+        {
+          "id": "21129",
+          "name": "Challenging Combat"
+        },
+        {
+          "id": "34154",
+          "name": "EA Play Trial"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "9549",
+          "name": "Controller Support"
+        },
+        {
+          "id": "1264",
+          "name": "Co-op"
+        },
+        {
+          "id": "1393",
+          "name": "Simulation"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "1203",
+          "name": "Multiplayer"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "1370",
+          "name": "Single Player"
+        },
+        {
+          "id": "24570",
+          "name": "Holiday Sale"
+        }
+      ],
+      "items": [
+        {
+          "id": "f4af8a16d29c475b8283a0cac5b49bf6",
+          "namespace": "b61e8ddd14e94619b7a74cf9d73f86b5",
+          "_id": "675cbe2f6721712dc157db56"
+        }
+      ],
+      "customAttributes": {
+        "com.epicgames.app.productSlug": {
+          "type": "STRING",
+          "value": "ea-sports-fc-25"
+        }
+      },
+      "categories": [
+        "games",
+        "games/edition",
+        "games/edition/base",
+        "applications"
+      ],
+      "developerDisplayName": "EA Canada",
+      "publisherDisplayName": "Electronic Arts",
+      "prePurchase": null,
+      "releaseDate": "2024-09-27T04:00:00.000Z",
+      "pcReleaseDate": "2024-09-27T04:00:00.000Z",
+      "viewableDate": "2024-09-27T04:00:00.000Z",
+      "countriesBlacklist": ["CU", "RU", "KP", "SY", "BY", "IR"],
+      "countriesWhitelist": null,
+      "refundType": "REFUNDABLE"
+    },
+    {
+      "_id": "3384527988",
+      "id": "954871df36d3456ca1face43aa5c2e62",
+      "namespace": "0584d2013f0149a791e7b9bad0eec102",
+      "title": "Grand Theft Auto V: Premium Edition",
+      "description": "The Grand Theft Auto V: Premium Edition includes the complete GTAV story, Grand Theft Auto Online and all existing gameplay upgrades and content. You’ll also get the Criminal Enterprise Starter Pack, the fastest way to jumpstart your criminal empire in GTA Online.",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2020-05-14T15:00:00.000Z",
+      "creationDate": "2020-03-20T00:38:56.086Z",
+      "lastModifiedDate": "2024-12-12T11:20:23.397Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_2560x1440_Landscaped Store-2560x1440-79155f950f32c9790073feaccae570fb.jpg",
+          "md5": "79155f950f32c9790073feaccae570fb"
+        },
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_1200x1600_Portrait Store Banner-1200x1600-382243057711adf80322ed2aeea42191.jpg",
+          "md5": "382243057711adf80322ed2aeea42191"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_1200x1600_Portrait Store Banner-1200x1600-382243057711adf80322ed2aeea42191.jpg",
+          "md5": "382243057711adf80322ed2aeea42191"
+        },
+        {
+          "type": "CodeRedemption_340x440",
+          "url": "https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_1200x1600_Portrait Store Banner-1200x1600-382243057711adf80322ed2aeea42191.jpg",
+          "md5": "382243057711adf80322ed2aeea42191"
+        },
+        {
+          "type": "DieselStoreFrontTall",
+          "url": "https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_1200x1600_Portrait Store Banner-1200x1600-382243057711adf80322ed2aeea42191.jpg",
+          "md5": "382243057711adf80322ed2aeea42191"
+        },
+        {
+          "type": "DieselStoreFrontWide",
+          "url": "https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_2560x1440_Landscaped Store-2560x1440-79155f950f32c9790073feaccae570fb.jpg",
+          "md5": "79155f950f32c9790073feaccae570fb"
+        },
+        {
+          "type": "ESRB",
+          "url": "https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/Diesel_productv2_grand-theft-auto-v_home_GTAV_EGS_Artwork_1000x200_ESRB-1000x200-995c56b26d2fd05efdeb9b8e3377700a3f6ba224-1000x200-326c1cad00820a1e642def71677df201.png",
+          "md5": "326c1cad00820a1e642def71677df201"
+        }
+      ],
+      "seller": {
+        "id": "o-dhz7kpvrvqngzdpnx5vn3jrljj53ca",
+        "name": "Rockstar Games"
+      },
+      "productSlug": "grand-theft-auto-v",
+      "urlSlug": "grand-theft-auto-v-premium-edition",
+      "url": null,
+      "tags": [
+        {
+          "id": "1216",
+          "name": "Action"
+        },
+        {
+          "id": "21122",
+          "name": "Diverse Characters"
+        },
+        {
+          "id": "1188",
+          "name": "RELAXING"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "11631",
+          "name": "Requires 2FA"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "1299",
+          "name": "Competitive"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "24570",
+          "name": "Holiday Sale"
+        },
+        {
+          "id": "1117",
+          "name": "Adventure"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        },
+        {
+          "id": "21119",
+          "name": "Great for Beginners"
+        }
+      ],
+      "items": [
+        {
+          "id": "3f56280a0cf64bc2b94a4bdada2ef7c8",
+          "namespace": "0584d2013f0149a791e7b9bad0eec102",
+          "_id": "675cbce06721712dc1577923"
+        },
+        {
+          "id": "d1deea7746654654a69bace466402a74",
+          "namespace": "0584d2013f0149a791e7b9bad0eec102",
+          "_id": "675cbce06721712dc1577924"
+        }
+      ],
+      "customAttributes": {
+        "com.epicgames.app.blacklist": {
+          "type": "STRING",
+          "value": "VE,SA,BH,LB,QA,KW,AE,OM,CU,IR,SY"
+        },
+        "publisherName": {
+          "type": "STRING",
+          "value": "Rockstar Games"
+        },
+        "com.epicgames.app.productSlug": {
+          "type": "STRING",
+          "value": "grand-theft-auto-v"
+        }
+      },
+      "categories": [
+        "games",
+        "games/edition/base",
+        "games/edition",
+        "applications"
+      ],
+      "developerDisplayName": null,
+      "publisherDisplayName": null,
+      "prePurchase": null,
+      "releaseDate": "2020-05-14T15:00:00.000Z",
+      "pcReleaseDate": null,
+      "viewableDate": "2020-04-29T12:00:00.000Z",
+      "countriesBlacklist": [
+        "RU",
+        "AE",
+        "BH",
+        "SY",
+        "IR",
+        "KW",
+        "SA",
+        "VE",
+        "QA",
+        "CU",
+        "LB",
+        "BY",
+        "OM"
+      ],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "6170458842",
+      "id": "8848871bb97641838fcf59d3be304891",
+      "namespace": "0e548758b82a4be785f435cedf306130",
+      "title": "Black Myth: Wukong",
+      "description": "Black Myth: Wukong is an action RPG rooted in Chinese mythology. You shall set out as the Destined One to venture into the challenges and marvels ahead, to uncover the obscured truth beneath the veil of a glorious legend from the past.",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2024-08-20T02:00:00.000Z",
+      "creationDate": "2024-05-10T06:33:14.819Z",
+      "lastModifiedDate": "2024-12-10T08:00:08.777Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/spt-assets/ca9ef1bcf2f54043baac351366aec677/black-myth-wukong-jz9yr.jpg",
+          "md5": "3551e287ed1ee0baea882929b1026dd8"
+        },
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/spt-assets/ca9ef1bcf2f54043baac351366aec677/black-myth-wukong-jjjfw.png",
+          "md5": "e19d45183b26472a91f09643e59639a1"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/spt-assets/ca9ef1bcf2f54043baac351366aec677/black-myth-wukong-jjjfw.png",
+          "md5": "e19d45183b26472a91f09643e59639a1"
+        }
+      ],
+      "seller": {
+        "id": "o-ql93722tl5s9zztlr9l42s8ucwb9vh",
+        "name": "Game Science Interactive Technology Co., Ltd."
+      },
+      "productSlug": null,
+      "urlSlug": "black-myth-wukong-03",
+      "url": null,
+      "tags": [
+        {
+          "id": "1216",
+          "name": "Action"
+        },
+        {
+          "id": "21122",
+          "name": "Diverse Characters"
+        },
+        {
+          "id": "1188",
+          "name": "RELAXING"
+        },
+        {
+          "id": "21894",
+          "name": "Cloud Saves"
+        },
+        {
+          "id": "19847",
+          "name": "Achievements"
+        },
+        {
+          "id": "21127",
+          "name": "Creative Community"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "9549",
+          "name": "Controller Support"
+        },
+        {
+          "id": "21137",
+          "name": "Unique Visuals"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21109",
+          "name": "Great Boss Battles"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "1367",
+          "name": "RPG"
+        },
+        {
+          "id": "1370",
+          "name": "Single Player"
+        },
+        {
+          "id": "21146",
+          "name": "Educational"
+        },
+        {
+          "id": "21147",
+          "name": "Inclusive Character Customization"
+        },
+        {
+          "id": "1117",
+          "name": "Adventure"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        },
+        {
+          "id": "21119",
+          "name": "Great for Beginners"
+        }
+      ],
+      "items": [
+        {
+          "id": "a6ae9cfb01284a30bc845db3c8fb5a09",
+          "namespace": "0e548758b82a4be785f435cedf306130",
+          "_id": "675cbece6721712dc1580e1a"
+        }
+      ],
+      "customAttributes": {
+        "autoGeneratedPrice": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isManuallySetViewableDate": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isPromotionalContentUsed": {
+          "type": "STRING",
+          "value": "null"
+        },
+        "isManuallySetPCReleaseDate": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isBlockchainUsed": {
+          "type": "STRING",
+          "value": "false"
+        }
+      },
+      "categories": ["games/edition/base", "games/edition", "games"],
+      "developerDisplayName": "Game Science",
+      "publisherDisplayName": "Game Science",
+      "prePurchase": null,
+      "releaseDate": "2024-08-20T02:00:00.000Z",
+      "pcReleaseDate": "2024-08-20T02:00:00.000Z",
+      "viewableDate": "2024-08-20T02:00:00.000Z",
+      "countriesBlacklist": null,
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "4167070874",
+      "id": "d57e7490007f453e9ef040bdd45baa19",
+      "namespace": "74ef4349fd684c438077d9e5287c7b2e",
+      "title": "Crosshair X",
+      "description": "Overlay custom crosshairs on every game you play. Choose from thousands of unique crosshairs created by the Crosshair X community or design your own using the designer.",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2024-02-23T19:00:00.000Z",
+      "creationDate": "2023-07-11T16:38:25.260Z",
+      "lastModifiedDate": "2024-12-12T17:31:19.191Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/spt-assets/bd49b69c7a9e410b83b7c553c837a00a/crosshair-x-1e6gl.png",
+          "md5": "b7ab2c7518c5465779e2f56815a8016a"
+        },
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/spt-assets/bd49b69c7a9e410b83b7c553c837a00a/crosshair-x-uqsfp.png",
+          "md5": "acf074cae6a2166bd97ac30d32174d03"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/spt-assets/bd49b69c7a9e410b83b7c553c837a00a/crosshair-x-uqsfp.png",
+          "md5": "acf074cae6a2166bd97ac30d32174d03"
+        }
+      ],
+      "seller": {
+        "id": "o-uy755p5tdy7u56vrmmry4drhhcrhar",
+        "name": "2824908 Ontario Inc"
+      },
+      "productSlug": null,
+      "urlSlug": "1b491aa001b94a93aa780f4a80209d13",
+      "url": null,
+      "tags": [
+        {
+          "id": "21137",
+          "name": "Unique Visuals"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "1210",
+          "name": "Shooter"
+        },
+        {
+          "id": "1370",
+          "name": "Single Player"
+        },
+        {
+          "id": "24570",
+          "name": "Holiday Sale"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        },
+        {
+          "id": "1294",
+          "name": "First Person"
+        },
+        {
+          "id": "21119",
+          "name": "Great for Beginners"
+        }
+      ],
+      "items": [
+        {
+          "id": "a79dd906682c45d081a25ee1b8f67e84",
+          "namespace": "74ef4349fd684c438077d9e5287c7b2e",
+          "_id": "675ce73c1af0fddfeeda25cd"
+        }
+      ],
+      "customAttributes": {
+        "autoGeneratedPrice": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isManuallySetViewableDate": {
+          "type": "STRING",
+          "value": "true"
+        },
+        "isPromotionalContentUsed": {
+          "type": "STRING",
+          "value": "null"
+        },
+        "isManuallySetPCReleaseDate": {
+          "type": "STRING",
+          "value": "true"
+        },
+        "isBlockchainUsed": {
+          "type": "STRING",
+          "value": "false"
+        }
+      },
+      "categories": ["games", "games/edition", "games/edition/base"],
+      "developerDisplayName": "CenterPoint Gaming",
+      "publisherDisplayName": "CenterPoint Gaming",
+      "prePurchase": null,
+      "releaseDate": "2024-02-23T19:00:00.000Z",
+      "pcReleaseDate": "2020-06-01T16:00:00.000Z",
+      "viewableDate": "2024-02-22T23:00:00.000Z",
+      "countriesBlacklist": ["RU", "KR"],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "6214979388",
+      "id": "7b0d120a875547e9bec70192ddcc96e2",
+      "namespace": "c7f9346e3db148fca6dd63e9dd8451bd",
+      "title": "theHunter: Call of the Wild™",
+      "description": "Experience an atmospheric hunting game like no other in this realistic and visually breathtaking open world. Immerse yourself in the atmospheric single player campaign, or share the ultimate hunting experience with friends.",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2021-11-25T16:00:00.000Z",
+      "creationDate": "2024-04-01T20:33:59.858Z",
+      "lastModifiedDate": "2024-12-10T16:01:09.010Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "featuredMedia",
+          "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_theHunterCalloftheWild_ExpansiveWorlds_S1_2560x1440-69120885e0b3acfb87f34ac0bad68ec6",
+          "md5": "69120885e0b3acfb87f34ac0bad68ec6"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_theHunterCalloftheWild_ExpansiveWorlds_S2_1200x1600-1e9b46aaabc33fe0a08cf5b418e76ba2",
+          "md5": "1e9b46aaabc33fe0a08cf5b418e76ba2"
+        },
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_theHunterCalloftheWild_ExpansiveWorlds_S2_1200x1600-1e9b46aaabc33fe0a08cf5b418e76ba2",
+          "md5": "1e9b46aaabc33fe0a08cf5b418e76ba2"
+        },
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_theHunterCalloftheWild_ExpansiveWorlds_S1_2560x1440-69120885e0b3acfb87f34ac0bad68ec6",
+          "md5": "69120885e0b3acfb87f34ac0bad68ec6"
+        }
+      ],
+      "seller": {
+        "id": "o-s22ys6lvw4qa9tvpqsnwkqmtug2ey7",
+        "name": "Expansive Worlds AB"
+      },
+      "productSlug": "thehunter-call-of-the-wild",
+      "urlSlug": "thehunter-call-of-the-wild",
+      "url": null,
+      "tags": [
+        {
+          "id": "29088",
+          "name": "Online Multiplayer"
+        },
+        {
+          "id": "1188",
+          "name": "RELAXING"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "1294",
+          "name": "First Person"
+        },
+        {
+          "id": "1264",
+          "name": "Co-op"
+        },
+        {
+          "id": "1393",
+          "name": "Simulation"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "37079",
+          "name": "Call of the Wild Fest"
+        },
+        {
+          "id": "22776",
+          "name": "Cross Platform"
+        },
+        {
+          "id": "1370",
+          "name": "Single Player"
+        },
+        {
+          "id": "21146",
+          "name": "Educational"
+        },
+        {
+          "id": "1307",
+          "name": "Open World"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        },
+        {
+          "id": "21119",
+          "name": "Great for Beginners"
+        }
+      ],
+      "items": [
+        {
+          "id": "87cc65381e6740be807366eb770470d4",
+          "namespace": "c7f9346e3db148fca6dd63e9dd8451bd",
+          "_id": "675ce7371af0fddfeeda216f"
+        }
+      ],
+      "customAttributes": {
+        "autoGeneratedPrice": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isManuallySetViewableDate": {
+          "type": "STRING",
+          "value": "true"
+        },
+        "isPromotionalContentUsed": {
+          "type": "STRING",
+          "value": "null"
+        },
+        "publisherName": {
+          "type": "STRING",
+          "value": "Expansive Worlds"
+        },
+        "developerName": {
+          "type": "STRING",
+          "value": "Expansive Worlds"
+        },
+        "com.epicgames.app.productSlug": {
+          "type": "STRING",
+          "value": "thehunter-call-of-the-wild"
+        },
+        "isBlockchainUsed": {
+          "type": "STRING",
+          "value": "false"
+        }
+      },
+      "categories": [
+        "games",
+        "games/edition",
+        "games/edition/base",
+        "applications"
+      ],
+      "developerDisplayName": "Expansive Worlds",
+      "publisherDisplayName": "Expansive Worlds",
+      "prePurchase": null,
+      "releaseDate": "2021-11-25T16:00:00.000Z",
+      "pcReleaseDate": "2017-02-16T15:00:00.000Z",
+      "viewableDate": "2021-11-18T15:25:00.000Z",
+      "countriesBlacklist": ["RU", "BY"],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "7477120368",
+      "id": "dc3a03c1ce5d467bb5db4693be7dbef8",
+      "namespace": "611482b8586142cda48a0786eb8a127c",
+      "title": "Dead by Daylight",
+      "description": "Dead by Daylight is a multiplayer (4vs1) horror game where one player takes on the role of the savage Killer, and the other four players play as Survivors, trying to escape the Killer and avoid being caught and killed.",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2021-12-09T16:00:00.000Z",
+      "creationDate": "2020-01-17T15:26:46.835Z",
+      "lastModifiedDate": "2024-12-12T11:20:23.270Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "featuredMedia",
+          "url": "https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S1_2560x1440-a32581cf9948a9a2e24b2ff15c1577c7",
+          "md5": "a32581cf9948a9a2e24b2ff15c1577c7"
+        },
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S2_1200x1600-a1c30209e3b9fb63144daa9b5670f503",
+          "md5": "a1c30209e3b9fb63144daa9b5670f503"
+        },
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S1_2560x1440-a32581cf9948a9a2e24b2ff15c1577c7",
+          "md5": "a32581cf9948a9a2e24b2ff15c1577c7"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S2_1200x1600-a1c30209e3b9fb63144daa9b5670f503",
+          "md5": "a1c30209e3b9fb63144daa9b5670f503"
+        }
+      ],
+      "seller": {
+        "id": "o-2ctdycbd3jxm6a26vpz5d4xv872smu",
+        "name": "Behaviour Interactive Inc."
+      },
+      "productSlug": null,
+      "urlSlug": "dead-by-daylight",
+      "url": null,
+      "tags": [
+        {
+          "id": "1216",
+          "name": "Action"
+        },
+        {
+          "id": "29088",
+          "name": "Online Multiplayer"
+        },
+        {
+          "id": "21122",
+          "name": "Diverse Characters"
+        },
+        {
+          "id": "21125",
+          "name": "Competitive Community"
+        },
+        {
+          "id": "21129",
+          "name": "Challenging Combat"
+        },
+        {
+          "id": "1131",
+          "name": "SURVIVAL HORROR"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "1080",
+          "name": "Survival"
+        },
+        {
+          "id": "24570",
+          "name": "Holiday Sale"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        }
+      ],
+      "items": [
+        {
+          "id": "daedda2898b74feeac35f222ef02539a",
+          "namespace": "611482b8586142cda48a0786eb8a127c",
+          "_id": "675ce71b1af0fddfeeda08c2"
+        }
+      ],
+      "customAttributes": {
+        "com.epicgames.app.productslug": {
+          "type": "STRING",
+          "value": "dead-by-daylight"
+        },
+        "autoGeneratedPrice": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isManuallySetViewableDate": {
+          "type": "STRING",
+          "value": "true"
+        },
+        "com.epicgames.app.blacklist": {
+          "type": "STRING",
+          "value": "[]"
+        },
+        "publisherName": {
+          "type": "STRING",
+          "value": "Behaviour Interactive"
+        },
+        "developerName": {
+          "type": "STRING",
+          "value": "Behaviour Interactive"
+        },
+        "isBlockchainUsed": {
+          "type": "STRING",
+          "value": "false"
+        }
+      },
+      "categories": [
+        "games",
+        "games/edition",
+        "games/edition/base",
+        "applications"
+      ],
+      "developerDisplayName": "Behaviour Interactive",
+      "publisherDisplayName": "Behaviour Interactive",
+      "prePurchase": null,
+      "releaseDate": "2021-12-09T16:00:00.000Z",
+      "pcReleaseDate": "2016-06-14T16:00:00.000Z",
+      "viewableDate": "2021-11-01T16:00:00.000Z",
+      "countriesBlacklist": ["RU", "BY"],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "3269557046",
+      "id": "c0ffb9893a03473490dfe76b668f1ba9",
+      "namespace": "e2f07405a896421fa0348e7863f7b97b",
+      "title": "Farming Simulator 25",
+      "description": "Farming Simulator 25 adds rice & other crops on three maps, new animals, productions & more. 400+ machines included, with enhanced graphics & physics.",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2024-11-12T13:00:00.000Z",
+      "creationDate": "2024-06-17T19:38:17.638Z",
+      "lastModifiedDate": "2024-12-12T13:00:21.533Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/spt-assets/416837697afc4fc78afcc57963d5a6df/farming-simulator-25-ilnos.jpg",
+          "md5": "ea70c37f690e53dcedae91ff6f36aa81"
+        },
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/spt-assets/416837697afc4fc78afcc57963d5a6df/farming-simulator-25-vow90.jpg",
+          "md5": "41a71399627d09e3ce2a26c32308bc66"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/spt-assets/416837697afc4fc78afcc57963d5a6df/farming-simulator-25-vow90.jpg",
+          "md5": "41a71399627d09e3ce2a26c32308bc66"
+        }
+      ],
+      "seller": {
+        "id": "o-542wb7tuehjkp8ced66p6z3jhnpz8t",
+        "name": "GIANTS Software GmbH"
+      },
+      "productSlug": null,
+      "urlSlug": "farming-simulator-25",
+      "url": null,
+      "tags": [
+        {
+          "id": "29088",
+          "name": "Online Multiplayer"
+        },
+        {
+          "id": "21122",
+          "name": "Diverse Characters"
+        },
+        {
+          "id": "1188",
+          "name": "RELAXING"
+        },
+        {
+          "id": "19847",
+          "name": "Achievements"
+        },
+        {
+          "id": "21127",
+          "name": "Creative Community"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "9549",
+          "name": "Controller Support"
+        },
+        {
+          "id": "1264",
+          "name": "Co-op"
+        },
+        {
+          "id": "1393",
+          "name": "Simulation"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "22776",
+          "name": "Cross Platform"
+        },
+        {
+          "id": "1370",
+          "name": "Single Player"
+        },
+        {
+          "id": "21146",
+          "name": "Educational"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        },
+        {
+          "id": "21119",
+          "name": "Great for Beginners"
+        }
+      ],
+      "items": [
+        {
+          "id": "b192c85f4fb043238852ff4ac4045769",
+          "namespace": "e2f07405a896421fa0348e7863f7b97b",
+          "_id": "675ce6ee1af0fddfeed9e143"
+        }
+      ],
+      "customAttributes": {
+        "autoGeneratedPrice": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isManuallySetViewableDate": {
+          "type": "STRING",
+          "value": "true"
+        },
+        "isPromotionalContentUsed": {
+          "type": "STRING",
+          "value": "null"
+        },
+        "isManuallySetPCReleaseDate": {
+          "type": "STRING",
+          "value": "true"
+        },
+        "isBlockchainUsed": {
+          "type": "STRING",
+          "value": "false"
+        }
+      },
+      "categories": ["games/edition/base", "games/edition", "games"],
+      "developerDisplayName": "GIANTS Software",
+      "publisherDisplayName": "GIANTS Software",
+      "prePurchase": null,
+      "releaseDate": "2024-11-12T13:00:00.000Z",
+      "pcReleaseDate": "2024-11-12T13:00:00.000Z",
+      "viewableDate": "2024-11-12T13:00:00.000Z",
+      "countriesBlacklist": ["KR"],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "9681282201",
+      "id": "05af9ab1d2dc4b78ada8b2f09724da20",
+      "namespace": "wombat",
+      "title": "World War Z Aftermath",
+      "description": "World War Z: Aftermath is the ultimate co-op zombie shooter and the next evolution of the original hit World War Z that has now captivated over 15 million players. Fight off hordes of ravenous zombies in intense story episodes across new zombie-ravaged locations around the world.",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2021-09-21T13:00:00.000Z",
+      "creationDate": "2021-06-03T17:39:30.544Z",
+      "lastModifiedDate": "2024-12-12T11:20:23.408Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/offer/wombat/EGS_WorldWarZ_SaberInteractive_Editions_S1_2560x1440-1555028d9b62f5348df49ad07b4301f0",
+          "md5": "1555028d9b62f5348df49ad07b4301f0"
+        },
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/offer/wombat/EGS_WorldWarZ_SaberInteractive_Editions_S2_1200x1600-8f45e0b69430aeffb89fc9906e3e5a34",
+          "md5": "8f45e0b69430aeffb89fc9906e3e5a34"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/offer/wombat/EGS_WorldWarZ_SaberInteractive_Editions_S2_1200x1600-8f45e0b69430aeffb89fc9906e3e5a34",
+          "md5": "8f45e0b69430aeffb89fc9906e3e5a34"
+        }
+      ],
+      "seller": {
+        "id": "o-2xlz78ngz5ubvus9sff9blglee43uk",
+        "name": "Saber Interactive"
+      },
+      "productSlug": "world-war-z",
+      "urlSlug": "world-war-z-aftermath",
+      "url": null,
+      "tags": [
+        {
+          "id": "1216",
+          "name": "Action"
+        },
+        {
+          "id": "21122",
+          "name": "Diverse Characters"
+        },
+        {
+          "id": "1220",
+          "name": "ZOMBIES"
+        },
+        {
+          "id": "1188",
+          "name": "RELAXING"
+        },
+        {
+          "id": "21894",
+          "name": "Cloud Saves"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "9549",
+          "name": "Controller Support"
+        },
+        {
+          "id": "1264",
+          "name": "Co-op"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "1203",
+          "name": "Multiplayer"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "1080",
+          "name": "Survival"
+        },
+        {
+          "id": "1210",
+          "name": "Shooter"
+        },
+        {
+          "id": "1370",
+          "name": "Single Player"
+        },
+        {
+          "id": "24570",
+          "name": "Holiday Sale"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        },
+        {
+          "id": "21119",
+          "name": "Great for Beginners"
+        }
+      ],
+      "items": [
+        {
+          "id": "4446fc9443324b7f8f742fb913ad9ba3",
+          "namespace": "wombat",
+          "_id": "675cbcc06721712dc1576fdb"
+        }
+      ],
+      "customAttributes": {
+        "com.epicgames.app.blacklist": {
+          "type": "STRING",
+          "value": "[]"
+        },
+        "publisherName": {
+          "type": "STRING",
+          "value": "Saber Interactive"
+        },
+        "developerName": {
+          "type": "STRING",
+          "value": "Saber Interactive"
+        },
+        "com.epicgames.app.productSlug": {
+          "type": "STRING",
+          "value": "world-war-z"
+        }
+      },
+      "categories": [
+        "games",
+        "games/edition",
+        "games/edition/base",
+        "applications"
+      ],
+      "developerDisplayName": null,
+      "publisherDisplayName": null,
+      "prePurchase": false,
+      "releaseDate": "2021-09-21T13:00:00.000Z",
+      "pcReleaseDate": "2021-09-21T13:00:00.000Z",
+      "viewableDate": "2021-09-21T13:00:00.000Z",
+      "countriesBlacklist": null,
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "5168133619",
+      "id": "afc09953666043cdbece0b2a65989bc3",
+      "namespace": "a646020cb93b4ea995cda70647bbe001",
+      "title": "Steep Standard Edition",
+      "description": "Ride a massive open world across the Alps, where the powder is always fresh and the run never ends.",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2020-01-01T16:00:00.000Z",
+      "creationDate": "2019-12-09T19:08:56.362Z",
+      "lastModifiedDate": "2024-12-13T15:58:22.223Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "DieselStoreFrontTall",
+          "url": "https://cdn1.epicgames.com/undefined/offer/KEY_ART_LOGO_640x854-640x854-d7402c9d56f9fc6d90d5e8550420e30b.jpg",
+          "md5": "d7402c9d56f9fc6d90d5e8550420e30b"
+        },
+        {
+          "type": "DieselStoreFrontWide",
+          "url": "https://cdn1.epicgames.com/undefined/offer/KEY_ART_LOGO_3840x2160-3840x2160-af3450f1bc27ae4642f4fd8cb0fde613.jpg",
+          "md5": "af3450f1bc27ae4642f4fd8cb0fde613"
+        },
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/undefined/offer/KEY_ART_LOGO_640x854-640x854-d7402c9d56f9fc6d90d5e8550420e30b.jpg",
+          "md5": "d7402c9d56f9fc6d90d5e8550420e30b"
+        },
+        {
+          "type": "CodeRedemption_340x440",
+          "url": "https://cdn1.epicgames.com/a646020cb93b4ea995cda70647bbe001/offer/KEY_ART_LOGO_640x854-640x854-d7402c9d56f9fc6d90d5e8550420e30b-640x854-d7402c9d56f9fc6d90d5e8550420e30b.jpg",
+          "md5": "d7402c9d56f9fc6d90d5e8550420e30b"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/a646020cb93b4ea995cda70647bbe001/offer/KEY_ART_LOGO_640x854-640x854-d7402c9d56f9fc6d90d5e8550420e30b-640x854-d7402c9d56f9fc6d90d5e8550420e30b.jpg",
+          "md5": "d7402c9d56f9fc6d90d5e8550420e30b"
+        },
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/a646020cb93b4ea995cda70647bbe001/offer/KEY_ART_LOGO_3840x2160-3840x2160-06904d279c608d6a87f80c5de3154272073831aa.jpg",
+          "md5": "17bf432e286a80db2d6bbf769b83ac66"
+        }
+      ],
+      "seller": {
+        "id": "o-3efjudxdtgsqnulml4bkeq3v9nec38",
+        "name": "Ubisoft Entertainment"
+      },
+      "productSlug": "steep/home",
+      "urlSlug": "steepgeneralaudience-01",
+      "url": null,
+      "tags": [
+        {
+          "id": "1216",
+          "name": "Action"
+        },
+        {
+          "id": "21121",
+          "name": "Great for Quick Sessions"
+        },
+        {
+          "id": "1283",
+          "name": "Sports"
+        },
+        {
+          "id": "1188",
+          "name": "RELAXING"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "9549",
+          "name": "Controller Support"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "1307",
+          "name": "Open World"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        },
+        {
+          "id": "21119",
+          "name": "Great for Beginners"
+        }
+      ],
+      "items": [
+        {
+          "id": "89ea78bb8a56436899316b1d07352b24",
+          "namespace": "a646020cb93b4ea995cda70647bbe001",
+          "_id": "675ce7121af0fddfeeda0048"
+        }
+      ],
+      "customAttributes": {
+        "com.epicgames.app.blacklist": {
+          "type": "STRING",
+          "value": "CN"
+        },
+        "developerName": {
+          "type": "STRING",
+          "value": "Ubisoft"
+        },
+        "com.epicgames.app.productSlug": {
+          "type": "STRING",
+          "value": "steep/home"
+        }
+      },
+      "categories": [
+        "games",
+        "games/edition/base",
+        "games/edition",
+        "applications"
+      ],
+      "developerDisplayName": null,
+      "publisherDisplayName": null,
+      "prePurchase": null,
+      "releaseDate": "2016-12-02T08:00:00.000Z",
+      "pcReleaseDate": null,
+      "viewableDate": null,
+      "countriesBlacklist": ["RU", "BY", "CN"],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "9062999520",
+      "id": "5e0277378de542ce9bf891d2f919d6c8",
+      "namespace": "77f2b98e2cef40c8a7437518bf420e47",
+      "title": "Cyberpunk 2077",
+      "description": "Cyberpunk 2077 is an open-world, action-adventure RPG set in the dark future of Night City — a dangerous megalopolis obsessed with power, glamor, and ceaseless body modification.",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2020-12-10T00:00:00.000Z",
+      "creationDate": "2019-06-13T21:04:20.315Z",
+      "lastModifiedDate": "2024-12-12T11:20:23.330Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "CodeRedemption_340x440",
+          "url": "https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S2_03_1200x1600-b1847981214ac013383111fc457eb9c5",
+          "md5": "b1847981214ac013383111fc457eb9c5"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S2_03_1200x1600-b1847981214ac013383111fc457eb9c5",
+          "md5": "b1847981214ac013383111fc457eb9c5"
+        },
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S2_03_1200x1600-b1847981214ac013383111fc457eb9c5",
+          "md5": "b1847981214ac013383111fc457eb9c5"
+        },
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7",
+          "md5": "359e77d3cd0a40aebf3bbc130d14c5c7"
+        },
+        {
+          "type": "DieselStoreFrontTall",
+          "url": "https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S2_03_1200x1600-b1847981214ac013383111fc457eb9c5",
+          "md5": "b1847981214ac013383111fc457eb9c5"
+        },
+        {
+          "type": "DieselStoreFrontWide",
+          "url": "https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077_CDPROJEKTRED_S1_03_2560x1440-359e77d3cd0a40aebf3bbc130d14c5c7",
+          "md5": "359e77d3cd0a40aebf3bbc130d14c5c7"
+        }
+      ],
+      "seller": {
+        "id": "o-x2vdjaf7cfakvlsgz8qf2gx8bkplcc",
+        "name": "CD PROJEKT RED"
+      },
+      "productSlug": "cyberpunk-2077",
+      "urlSlug": "cyberpunk",
+      "url": null,
+      "tags": [
+        {
+          "id": "1216",
+          "name": "Action"
+        },
+        {
+          "id": "1185",
+          "name": "FPS"
+        },
+        {
+          "id": "21122",
+          "name": "Diverse Characters"
+        },
+        {
+          "id": "1188",
+          "name": "RELAXING"
+        },
+        {
+          "id": "21894",
+          "name": "Cloud Saves"
+        },
+        {
+          "id": "19847",
+          "name": "Achievements"
+        },
+        {
+          "id": "21127",
+          "name": "Creative Community"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "9549",
+          "name": "Controller Support"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21109",
+          "name": "Great Boss Battles"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "1367",
+          "name": "RPG"
+        },
+        {
+          "id": "1370",
+          "name": "Single Player"
+        },
+        {
+          "id": "24570",
+          "name": "Holiday Sale"
+        },
+        {
+          "id": "1307",
+          "name": "Open World"
+        },
+        {
+          "id": "21147",
+          "name": "Inclusive Character Customization"
+        },
+        {
+          "id": "1117",
+          "name": "Adventure"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        },
+        {
+          "id": "21119",
+          "name": "Great for Beginners"
+        }
+      ],
+      "items": [
+        {
+          "id": "3f0e402b13894701a037972dfe533506",
+          "namespace": "77f2b98e2cef40c8a7437518bf420e47",
+          "_id": "675cbd8c6721712dc157aca6"
+        }
+      ],
+      "customAttributes": {
+        "com.epicgames.app.blacklist": {
+          "type": "STRING",
+          "value": "{}"
+        },
+        "developerName": {
+          "type": "STRING",
+          "value": "CD PROJEKT RED"
+        },
+        "com.epicgames.app.productSlug": {
+          "type": "STRING",
+          "value": "cyberpunk-2077"
+        }
+      },
+      "categories": [
+        "games",
+        "games/edition",
+        "games/edition/base",
+        "applications"
+      ],
+      "developerDisplayName": null,
+      "publisherDisplayName": null,
+      "prePurchase": null,
+      "releaseDate": "2020-12-10T00:00:00.000Z",
+      "pcReleaseDate": "2020-12-10T00:00:00.000Z",
+      "viewableDate": "2020-12-10T00:00:00.000Z",
+      "countriesBlacklist": ["RU", "BY"],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "1114177232",
+      "id": "a7364ebfa54147f1b90f78a81c8093f7",
+      "namespace": "c4763f236d08423eb47b4c3008779c84",
+      "title": "Alan Wake 2",
+      "description": "Saga Anderson arrives to investigate ritualistic murders in a small town. Alan Wake pens a dark story to shape the reality around him. These two heroes are somehow connected. Can they become the heroes they need to be?",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2023-10-27T04:00:00.000Z",
+      "creationDate": "2023-05-18T20:03:10.889Z",
+      "lastModifiedDate": "2024-12-12T16:00:15.700Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "CodeRedemption_340x440",
+          "url": "https://cdn1.epicgames.com/offer/c4763f236d08423eb47b4c3008779c84/EGS_AlanWake2_RemedyEntertainment_S2_1200x1600-c7c8091ddac0f9669c8e5905bca88aaa",
+          "md5": "c7c8091ddac0f9669c8e5905bca88aaa"
+        },
+        {
+          "type": "DieselStoreFrontTall",
+          "url": "https://cdn1.epicgames.com/offer/c4763f236d08423eb47b4c3008779c84/EGS_AlanWake2_RemedyEntertainment_S2_1200x1600-c7c8091ddac0f9669c8e5905bca88aaa",
+          "md5": "c7c8091ddac0f9669c8e5905bca88aaa"
+        },
+        {
+          "type": "DieselStoreFrontWide",
+          "url": "https://cdn1.epicgames.com/offer/c4763f236d08423eb47b4c3008779c84/EGS_AlanWake2_RemedyEntertainment_S1_2560x1440-ec44404c0b41bc457cb94cd72cf85872",
+          "md5": "ec44404c0b41bc457cb94cd72cf85872"
+        },
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/offer/c4763f236d08423eb47b4c3008779c84/EGS_AlanWake2_RemedyEntertainment_S2_1200x1600-c7c8091ddac0f9669c8e5905bca88aaa",
+          "md5": "c7c8091ddac0f9669c8e5905bca88aaa"
+        },
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/offer/c4763f236d08423eb47b4c3008779c84/EGS_AlanWake2_RemedyEntertainment_S1_2560x1440-ec44404c0b41bc457cb94cd72cf85872",
+          "md5": "ec44404c0b41bc457cb94cd72cf85872"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/offer/c4763f236d08423eb47b4c3008779c84/EGS_AlanWake2_RemedyEntertainment_S2_1200x1600-c7c8091ddac0f9669c8e5905bca88aaa",
+          "md5": "c7c8091ddac0f9669c8e5905bca88aaa"
+        }
+      ],
+      "seller": {
+        "id": "o-e2xslu4mlqqaavphzl6927vtjqamhj",
+        "name": "Epic Games Publishing"
+      },
+      "productSlug": "alan-wake-2",
+      "urlSlug": "alan-wake-2",
+      "url": null,
+      "tags": [
+        {
+          "id": "1218",
+          "name": "Horror"
+        },
+        {
+          "id": "21122",
+          "name": "Diverse Characters"
+        },
+        {
+          "id": "21894",
+          "name": "Cloud Saves"
+        },
+        {
+          "id": "19847",
+          "name": "Achievements"
+        },
+        {
+          "id": "21127",
+          "name": "Creative Community"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "1336",
+          "name": "Action-Adventure"
+        },
+        {
+          "id": "1210",
+          "name": "Shooter"
+        },
+        {
+          "id": "1370",
+          "name": "Single Player"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        }
+      ],
+      "items": [
+        {
+          "id": "d59bd88b62394cdfa8e6911ec385f3dc",
+          "namespace": "c4763f236d08423eb47b4c3008779c84",
+          "_id": "675cbc8c6721712dc1576177"
+        },
+        {
+          "id": "c79f279929734feb84e2f801888626e3",
+          "namespace": "2e92a78949e2474aa89271b8b893f3b0",
+          "_id": "675cbc8c6721712dc1576178"
+        }
+      ],
+      "customAttributes": {
+        "com.epicgames.app.productSlug": {
+          "type": "STRING",
+          "value": "alan-wake-2"
+        }
+      },
+      "categories": [
+        "games",
+        "games/edition",
+        "games/edition/base",
+        "applications"
+      ],
+      "developerDisplayName": "Remedy Entertainment",
+      "publisherDisplayName": "Epic Games Publishing",
+      "prePurchase": null,
+      "releaseDate": "2023-10-27T04:00:00.000Z",
+      "pcReleaseDate": "2023-10-27T04:00:00.000Z",
+      "viewableDate": "2023-10-27T04:00:00.000Z",
+      "countriesBlacklist": ["RU", "BY"],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "5387263192",
+      "id": "275daa4dca49471089ccc7f2bf53cac8",
+      "namespace": "602a0ef0aceb46cca62445439661d712",
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "description": "S.T.A.L.K.E.R. 2: Heart of Chornobyl is the unforgiving FPS survival adventure in a dark science-fiction open world. Scavenge for gear and resources, hunt for wonders, make hard decisions to survive and pave the path through the Chornobyl Anomalous Zone.",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2024-11-20T16:00:00.000Z",
+      "creationDate": "2021-06-10T02:00:14.492Z",
+      "lastModifiedDate": "2024-12-02T03:15:57.335Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/offer/602a0ef0aceb46cca62445439661d712/EGS_STALKER2HeartofChornobyl_GSCGameWorld_S2_1200x1600-3729b87388aa1a01fbd98c7d289d4c80",
+          "md5": "3729b87388aa1a01fbd98c7d289d4c80"
+        },
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/offer/602a0ef0aceb46cca62445439661d712/EGS_STALKER2HeartofChornobyl_GSCGameWorld_S1_2560x1440-62f2f7def1bae0e3255e49fc7177adaf",
+          "md5": "62f2f7def1bae0e3255e49fc7177adaf"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/offer/602a0ef0aceb46cca62445439661d712/EGS_STALKER2HeartofChornobyl_GSCGameWorld_S2_1200x1600-3729b87388aa1a01fbd98c7d289d4c80",
+          "md5": "3729b87388aa1a01fbd98c7d289d4c80"
+        }
+      ],
+      "seller": {
+        "id": "o-e4pcmp7frwrbjnn6q4tc3a642ud2x8",
+        "name": "GSC Game World Global LTD."
+      },
+      "productSlug": "stalker-2-heart-of-chornobyl",
+      "urlSlug": "stalker-2-heart-of-chornobyl",
+      "url": null,
+      "tags": [
+        {
+          "id": "1216",
+          "name": "Action"
+        },
+        {
+          "id": "1185",
+          "name": "FPS"
+        },
+        {
+          "id": "21122",
+          "name": "Diverse Characters"
+        },
+        {
+          "id": "1188",
+          "name": "RELAXING"
+        },
+        {
+          "id": "21894",
+          "name": "Cloud Saves"
+        },
+        {
+          "id": "19847",
+          "name": "Achievements"
+        },
+        {
+          "id": "21127",
+          "name": "Creative Community"
+        },
+        {
+          "id": "21129",
+          "name": "Challenging Combat"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "9549",
+          "name": "Controller Support"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21109",
+          "name": "Great Boss Battles"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "1370",
+          "name": "Single Player"
+        },
+        {
+          "id": "1307",
+          "name": "Open World"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        }
+      ],
+      "items": [
+        {
+          "id": "b71ca98e59ae47c39952386096ea0320",
+          "namespace": "602a0ef0aceb46cca62445439661d712",
+          "_id": "675cbf8a6721712dc158503f"
+        }
+      ],
+      "customAttributes": {
+        "com.epicgames.app.productSlug": {
+          "type": "STRING",
+          "value": "stalker-2-heart-of-chornobyl"
+        }
+      },
+      "categories": [
+        "games",
+        "games/edition",
+        "games/edition/base",
+        "applications"
+      ],
+      "developerDisplayName": "GSC Game World",
+      "publisherDisplayName": "GSC Game World",
+      "prePurchase": false,
+      "releaseDate": "2024-11-20T16:00:00.000Z",
+      "pcReleaseDate": "2024-11-20T16:00:00.000Z",
+      "viewableDate": "2024-11-20T16:00:00.000Z",
+      "countriesBlacklist": ["RU", "BY"],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "7977530362",
+      "id": "50192877718f4479a376aa11a5761110",
+      "namespace": "862d80a2d1044d88b01104b3ebaed032",
+      "title": "God of War Ragnarök",
+      "description": "From Santa Monica Studio comes the sequel to the critically acclaimed God of War (2018). Embark on an epic and heartfelt journey as Kratos and Atreus struggle with holding on and letting go – now on PC.",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2024-09-19T15:00:00.000Z",
+      "creationDate": "2024-05-28T21:24:58.582Z",
+      "lastModifiedDate": "2024-12-14T02:32:17.104Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/spt-assets/edaff839f0734d16bc89d2ddb1dc9339/steel-magnolia-15owu.jpg",
+          "md5": "c753e123b7151a399e8245673ac707a4"
+        },
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/spt-assets/edaff839f0734d16bc89d2ddb1dc9339/steel-magnolia-19vzm.jpg",
+          "md5": "81b5173d54c13aeacc13a77a3ccb5612"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/spt-assets/edaff839f0734d16bc89d2ddb1dc9339/steel-magnolia-19vzm.jpg",
+          "md5": "81b5173d54c13aeacc13a77a3ccb5612"
+        }
+      ],
+      "seller": {
+        "id": "o-sby9x4c2zlm5mb2z5r9ajue9pcqfs5",
+        "name": "Sony Interactive Entertainment"
+      },
+      "productSlug": null,
+      "urlSlug": "god-of-war-ragnaro-k",
+      "url": null,
+      "tags": [
+        {
+          "id": "21122",
+          "name": "Diverse Characters"
+        },
+        {
+          "id": "1188",
+          "name": "RELAXING"
+        },
+        {
+          "id": "21894",
+          "name": "Cloud Saves"
+        },
+        {
+          "id": "19847",
+          "name": "Achievements"
+        },
+        {
+          "id": "21127",
+          "name": "Creative Community"
+        },
+        {
+          "id": "21129",
+          "name": "Challenging Combat"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "9549",
+          "name": "Controller Support"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "1336",
+          "name": "Action-Adventure"
+        },
+        {
+          "id": "1370",
+          "name": "Single Player"
+        },
+        {
+          "id": "21146",
+          "name": "Educational"
+        },
+        {
+          "id": "24570",
+          "name": "Holiday Sale"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        },
+        {
+          "id": "21119",
+          "name": "Great for Beginners"
+        }
+      ],
+      "items": [
+        {
+          "id": "53dc3f5c4fd9403896a81952914fb93d",
+          "namespace": "862d80a2d1044d88b01104b3ebaed032",
+          "_id": "675ceed63c77b0fcbf49db71"
+        }
+      ],
+      "customAttributes": {
+        "autoGeneratedPrice": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isManuallySetViewableDate": {
+          "type": "STRING",
+          "value": "true"
+        },
+        "isPromotionalContentUsed": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isManuallySetPCReleaseDate": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isBlockchainUsed": {
+          "type": "STRING",
+          "value": "false"
+        }
+      },
+      "categories": ["games/edition/base", "games/edition", "games"],
+      "developerDisplayName": "Santa Monica Studio, Jetpack Interactive",
+      "publisherDisplayName": "PlayStation Publishing LLC",
+      "prePurchase": null,
+      "releaseDate": "2024-09-19T15:00:00.000Z",
+      "pcReleaseDate": "2024-09-19T15:00:00.000Z",
+      "viewableDate": "2024-09-19T15:00:00.000Z",
+      "countriesBlacklist": [
+        "PS",
+        "HM",
+        "PW",
+        "YE",
+        "HT",
+        "YT",
+        "AD",
+        "IM",
+        "AF",
+        "AG",
+        "IO",
+        "IQ",
+        "AI",
+        "AL",
+        "AM",
+        "AO",
+        "AQ",
+        "ZM",
+        "RE",
+        "AW",
+        "AX",
+        "AZ",
+        "JE",
+        "ZW",
+        "BA",
+        "BB",
+        "RS",
+        "BD",
+        "JM",
+        "RU",
+        "BF",
+        "RW",
+        "JO",
+        "BI",
+        "BJ",
+        "BM",
+        "BN",
+        "SB",
+        "BQ",
+        "SC",
+        "SD",
+        "BS",
+        "BT",
+        "BV",
+        "BW",
+        "SH",
+        "SJ",
+        "BY",
+        "BZ",
+        "SL",
+        "KE",
+        "SM",
+        "SN",
+        "SO",
+        "KG",
+        "KH",
+        "KI",
+        "SR",
+        "SS",
+        "CC",
+        "CD",
+        "ST",
+        "KM",
+        "CF",
+        "KN",
+        "CG",
+        "SX",
+        "CI",
+        "CK",
+        "CM",
+        "KY",
+        "KZ",
+        "TC",
+        "TD",
+        "TF",
+        "CV",
+        "TG",
+        "CW",
+        "CX",
+        "LA",
+        "TJ",
+        "TK",
+        "LC",
+        "TL",
+        "TM",
+        "TN",
+        "TO",
+        "LI",
+        "LK",
+        "TT",
+        "TV",
+        "DJ",
+        "LR",
+        "TZ",
+        "LS",
+        "LT",
+        "DM",
+        "LV",
+        "DO",
+        "LY",
+        "UG",
+        "MA",
+        "DZ",
+        "MC",
+        "MD",
+        "ME",
+        "UM",
+        "MG",
+        "MH",
+        "MK",
+        "ML",
+        "EE",
+        "MM",
+        "MN",
+        "EG",
+        "MO",
+        "EH",
+        "MQ",
+        "MR",
+        "UZ",
+        "MS",
+        "MU",
+        "MV",
+        "MW",
+        "VA",
+        "ER",
+        "MZ",
+        "VC",
+        "ET",
+        "VE",
+        "VG",
+        "NA",
+        "NC",
+        "NE",
+        "NF",
+        "VN",
+        "NG",
+        "VU",
+        "NP",
+        "FJ",
+        "NR",
+        "FK",
+        "FM",
+        "NU",
+        "FO",
+        "WF",
+        "GA",
+        "WS",
+        "GD",
+        "GE",
+        "GF",
+        "GG",
+        "GH",
+        "GI",
+        "GL",
+        "GM",
+        "GN",
+        "GP",
+        "GQ",
+        "GS",
+        "GW",
+        "GY",
+        "PF",
+        "PG",
+        "PH",
+        "PK",
+        "PM",
+        "PN"
+      ],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "2986911698",
+      "id": "1c9126da9edc47bca6c24d12d6caf872",
+      "namespace": "7e2ec8a47b8d41528eb6dd2efd2b1abc",
+      "title": "Disney Dreamlight Valley",
+      "description": "Disney Dreamlight Valley",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2022-09-06T17:45:00.000Z",
+      "creationDate": "2022-06-01T16:11:09.938Z",
+      "lastModifiedDate": "2024-12-03T16:05:59.516Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/offer/7e2ec8a47b8d41528eb6dd2efd2b1abc/StandardTall_1200x1600-7cb2cda8741f9b56a4c1cbb3e7dc9b3e",
+          "md5": "7cb2cda8741f9b56a4c1cbb3e7dc9b3e"
+        },
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/offer/7e2ec8a47b8d41528eb6dd2efd2b1abc/standardwide_2560x1440-ed57ff001b3e6ba991bf10975dfc8b6c",
+          "md5": "ed57ff001b3e6ba991bf10975dfc8b6c"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/offer/7e2ec8a47b8d41528eb6dd2efd2b1abc/StandardTall_1200x1600-7cb2cda8741f9b56a4c1cbb3e7dc9b3e",
+          "md5": "7cb2cda8741f9b56a4c1cbb3e7dc9b3e"
+        }
+      ],
+      "seller": {
+        "id": "o-p55z3hey6z3yqmg4f475wbbcznxvxh",
+        "name": "Gameloft SE"
+      },
+      "productSlug": "disney-dreamlight-valley",
+      "urlSlug": "founderpack1",
+      "url": null,
+      "tags": [
+        {
+          "id": "21122",
+          "name": "Diverse Characters"
+        },
+        {
+          "id": "1188",
+          "name": "RELAXING"
+        },
+        {
+          "id": "21127",
+          "name": "Creative Community"
+        },
+        {
+          "id": "21130",
+          "name": "Easy Combat"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "1393",
+          "name": "Simulation"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "1370",
+          "name": "Single Player"
+        },
+        {
+          "id": "1117",
+          "name": "Adventure"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        },
+        {
+          "id": "21119",
+          "name": "Great for Beginners"
+        }
+      ],
+      "items": [
+        {
+          "id": "4cd1d08761d1418093fee7db2324e762",
+          "namespace": "7e2ec8a47b8d41528eb6dd2efd2b1abc",
+          "_id": "675cbf496721712dc158387d"
+        }
+      ],
+      "customAttributes": {
+        "com.epicgames.app.productSlug": {
+          "type": "STRING",
+          "value": "disney-dreamlight-valley"
+        }
+      },
+      "categories": [
+        "application",
+        "games",
+        "games/edition",
+        "games/edition/base"
+      ],
+      "developerDisplayName": null,
+      "publisherDisplayName": null,
+      "prePurchase": null,
+      "releaseDate": "2022-09-06T13:00:00.000Z",
+      "pcReleaseDate": "2022-09-06T13:00:00.000Z",
+      "viewableDate": "2022-09-06T17:45:00.000Z",
+      "countriesBlacklist": [
+        "SS",
+        "SD",
+        "CU",
+        "RU",
+        "KP",
+        "SY",
+        "BY",
+        "IR",
+        "CN",
+        "ZW",
+        "VE"
+      ],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "1512589589",
+      "id": "2105204280f54b229bda50d71a383e38",
+      "namespace": "1b817ce74ae244e08a0b3038e77e5b6b",
+      "title": "Shatterline",
+      "description": "Get ready for the apocalypse! Shatterline is an intense FPS with roguelike co-op PVE and PVP modes. Pick a unique operator, customize your look and weapons, and combat the alien plague!",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2024-12-05T10:00:00.000Z",
+      "creationDate": "2022-09-14T18:34:31.567Z",
+      "lastModifiedDate": "2024-12-13T08:26:05.556Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/spt-assets/0cbc7c03131b479ab1e5ec67f4da4290/shatterline-1ojh6.jpg",
+          "md5": "b0a1860e629efb2c2cd7ac6941a3b576"
+        },
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/spt-assets/0cbc7c03131b479ab1e5ec67f4da4290/shatterline-jnhps.jpg",
+          "md5": "56498b6e06c5cca6620cac932a9a8db1"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/spt-assets/0cbc7c03131b479ab1e5ec67f4da4290/shatterline-jnhps.jpg",
+          "md5": "56498b6e06c5cca6620cac932a9a8db1"
+        }
+      ],
+      "seller": {
+        "id": "o-pqlxczrzqpetbll97xpbh4a3ezrl3p",
+        "name": "Faraway Inc."
+      },
+      "productSlug": null,
+      "urlSlug": "6d0f48463080450aa5d3e6dd6eae2165",
+      "url": null,
+      "tags": [
+        {
+          "id": "1264",
+          "name": "Co-op"
+        },
+        {
+          "id": "29088",
+          "name": "Online Multiplayer"
+        },
+        {
+          "id": "31313",
+          "name": "First Run"
+        },
+        {
+          "id": "1299",
+          "name": "Competitive"
+        },
+        {
+          "id": "1381",
+          "name": "Exploration"
+        },
+        {
+          "id": "19847",
+          "name": "Achievements"
+        },
+        {
+          "id": "1210",
+          "name": "Shooter"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "9549",
+          "name": "Controller Support"
+        },
+        {
+          "id": "1294",
+          "name": "First Person"
+        }
+      ],
+      "items": [
+        {
+          "id": "150d5a3c21b34dc8a2f9cc43e46397cd",
+          "namespace": "1b817ce74ae244e08a0b3038e77e5b6b",
+          "_id": "675cbc846721712dc1575d2d"
+        }
+      ],
+      "customAttributes": {
+        "autoGeneratedPrice": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isManuallySetViewableDate": {
+          "type": "STRING",
+          "value": "true"
+        },
+        "isPromotionalContentUsed": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isManuallySetPCReleaseDate": {
+          "type": "STRING",
+          "value": "false"
+        },
+        "isBlockchainUsed": {
+          "type": "STRING",
+          "value": "false"
+        }
+      },
+      "categories": ["games/edition/base", "games/edition", "games"],
+      "developerDisplayName": "Frag Lab LLC",
+      "publisherDisplayName": "Faraway Inc.",
+      "prePurchase": null,
+      "releaseDate": "2024-12-05T10:00:00.000Z",
+      "pcReleaseDate": "2024-12-05T10:00:00.000Z",
+      "viewableDate": "2024-10-10T21:00:00.000Z",
+      "countriesBlacklist": [
+        "MN",
+        "EG",
+        "RU",
+        "PS",
+        "AF",
+        "JO",
+        "SY",
+        "KR",
+        "IQ",
+        "IR",
+        "MV",
+        "LY",
+        "LB",
+        "BY",
+        "PK",
+        "OM",
+        "LK"
+      ],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    },
+    {
+      "_id": "3484127483",
+      "id": "283939b792814f5e87d8bdd5a8375fac",
+      "namespace": "9c59efaabb6a48f19b3485d5d9416032",
+      "title": "LEGO® Star Wars™: The Skywalker Saga",
+      "description": "Play through all nine Skywalker saga films in a game unlike any other. With over 300 playable characters, over 100 vehicles, and 23 planets to explore, a galaxy far, far away has never been more fun! \n\n*Includes classic Obi-Wan Kenobi playable character",
+      "offerType": "BASE_GAME",
+      "effectiveDate": "2022-04-05T17:00:00.000Z",
+      "creationDate": "2022-01-26T19:01:12.125Z",
+      "lastModifiedDate": "2024-12-12T16:00:03.792Z",
+      "isCodeRedemptionOnly": false,
+      "keyImages": [
+        {
+          "type": "OfferImageTall",
+          "url": "https://cdn1.epicgames.com/offer/9c59efaabb6a48f19b3485d5d9416032/EGS_LEGOStarWarsTheSkywalkerSaga_TTGames_S2_1200x1600-fba27b1ae598e355c3ad42d04d9025ba",
+          "md5": "fba27b1ae598e355c3ad42d04d9025ba"
+        },
+        {
+          "type": "OfferImageWide",
+          "url": "https://cdn1.epicgames.com/offer/9c59efaabb6a48f19b3485d5d9416032/EGS_LEGOStarWarsTheSkywalkerSaga_TTGames_S1_2560x1440-ae89e9c91aec1e461148f93f25b828ed",
+          "md5": "ae89e9c91aec1e461148f93f25b828ed"
+        },
+        {
+          "type": "ProductLogo",
+          "url": "https://cdn1.epicgames.com/offer/9c59efaabb6a48f19b3485d5d9416032/EGS_LEGOStarWarsTheSkywalkerSaga_TTGames_IC1_400x400-a56a855c4679eee50ae07792db63a324",
+          "md5": "a56a855c4679eee50ae07792db63a324"
+        },
+        {
+          "type": "Thumbnail",
+          "url": "https://cdn1.epicgames.com/offer/9c59efaabb6a48f19b3485d5d9416032/EGS_LEGOStarWarsTheSkywalkerSaga_TTGames_S2_1200x1600-fba27b1ae598e355c3ad42d04d9025ba",
+          "md5": "fba27b1ae598e355c3ad42d04d9025ba"
+        },
+        {
+          "type": "CodeRedemption_340x440",
+          "url": "https://cdn1.epicgames.com/offer/9c59efaabb6a48f19b3485d5d9416032/EGS_LEGOStarWarsTheSkywalkerSaga_TTGames_S2_1200x1600-fba27b1ae598e355c3ad42d04d9025ba",
+          "md5": "fba27b1ae598e355c3ad42d04d9025ba"
+        }
+      ],
+      "seller": {
+        "id": "o-7kyv8uwtz74njnl544kbxzt5xqephw",
+        "name": "Warner Bros."
+      },
+      "productSlug": "lego-star-wars-the-skywalker-saga",
+      "urlSlug": "lego-star-wars-the-skywalker-saga",
+      "url": null,
+      "tags": [
+        {
+          "id": "1216",
+          "name": "Action"
+        },
+        {
+          "id": "21122",
+          "name": "Diverse Characters"
+        },
+        {
+          "id": "1188",
+          "name": "RELAXING"
+        },
+        {
+          "id": "21894",
+          "name": "Cloud Saves"
+        },
+        {
+          "id": "19847",
+          "name": "Achievements"
+        },
+        {
+          "id": "21130",
+          "name": "Easy Combat"
+        },
+        {
+          "id": "9547",
+          "name": "Windows"
+        },
+        {
+          "id": "1264",
+          "name": "Co-op"
+        },
+        {
+          "id": "21138",
+          "name": "Recommend this Game"
+        },
+        {
+          "id": "1203",
+          "name": "Multiplayer"
+        },
+        {
+          "id": "21139",
+          "name": "Amazing Characters"
+        },
+        {
+          "id": "21140",
+          "name": "Amazing Storytelling"
+        },
+        {
+          "id": "21109",
+          "name": "Great Boss Battles"
+        },
+        {
+          "id": "21141",
+          "name": "Extremely Fun"
+        },
+        {
+          "id": "1370",
+          "name": "Single Player"
+        },
+        {
+          "id": "1117",
+          "name": "Adventure"
+        },
+        {
+          "id": "21149",
+          "name": "Quickly Understand the Controls"
+        },
+        {
+          "id": "21119",
+          "name": "Great for Beginners"
+        }
+      ],
+      "items": [
+        {
+          "id": "0bf4dc213d9c45aaab5df9f60423fa34",
+          "namespace": "9c59efaabb6a48f19b3485d5d9416032",
+          "_id": "675ce7081af0fddfeed9f85b"
+        }
+      ],
+      "customAttributes": {
+        "com.epicgames.app.productSlug": {
+          "type": "STRING",
+          "value": "lego-star-wars-the-skywalker-saga"
+        }
+      },
+      "categories": [
+        "games",
+        "games/edition",
+        "games/edition/base",
+        "applications"
+      ],
+      "developerDisplayName": "TT Games",
+      "publisherDisplayName": "Warner Bros.",
+      "prePurchase": null,
+      "releaseDate": "2022-04-05T17:00:00.000Z",
+      "pcReleaseDate": "2022-04-05T17:00:00.000Z",
+      "viewableDate": "2022-04-05T17:00:00.000Z",
+      "countriesBlacklist": ["RU", "BY"],
+      "countriesWhitelist": null,
+      "refundType": "SELF_REFUNDABLE"
+    }
+  ],
+  "page": 1,
+  "limit": 50,
+  "total": 425
+}

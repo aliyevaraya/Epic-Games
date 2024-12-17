@@ -3,6 +3,7 @@ import Discover from "./Discover";
 import DiscoverSomething from "./DiscoverSomething";
 import LinkSlider from "./LinkSlider";
 import MiniSlider from "./MiniSlider";
+import TopList from "./TopList";
 
 function Main() {
   return (
@@ -13,6 +14,7 @@ function Main() {
         <BigSlider />
         <DiscoverSomething />
         <LinkSlider />
+        <TopList />
       </div>
     </main>
   );

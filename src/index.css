@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.container{
+  margin: auto;
+  padding: 0 20px;
+}
 .no-scrollbar {
   scrollbar-width: none;
 }
@@ -162,22 +166,46 @@
   align-items: center;
 }
 
-#support-top{
-  background-image: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, #141414 100%), url("images/support-bg.jpg");
+#support-top {
+  background-image: linear-gradient(
+      180deg,
+      rgba(20, 20, 20, 0) 0%,
+      #141414 100%
+    ),
+    url("images/support-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top;
   padding: 30px 0;
 }
+.server-status::after {
+  content: "";
+  display: flex;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #11cf59;
+}
+.notify {
+  position: relative;
+}
+.notify::before {
+  content: "";
+  width: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  background: #ffa640;
+  border-radius: 4px 0 0 4px;
+}
 
-
-
-
-
-
-
-
-
-
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1160px !important;
+  }
+}
 @media only screen and (max-width: 768px) {
   .discover-slider .swiper-button-next,
   .discover-slider .swiper-button-prev {

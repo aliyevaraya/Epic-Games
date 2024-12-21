@@ -10,8 +10,7 @@ import { DATA } from "../../context/DataContext";
 
 function Main() {
   const {sell, play, wishlist, games, newRelease  } = useContext(DATA)
-  // console.log(newRelease);
-  
+
   return (
     <main className="bg-[#101014]">
       <div className="w-full lg:w-[75%] m-auto relative">

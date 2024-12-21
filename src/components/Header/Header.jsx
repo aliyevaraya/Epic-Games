@@ -86,7 +86,7 @@ function Header() {
               </Link>
             </li>
             <li className="p-5 hidden lg:block">
-              <Link>Support</Link>
+              <Link to={"support"}>Support</Link>
             </li>
             <li className="group p-5 hidden lg:block relative">
               <Link className="flex items-center">

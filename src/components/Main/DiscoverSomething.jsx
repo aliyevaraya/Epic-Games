@@ -5,65 +5,11 @@ import { Navigation } from "swiper/modules";
 import { SlArrowRight } from "react-icons/sl";
 import { IoMdAddCircle } from "react-icons/io";
 
-function DiscoverSomething() {
-  const games = [
-    {
-      title: "Marvel Rivals",
-      price: "Free",
-      image: "images/marvel-rivals-mobil.avif",
-    },
-    {
-      title: "Farming Simulator 25",
-      price: "$36.49",
-      image: "images/farming-simulator.avif",
-    },
-    {
-      title: "ReMix",
-      price: "$1.61",
-      discount: "-40%",
-      image: "images/remix-bip.avif",
-    },
-    {
-      title: "Teenage Mutant Ninja Turtles",
-      price: "$14.99",
-      image: "images/teenage-mutant-ninja-turtles-splintered-fate.avif",
-    },
-    {
-      title: "Necroking",
-      price: "$3.29",
-      image: "images/necroking.avif",
-    },
-    {
-      title: "Marvel Rivals",
-      price: "Free",
-      image: "images/marvel-rivals-mobil.avif",
-    },
-    {
-      title: "Farming Simulator 25",
-      price: "$36.49",
-      image: "images/farming-simulator.avif",
-    },
-    {
-      title: "ReMix",
-      price: "$1.61",
-      discount: "-40%",
-      image: "images/remix-bip.avif",
-    },
-    {
-      title: "Teenage Mutant Ninja Turtles",
-      price: "$14.99",
-      image: "images/teenage-mutant-ninja-turtles-splintered-fate.avif",
-    },
-    {
-      title: "Necroking",
-      price: "$3.29",
-      image: "images/necroking.avif",
-    },
-  ];
+function DiscoverSomething({ data }) {
   return (
-    <div className="text-white px-4 pb-[64px]">
-      <h3 className="discover flex items-center text-[20px] font-bold mb-4 mr-4 cursor-pointer">
-        Discover Something New{" "}
+    <div className="text-white px-4 pb-[64px] relative">
+      <h3 className="discover md:absolute md:top-3 flex items-center text-[20px] font-bold mb-4 mr-4 cursor-pointer">
+        {(data.map(item => item.id)) ? "Top New Releases" :"Discover Something New"}
         <SlArrowRight className="move-right text-[16px] ml-2 mt-1" />
       </h3>
       <Swiper
@@ -81,38 +27,68 @@ function DiscoverSomething() {
         }}
         className="discover-slider"
       >
-        {games.map((game, index) => (
-          <SwiperSlide key={index} className="cursor-pointer">
-            <div className="group">
-              <div className="relative">
-                <img
-                  className="rounded-lg hover:opacity-[0.5]"
-                  src={game.image}
-                  alt={game.title}
-                />
-                <div className="hoverLay after:hover:opacity-[1]"></div>
-              </div>
-              <button
-                className="opacity-0 group-hover:opacity-[1] text-[24px] absolute top-2 right-2 trans"
-                title="Add to wishlist"
-              >
-                <IoMdAddCircle className="text-black" />
-              </button>
-              <span className="text-[12px] text-[#ffffffa6] inline-block mt-2">
-                Base Game
-              </span>
-              <h3 className="font-bold">{game.title}</h3>
-              <div className="flex items-center gap-2  mt-[10px]">
-                {game.discount && (
-                  <span className="bg-[#26bbff] px-2 text-[12px] text-black rounded-xl">
-                    {game.discount}
+        {data && 
+          data.map((game, index) => {
+            const price = game.price?.price?.originalPrice ?? game.price;
+            const discountedPrice = game.price?.price?.discountPrice;
+            let discount = null;
+            if (game.price?.appliedRules?.length) {
+              discount =
+                game.price?.appliedRules[0]?.discountSetting
+                  ?.discountPercentage;
+            }
+            return (
+              <SwiperSlide key={index} className="cursor-pointer">
+                <div className="group">
+                  <div className="relative">
+                    <img
+                      className="rounded-lg hover:opacity-[0.5] object-cover"
+                      src={game.image ?? game.keyImages[2].url}
+                      alt={game.title}
+                    />
+                    <div className="hoverLay after:hover:opacity-[1]"></div>
+                  </div>
+                  <button
+                    className="opacity-0 group-hover:opacity-[1] text-[24px] absolute top-2 right-2 trans"
+                    title="Add to wishlist"
+                  >
+                    <IoMdAddCircle className="text-black" />
+                  </button>
+                  <span className="text-[12px] text-[#ffffffa6] inline-block mt-2">
+                    Base Game
                   </span>
-                )}
-                <p className="text-[14px]">{game.price}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
+                  <h3 className="font-bold">{game.title}</h3>
+                  <div className="flex items-center gap-2  mt-[10px]">
+                    {
+                      <span
+                        className={`bg-[#26bbff] px-2 text-[12px] text-black rounded-xl ${
+                          game.price?.appliedRules?.length ? "block" : "hidden"
+                        }`}
+                      >
+                        {discount}%
+                      </span>
+                    }
+                    <p
+                      className={`text-[14px] opacity-[.8] ${
+                        discount ? "line-through" : ""
+                      }`}
+                    >
+                      {price > 100
+                        ? `$${(price / 100).toFixed(2)}`
+                        : price === "Free"
+                        ? "Free"
+                        : `$${price}`}
+                    </p>
+                    <p className="text-[14px]">
+                      {discount &&
+                        discountedPrice &&
+                        "$" + (discountedPrice / 100).toFixed(2)}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
       </Swiper>
     </div>
   );

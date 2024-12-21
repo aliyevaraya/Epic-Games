@@ -1,27 +1,32 @@
 import { useState } from "react";
 import { GoSearch } from "react-icons/go";
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp, MdClose } from "react-icons/md";
 
 function Discover() {
   const [discover, setDiscover] = useState(false);
+  const [search, setSearch] = useState(false);
+
   return (
     <>
       <div className={`sticky top-0 z-[3] bg-[#101014] text-white`}>
-        <div className="w-[90%] lg:w-full h-[80px] m-auto flex items-center justify-between">
-          <div className="h-[40px] px-3 my-[10px] trans flex items-center rounded-[50%] lg:rounded-3xl lg:bg-[#202024] hover:bg-[#404044] ">
-            <GoSearch className="opacity-[.65]" />
-            <input
-              type="search"
-              className="hidden lg:inline bg-transparent outline-none pl-3 text-[14px]"
-              placeholder="Search store"
-            />
+        <div className={`w-[90%] lg:w-full h-[80px] m-auto flex items-center justify-between ${search ? "bg-[#18181c]" : "bg-[transparent]"}`}>
+          <div className={`flex justify-between items-center ${search ? " w-full" : "w-fit"}`}>
+            <div className={`h-[40px] px-3 my-[10px] trans flex items-center rounded-[50%] lg:rounded-3xl lg:bg-[#202024]  ${search ? "w-full rounded-sm" : "hover:bg-[#404044]"}`}>
+              <GoSearch onClick={() => setSearch(true)} className="opacity-[.65] cursor-pointer" />
+              <input
+                type="search"
+                className={`${search ? "inline" : "hidden"} lg:inline bg-transparent outline-none pl-3 text-[14px]`}
+                placeholder="Search store"
+              />
+            </div>
+              <MdClose onClick={() => setSearch(false)} className={`${search ? "block mr-4 text-[20px] cursor-pointer" : "hidden"}`}/>
           </div>
-          <div className="h-[80px] lg:relative static flex flex-col items-center m-auto w-[80%] justify-center lg:items-start ml-[20px]">
+          <div className={`h-[80px] lg:relative static flex flex-col items-center m-auto w-[80%] justify-center lg:items-start ml-[20px] ${search ? "hidden" : "flex"} `}>
             <button
               onClick={() => setDiscover(!discover)}
               className="2xl:hidden flex items-center p-[10px]"
             >
-              Discover{" "}
+              Discover
               {discover ? (
                 <MdKeyboardArrowUp className="block mt-1 ml-1" />
               ) : (
@@ -65,7 +70,7 @@ function Discover() {
           </div>
         </div>
       </div>
-      {discover ? (
+      {discover || search ? (
         <div className="block lg:hidden fixed top-0 left-0 w-full h-screen bg-[#000000b3] z-[2]"></div>
       ) : (
         ""

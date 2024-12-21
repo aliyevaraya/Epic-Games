@@ -21,7 +21,7 @@ function LinkSlider() {
         },
       }}
       modules={[Pagination]}
-      className="mini-slider !px-[15px] lg:!px-0 "
+      className="mini-slider !px-[15px] lg:!px-0 !pb-[64px]"
     >
       <SwiperSlide>
         <div className="relative">

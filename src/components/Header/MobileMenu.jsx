@@ -58,7 +58,7 @@ function MobileMenu({showMenu, setShowMenu}) {
           <ul className="p-4 sm:p-[4rem]">
             <li className="text-[32px] font-bold mb-[32px]">Menu</li>
             <li className="py-3 px-2">
-              <Link>Support</Link>
+              <Link to={"/support"}>Support</Link>
             </li>
             <li onClick={() => setDropdown(!dropdown)} className="py-3 px-2">
               <Link className="flex justify-between items-center">

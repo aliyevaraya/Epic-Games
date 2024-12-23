@@ -81,7 +81,7 @@ function Header() {
           </div>
           <ul className="flex items-center">
             <li className="p-1 sm:p-5">
-              <Link>
+              <Link to={"/"}>
                 <img width="54px" src="images/Store.svg" alt="store img" />
               </Link>
             </li>

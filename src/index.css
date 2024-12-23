@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.container{
+.container {
   margin: auto;
   padding: 0 20px;
 }
@@ -200,18 +200,34 @@
   background: #ffa640;
   border-radius: 4px 0 0 4px;
 }
+.show-all {
+  transform: rotate(90deg);
+}
+.all-serv {
+  background: linear-gradient(135deg, transparent 89% 0, #0074e4 0 0) 100% 100%/100%
+      100% no-repeat,
+    #272727;
+  transition: all 0.5s ease-in-out;
+}
+.all-serv:hover {
+  background: linear-gradient(135deg, transparent 89% 0, #0074e4 0 0) 100% 100%/1000%
+      1000% no-repeat,
+    #272727 !important;
+}
 
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1160px !important;
   }
 }
+
 @media only screen and (max-width: 768px) {
   .discover-slider .swiper-button-next,
   .discover-slider .swiper-button-prev {
     display: none;
   }
 }
+
 .list-slider .swiper-wrapper {
   width: 100% !important;
 }

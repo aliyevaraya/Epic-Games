@@ -13,7 +13,7 @@ function Main() {
 
   return (
     <main className="bg-[#101014]">
-      <div className="w-full lg:w-[75%] m-auto relative">
+      <div className="w-full containerr m-auto relative">
         <Discover />
         <MiniSlider />
         <BigSlider />

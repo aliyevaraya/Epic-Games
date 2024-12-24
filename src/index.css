@@ -2,15 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
+.containerr {
   margin: auto;
   padding: 0 20px;
 }
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 40px;
+  }
+}
+
 .no-scrollbar {
   scrollbar-width: none;
 }
 .trans {
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 .hoverBlue:hover {
   color: #0078f2;
@@ -203,21 +209,23 @@
 .show-all {
   transform: rotate(90deg);
 }
-.all-serv {
+.bg-hover {
   background: linear-gradient(135deg, transparent 89% 0, #0074e4 0 0) 100% 100%/100%
       100% no-repeat,
     #272727;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; 
 }
-.all-serv:hover {
+.bg-hover:hover {
   background: linear-gradient(135deg, transparent 89% 0, #0074e4 0 0) 100% 100%/1000%
       1000% no-repeat,
     #272727 !important;
 }
-
+.game-title{
+  word-break: break-word
+}
 @media only screen and (min-width: 1200px) {
-  .container {
-    max-width: 1160px !important;
+  .containerr {
+    max-width: 1180px !important;
   }
 }
 

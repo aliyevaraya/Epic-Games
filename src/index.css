@@ -6,12 +6,6 @@
   margin: auto;
   padding: 0 20px;
 }
-@media only screen and (min-width: 768px) {
-  .container {
-    padding: 40px;
-  }
-}
-
 .no-scrollbar {
   scrollbar-width: none;
 }
@@ -213,19 +207,46 @@
   background: linear-gradient(135deg, transparent 89% 0, #0074e4 0 0) 100% 100%/100%
       100% no-repeat,
     #272727;
-  transition: all 0.5s ease-in-out; 
+  transition: all 0.5s ease-in-out;
 }
 .bg-hover:hover {
   background: linear-gradient(135deg, transparent 89% 0, #0074e4 0 0) 100% 100%/1000%
       1000% no-repeat,
     #272727 !important;
 }
-.game-title{
-  word-break: break-word
+.game-title {
+  word-break: break-word;
 }
+.account-content {
+  clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.list-slider .swiper-wrapper {
+  width: 100% !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .containerr {
+    padding: 40px;
+  }
+  .notify::before{
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .containerr {
+    max-width: 1000px;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   .containerr {
     max-width: 1180px !important;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .containerr {
+    max-width: 1260px !important;
   }
 }
 
@@ -234,8 +255,4 @@
   .discover-slider .swiper-button-prev {
     display: none;
   }
-}
-
-.list-slider .swiper-wrapper {
-  width: 100% !important;
 }

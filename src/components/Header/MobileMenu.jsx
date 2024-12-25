@@ -16,7 +16,7 @@ function MobileMenu({showMenu, setShowMenu}) {
     >
       <div className="flex justify-between items-center p-4 h-[4.5rem]">
         <Link>
-          <img width="54px" src="images/Store.svg" alt="store img" />
+          <img width="54px" src="/images/Store.svg" alt="store img" />
         </Link>
         <div className="flex gap-5 items-center">
           <a

@@ -152,7 +152,7 @@ function Footer() {
           <a href="">
             <img
               width="65px"
-              src="images/footer-logo.png"
+              src="/images/footer-logo.png"
               alt="epic games and unreal engine"
             />
           </a>

@@ -8,9 +8,12 @@ function Detail() {
   const { newRelease, video, sliderImg } = useContext(DATA);
   const game = newRelease.find((game) => game.id === id);
   const gameVideo = video[0]?.outputs[7]?.url;
-  const [currentVideo, setCurrentVideo] = useState(0);
+  const [currentMedia, setCurrentMedia] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
-
+  const mediaItems = [
+    { type: "video", src: gameVideo, img: "/images/fall-guys.jpg" },
+    ...sliderImg.map((img) => ({ type: "image", src: img.src })),
+  ];
   let formattedDate = null;
   if (game) {
     formattedDate = new Intl.DateTimeFormat("en-US", {
@@ -177,48 +180,68 @@ function Detail() {
                 </div>
               </div>
             </div>
-            <div className="">
+            <div>
               <div>
                 <div className="relative w-full h-72 bg-black py-4 rounded-lg">
-                  <video
-                    src={gameVideo}
-                    controls
-                    autoPlay
-                    loop
-                    className="w-full h-full object-cover"
-                  ></video>
+                  {mediaItems[currentMedia]?.type === "video" ? (
+                    <video
+                      src={mediaItems[currentMedia]?.src}
+                      controls
+                      autoPlay
+                      loop
+                      className="w-full h-full object-cover"
+                    ></video>
+                  ) : (
+                    <img
+                      src={mediaItems[currentMedia]?.src}
+                      alt={`media-${currentMedia}`}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                 </div>
                 <div className="flex justify-center items-center mt-4 gap-4">
                   <button
                     className="text-[#ffffffa6] hover:text-white"
                     onClick={() =>
-                      setCurrentVideo((prev) =>
-                        prev === 0 ? sliderImg.length - 1 : prev - 1
+                      setCurrentMedia((prev) =>
+                        prev === 0 ? mediaItems.length - 1 : prev - 1
                       )
                     }
                   >
                     &#8249;
                   </button>
                   <div className="flex gap-2 overflow-x-auto no-scrollbar">
-                    {sliderImg.map((img, index) => (
-                      <img
+                    {mediaItems.map((media, index) => (
+                      <div
                         key={index}
-                        src={img.src}
-                        alt={`${index + 1}`}
-                        onClick={() => setCurrentVideo(index)}
-                        className={`w-20 h-12 object-cover rounded-lg cursor-pointer ${
-                          currentVideo === index
+                        onClick={() => setCurrentMedia(index)}
+                        className={`w-20 h-12 rounded-lg cursor-pointer ${
+                          currentMedia === index
                             ? "border-2 border-white"
                             : "opacity-50"
                         }`}
-                      />
+                      >
+                        {media.type === "video" ? (
+                          <img
+                            src={media.img || "/default-video-thumbnail.jpg"}
+                            alt={`video-${index}`}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <img
+                            src={media.src}
+                            alt={`image-${index}`}
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                      </div>
                     ))}
                   </div>
                   <button
                     className="text-[#ffffffa6] hover:text-white"
                     onClick={() =>
-                      setCurrentVideo((prev) =>
-                        prev === sliderImg.length - 1 ? 0 : prev + 1
+                      setCurrentMedia((prev) =>
+                        prev === mediaItems.length - 1 ? 0 : prev + 1
                       )
                     }
                   >

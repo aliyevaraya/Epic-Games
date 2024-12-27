@@ -17,6 +17,14 @@ async function getNewRelease() {
     const res = await axios.get("http://localhost:3334/elements")
     return res.data
 }
+async function getVideos() {
+    const res = await axios.get("http://localhost:4000/videos")
+    return res.data
+}
+async function getSliderImg() {
+    const res = await axios.get("http://localhost:4000/images")
+    return res.data
+}
 
 
-export {getTopSeller, getMostPlayed, getWishlist, games, getNewRelease}
+export {getTopSeller, getMostPlayed, getWishlist, games, getNewRelease, getVideos, getSliderImg}

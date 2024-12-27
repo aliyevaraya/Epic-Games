@@ -13,5 +13,4 @@ export default {
       "2xl": "1280px",
     },
   },
-  plugins: [],
 };

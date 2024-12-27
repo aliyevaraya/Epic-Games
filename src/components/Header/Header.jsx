@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import EpicMenu from "./EpicMenu";
 import MobileMenu from "./MobileMenu";
+import Discover from "../Main/Discover";
 
 function Header() {
   const [showEpic, setShowEpic] = useState(false);
@@ -142,6 +143,7 @@ function Header() {
       </header>
       <EpicMenu showEpic={showEpic} setShowEpic={setShowEpic} />
       <MobileMenu showMenu={showMenu} setShowMenu={setShowMenu} />
+      <Discover />
     </>
   );
 }

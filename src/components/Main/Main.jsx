@@ -14,7 +14,6 @@ function Main() {
   return (
     <main className="bg-[#101014]">
       <div className="w-full containerr m-auto relative">
-        <Discover />
         <MiniSlider />
         <BigSlider />
         <DiscoverSomething data={games}/>

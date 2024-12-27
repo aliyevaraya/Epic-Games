@@ -1,0 +1,159 @@
+{
+    "_id": "01aaaeaf3a27462391c6791566d66af3",
+    "__v": 0,
+    "images": [
+      {
+        "_id": "5334bb4ad22b5cedfddc892ef029fcbd",
+        "src": "https://cdn1.epicgames.com/spt-assets/37d7b036f7fc4168a1c7064af0463631/sumerian-six-1dgwu.jpg"
+      },
+      {
+        "_id": "7c5dc4cd263a3b4c6febe9d5d3bf8285",
+        "src": "https://cdn1.epicgames.com/spt-assets/37d7b036f7fc4168a1c7064af0463631/sumerian-six-1ue83.jpg"
+      },
+      {
+        "_id": "364cb9188759fa1f5e9f33c71bbb70f5",
+        "src": "https://cdn1.epicgames.com/spt-assets/37d7b036f7fc4168a1c7064af0463631/sumerian-six-mxdgc.jpg"
+      },
+      {
+        "_id": "b82dc79b7bb4200e58eebcc196e11449",
+        "src": "https://cdn1.epicgames.com/spt-assets/37d7b036f7fc4168a1c7064af0463631/sumerian-six-1fc21.jpg"
+      },
+      {
+        "_id": "5eb3122105716f90be2465b89f40596e",
+        "src": "https://cdn1.epicgames.com/spt-assets/37d7b036f7fc4168a1c7064af0463631/sumerian-six-1hkk1.jpg"
+      },
+      {
+        "_id": "b270ff6443b293c73c129d8356e00e2c",
+        "src": "https://cdn1.epicgames.com/spt-assets/37d7b036f7fc4168a1c7064af0463631/sumerian-six-1izg5.jpg"
+      },
+      {
+        "_id": "b9dae060b5bf54ebb509b3219aa597a9",
+        "src": "https://cdn1.epicgames.com/spt-assets/37d7b036f7fc4168a1c7064af0463631/sumerian-six-2a54u.jpg"
+      },
+      {
+        "_id": "af75cf0561b70ef51766e06845225961",
+        "src": "https://cdn1.epicgames.com/spt-assets/37d7b036f7fc4168a1c7064af0463631/sumerian-six-13i1m.jpg"
+      },
+      {
+        "_id": "df6991a98b89a73721ec777a3c8b6068",
+        "src": "https://cdn1.epicgames.com/spt-assets/37d7b036f7fc4168a1c7064af0463631/sumerian-six-1uqwc.jpg"
+      }
+    ],
+    "logo": "https://cdn1.epicgames.com/spt-assets/37d7b036f7fc4168a1c7064af0463631/sumerian-six-logo-1uyhs.png",
+    "namespace": "77d0632b8cf14d4f8b974899928a579d",
+    "videos": [
+      {
+        "_id": "5c6f52e3d2784564a5d6ab0bbed21439",
+        "outputs": [
+          {
+            "duration": 384,
+            "url": "https://media-cdn.epicgames.com/3bd5800006c949488c7ad8d323ff95fc/3bd5800006c949488c7ad8d323ff95fc-audio.webm",
+            "width": null,
+            "height": null,
+            "key": "audio",
+            "contentType": "audio/webm",
+            "_id": "676d3ed607cb9830a08800be"
+          },
+          {
+            "duration": 384,
+            "url": "https://media-cdn.epicgames.com/3bd5800006c949488c7ad8d323ff95fc/3bd5800006c949488c7ad8d323ff95fc-high.webm",
+            "width": 1920,
+            "height": 1080,
+            "key": "high",
+            "contentType": "video/webm",
+            "_id": "676d3ed607cb9830a08800bf"
+          },
+          {
+            "duration": 384,
+            "url": "https://media-cdn.epicgames.com/3bd5800006c949488c7ad8d323ff95fc/3bd5800006c949488c7ad8d323ff95fc-medium.webm",
+            "width": 1280,
+            "height": 720,
+            "key": "medium",
+            "contentType": "video/webm",
+            "_id": "676d3ed607cb9830a08800c0"
+          },
+          {
+            "duration": 384,
+            "url": "https://media-cdn.epicgames.com/3bd5800006c949488c7ad8d323ff95fc/3bd5800006c949488c7ad8d323ff95fc-low.webm",
+            "width": 854,
+            "height": 480,
+            "key": "low",
+            "contentType": "video/webm",
+            "_id": "676d3ed607cb9830a08800c1"
+          },
+          {
+            "duration": null,
+            "url": "https://media-cdn.epicgames.com/3bd5800006c949488c7ad8d323ff95fc/3bd5800006c949488c7ad8d323ff95fc-00001-thumb.png",
+            "width": null,
+            "height": null,
+            "key": "thumbnail",
+            "contentType": "image/png",
+            "_id": "676d3ed607cb9830a08800c2"
+          },
+          {
+            "duration": null,
+            "url": "https://media-cdn.epicgames.com/3bd5800006c949488c7ad8d323ff95fc/3bd5800006c949488c7ad8d323ff95fc.mpd",
+            "width": null,
+            "height": null,
+            "key": "manifest",
+            "contentType": "application/dash+xml",
+            "_id": "676d3ed607cb9830a08800c3"
+          },
+          {
+            "duration": 89,
+            "url": "https://media-cdn.epicgames.com/6cb67b6dbfb243fb8b3974d0159a4b0a/6cb67b6dbfb243fb8b3974d0159a4b0a-medium.webm",
+            "width": 1280,
+            "height": 720,
+            "key": "medium",
+            "contentType": "video/webm",
+            "_id": "676d3ed607cb9830a08800c4"
+          },
+          {
+            "duration": 89,
+            "url": "https://media-cdn.epicgames.com/6cb67b6dbfb243fb8b3974d0159a4b0a/6cb67b6dbfb243fb8b3974d0159a4b0a-low.webm",
+            "width": 854,
+            "height": 480,
+            "key": "low",
+            "contentType": "video/webm",
+            "_id": "676d3ed607cb9830a08800c5"
+          },
+          {
+            "duration": 89,
+            "url": "https://media-cdn.epicgames.com/6cb67b6dbfb243fb8b3974d0159a4b0a/6cb67b6dbfb243fb8b3974d0159a4b0a-audio.webm",
+            "width": null,
+            "height": null,
+            "key": "audio",
+            "contentType": "audio/webm",
+            "_id": "676d3ed607cb9830a08800c6"
+          },
+          {
+            "duration": 89,
+            "url": "https://media-cdn.epicgames.com/6cb67b6dbfb243fb8b3974d0159a4b0a/6cb67b6dbfb243fb8b3974d0159a4b0a-high.webm",
+            "width": 1920,
+            "height": 1080,
+            "key": "high",
+            "contentType": "video/webm",
+            "_id": "676d3ed607cb9830a08800c7"
+          },
+          {
+            "duration": null,
+            "url": "https://media-cdn.epicgames.com/6cb67b6dbfb243fb8b3974d0159a4b0a/6cb67b6dbfb243fb8b3974d0159a4b0a-00001-thumb.png",
+            "width": null,
+            "height": null,
+            "key": "thumbnail",
+            "contentType": "image/png",
+            "_id": "676d3ed607cb9830a08800c8"
+          },
+          {
+            "duration": null,
+            "url": "https://media-cdn.epicgames.com/6cb67b6dbfb243fb8b3974d0159a4b0a/6cb67b6dbfb243fb8b3974d0159a4b0a.mpd",
+            "width": null,
+            "height": null,
+            "key": "manifest",
+            "contentType": "application/dash+xml",
+            "_id": "676d3ed607cb9830a08800c9"
+          }
+        ]
+      }
+    ]
+  }

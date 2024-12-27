@@ -31,12 +31,12 @@ function Detail() {
             </button>
             <button className="opacity-[.6]">Achievements</button>
           </div>
-          <div className="md:flex flex-row-reverse ">
-            <div className="md:ml-[32px]">
+          <div className="md:flex flex-row-reverse relative w-full">
+            <div className="md:ml-[32px] md:sticky top-0 h-full">
               <div className="flex">
-                <div className="w-full rounded-xl overflow-hidden">
+                <div className="w-full md:w-[300px] rounded-xl overflow-hidden">
                   <img
-                    className="w-full h-full"
+                    className="w-full h-full md:h-[200px] object-cover object-top"
                     src={game.keyImages[0].url}
                     alt="Slide 1"
                   />
@@ -177,8 +177,7 @@ function Detail() {
                 </div>
               </div>
             </div>
-            <div>
-              {/* <video src={gameVideo} autoPlay controls></video> */}
+            <div className="">
               <div>
                 <div className="relative w-full h-72 bg-black py-4 rounded-lg">
                   <video
@@ -227,7 +226,7 @@ function Detail() {
                   </button>
                 </div>
               </div>
-              <div className="my-[50px]">
+              <div className="mt-[50px]">
                 <p>{game.description}</p>
               </div>
               <div className="py-[50px]">
@@ -266,10 +265,10 @@ function Detail() {
                 <div>
                   <div
                     className={`${
-                      isExpanded ? "h-full" : "h-[300px]"
+                      isExpanded ? "h-full" : "h-[500px]"
                     }  overflow-hidden relative`}
                   >
-                    <h5 className="uppercase text-[#ee6d46] text-[17px] my-5">
+                    <h5 className="uppercase text-[#ee6d46] text-[17px] my-[30px]">
                       Fight To Reach highpoint
                     </h5>
                     <p className="text-[#ffffffa6]">
@@ -290,6 +289,18 @@ function Detail() {
                       humans. Explore the Deadzone, where humans must
                       “tele-project” their minds into drones in order to survive
                       and pillage the remains of a once great society.
+                    </p>
+                    <p>
+                      On an asteroid-bound service station in an unfrequented
+                      space lane, Wilbur carves out a paltry living as a
+                      mechanic, repairing as many ships as he can to afford the
+                      ever-rising R.E.N.T payments to his corporate overlord,
+                      Uncle Chop. Where most of his customers find meaning in
+                      pastimes like worshipping deranged space gods, feeding
+                      random crap to a sentient black hole, endlessly digging
+                      for The Treasure™ or mentally enslaving donut shop
+                      workers, Wilbur lives a more humble life, fixing the
+                      galaxy’s ills one broken ship module at a time.
                     </p>
                     <p>
                       On an asteroid-bound service station in an unfrequented
@@ -339,7 +350,9 @@ function Detail() {
               </div>
               <div className="grid grid-cols-2 gap-4 mt-[40px]">
                 <div>
-                  <h2 className="font-semibold text-[14px] md:text-[16px]">Minimum</h2>
+                  <h2 className="font-semibold text-[14px] md:text-[16px]">
+                    Minimum
+                  </h2>
                   <ul className="mt-2">
                     <li className="flex flex-col gap-1 my-[13px]">
                       OS version
@@ -362,7 +375,9 @@ function Detail() {
                   </ul>
                 </div>
                 <div>
-                  <h2 className="font-semibold text-[14px] md:text-[16px]">Recommended</h2>
+                  <h2 className="font-semibold text-[14px] md:text-[16px]">
+                    Recommended
+                  </h2>
                   <ul className="mt-2">
                     <li className="flex flex-col gap-1 my-[13px]">
                       OS version

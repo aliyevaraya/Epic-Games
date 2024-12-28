@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DATA } from "../../context/DataContext";
-import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowUp, MdKeyboardArrowDown, MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 function Detail() {
   const { id } = useParams();
@@ -34,10 +34,10 @@ function Detail() {
             </button>
             <button className="opacity-[.6]">Achievements</button>
           </div>
-          <div className="md:flex flex-row-reverse relative w-full">
-            <div className="md:ml-[32px] md:sticky top-0 h-full">
+          <div className="md:flex flex-row-reverse gap-6 relative">
+            <div className="md:sticky md:w-[400px] top-0 h-full">
               <div className="flex">
-                <div className="w-full md:w-[300px] rounded-xl overflow-hidden">
+                <div className="w-full rounded-xl overflow-hidden">
                   <img
                     className="w-full h-full md:h-[200px] object-cover object-top"
                     src={game.keyImages[0].url}
@@ -180,75 +180,104 @@ function Detail() {
                 </div>
               </div>
             </div>
-            <div>
-              <div>
-                <div className="relative w-full h-72 bg-black py-4 rounded-lg">
-                  {mediaItems[currentMedia]?.type === "video" ? (
-                    <video
-                      src={mediaItems[currentMedia]?.src}
-                      controls
-                      autoPlay
-                      loop
-                      className="w-full h-full object-cover"
-                    ></video>
-                  ) : (
-                    <img
-                      src={mediaItems[currentMedia]?.src}
-                      alt={`media-${currentMedia}`}
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                </div>
-                <div className="flex justify-center items-center mt-4 gap-4">
-                  <button
-                    className="text-[#ffffffa6] hover:text-white"
-                    onClick={() =>
-                      setCurrentMedia((prev) =>
-                        prev === 0 ? mediaItems.length - 1 : prev - 1
-                      )
-                    }
-                  >
-                    &#8249;
-                  </button>
-                  <div className="flex gap-2 overflow-x-auto no-scrollbar">
-                    {mediaItems.map((media, index) => (
-                      <div
-                        key={index}
-                        onClick={() => setCurrentMedia(index)}
-                        className={`w-20 h-12 rounded-lg cursor-pointer ${
-                          currentMedia === index
-                            ? "border-2 border-white"
-                            : "opacity-50"
-                        }`}
-                      >
-                        {media.type === "video" ? (
-                          <img
-                            src={media.img || "/default-video-thumbnail.jpg"}
-                            alt={`video-${index}`}
-                            className="w-full h-full object-cover"
-                          />
-                        ) : (
-                          <img
-                            src={media.src}
-                            alt={`image-${index}`}
-                            className="w-full h-full object-cover"
-                          />
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                  <button
-                    className="text-[#ffffffa6] hover:text-white"
-                    onClick={() =>
-                      setCurrentMedia((prev) =>
-                        prev === mediaItems.length - 1 ? 0 : prev + 1
-                      )
-                    }
-                  >
-                    &#8250;
-                  </button>
-                </div>
+            <div className="w-full md:w-[calc(100%-300px)]">
+              {/* <div> */}
+              <div className="relative w-full h-72 bg-black py-4 rounded-lg">
+                {mediaItems[currentMedia]?.type === "video" ? (
+                  <video
+                    src={mediaItems[currentMedia]?.src}
+                    controls
+                    autoPlay
+                    loop
+                    className="w-full h-full object-cover"
+                  ></video>
+                ) : (
+                  <img
+                    src={mediaItems[currentMedia]?.src}
+                    alt={`media-${currentMedia}`}
+                    className="w-full h-full object-cover"
+                  />
+                )}
               </div>
+              <div className="flex justify-between md:justify-center items-center mt-4 gap-4">
+                <button
+                  className="text-[#ffffffa6] text-[20px] hover:text-white bg-[#ffffff26] w-[30px] h-[30px] rounded-full flex items-center justify-center"
+                  onClick={() => {
+                    setCurrentMedia((prev) => {
+                      const newIndex =
+                        prev === 0 ? mediaItems.length - 1 : prev - 1;
+                      document
+                        .getElementById(`thumbnail-${newIndex}`)
+                        ?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "nearest",
+                          inline: "center",
+                        });
+                      return newIndex;
+                    });
+                  }}
+                >
+                  <MdKeyboardArrowLeft />
+                </button>
+                <div className="flex gap-2 overflow-hidden w-[200px] md:w-full overflow-x-auto no-scrollbar">
+                  {mediaItems.map((media, index) => (
+                    <div
+                      key={index}
+                      id={`thumbnail-${index}`}
+                      onClick={() => {
+                        setCurrentMedia(index);
+                        document
+                          .getElementById(`thumbnail-${index}`)
+                          ?.scrollIntoView({
+                            behavior: "smooth",
+                            block: "nearest",
+                            inline: "center",
+                          });
+                      }}
+                      className={`w-[100px] h-12 rounded-lg cursor-pointer shrink-0 ${
+                        currentMedia === index
+                          ? "border-2 border-white"
+                          : "opacity-50"
+                      }`}
+                    >
+                      {media.type === "video" ? (
+                        <img
+                          src={media.img}
+                          alt={`video-${index}`}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <img
+                          src={media.src}
+                          alt={`image-${index}`}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <button
+                  className="text-[#ffffffa6] hover:text-white text-[20px] bg-[#ffffff26] w-[30px] h-[30px] rounded-full flex items-center justify-center"
+                  onClick={() => {
+                    setCurrentMedia((prev) => {
+                      const newIndex =
+                        prev === mediaItems.length - 1 ? 0 : prev + 1;
+                      document
+                        .getElementById(`thumbnail-${newIndex}`)
+                        ?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "nearest",
+                          inline: "center",
+                        });
+                      return newIndex;
+                    });
+                  }}
+                >
+                  <MdKeyboardArrowRight />
+                </button>
+              </div>
+
+              {/* </div> */}
               <div className="mt-[50px]">
                 <p>{game.description}</p>
               </div>

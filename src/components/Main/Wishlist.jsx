@@ -31,8 +31,43 @@ const Wishlist = () => {
       imgSrc: "path-to-image-1",
     },
   ];
+  const filters = [
+    {
+      filter: "Events",
+      subFilter: ["Holiday Sale"],
+    },
+    {
+      filter: "Genre",
+      subFilter: [
+        "Adventure",
+        "Action",
+        "Indie",
+        "Platformer",
+        "Shooter",
+        "Simulation",
+      ],
+    },
+    {
+      filter: "Features",
+      subFilter: [
+        "Single Player",
+        "Controller Support",
+        "Co-op",
+        "Multiplayer",
+      ],
+    },
+    {
+      filter: "Platform",
+      subFilter: ["Windows"],
+    },
+  ];
+
   const [openSort, setOpenSort] = useState(false);
-  const [openFilter, setOpenFilter] = useState(false);
+  const [openFilterIndex, setOpenFilterIndex] = useState(null);
+  function handleToggleFilter(index) {
+    setOpenFilterIndex(openFilterIndex === index ? null : index);
+  }
+
   return (
     <div className="bg-[#121212] text-white">
       <div className="containerr">
@@ -177,22 +212,36 @@ const Wishlist = () => {
             <div className="font-bold py-5 px-3 border-b border-[#ffffff26]">
               Filters
             </div>
-            <div className="text-[#ffffffa6] hover:text-white py-5 px-3 flex justify-between items-center border-b border-[#ffffff26] cursor-pointer">
-              <span onClick={() => setOpenFilter(!openFilter)}>Events</span>{" "}
-              {openFilter ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
-            </div>
-            <div className="text-[#ffffffa6] hover:text-white py-5 px-3 flex justify-between items-center border-b border-[#ffffff26] cursor-pointer">
-              <span>Genre</span>{" "}
-              {openFilter ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
-            </div>
-            <div className="text-[#ffffffa6] hover:text-white py-5 px-3 flex justify-between items-center border-b border-[#ffffff26] cursor-pointer">
-              <span>Features</span>{" "}
-              {openFilter ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
-            </div>
-            <div className="text-[#ffffffa6] hover:text-white py-5 px-3 flex justify-between items-center border-b border-[#ffffff26] cursor-pointer">
-              <span>Platform</span>{" "}
-              {openFilter ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
-            </div>
+            {filters.map((filter, i) => (
+              <div
+                key={i}
+                className="border-b border-[#ffffff26] text-[#ffffffa6] hover:text-white"
+              >
+                <button
+                  onClick={() => handleToggleFilter(i)}
+                  className="flex justify-between items-center py-5 px-3 w-full"
+                >
+                  <span>{filter.filter}</span>
+                  {openFilterIndex === i ? (
+                    <MdKeyboardArrowUp />
+                  ) : (
+                    <MdKeyboardArrowDown />
+                  )}
+                </button>
+                {openFilterIndex === i && (
+                  <ul>
+                    {filter.subFilter.map((item, j) => (
+                      <li
+                        key={j}
+                        className="rounded-md p-3 text-[#ffffffa6] hover:bg-[#ffffff26] mb-1 cursor-pointer"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>

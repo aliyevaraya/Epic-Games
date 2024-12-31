@@ -4,7 +4,10 @@ import {
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
   MdClose,
+  MdOutlineCheckCircle
 } from "react-icons/md";
+import { SlBasket } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 function Discover() {
   const [discover, setDiscover] = useState(false);
@@ -98,7 +101,12 @@ function Discover() {
                   </li>
                 </ul>
               </div>
+             
             </div>
+            <div className="flex items-center gap-5">
+                <Link to={"wishlist"}><span className="hidden md:block">Wishlist</span> <MdOutlineCheckCircle className="md:hidden block text-[24px]"/></Link>
+                <Link to={"cart"}><span className="hidden md:block">Cart</span> <SlBasket className="md:hidden block text-[24px]"/> <span className="basket-count"></span></Link>
+              </div>
           </div>
         </div>
       </div>

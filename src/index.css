@@ -231,7 +231,11 @@
 .show-more {
   background-image: linear-gradient(#10101400, #101014);
 }
-
+.text-linear{
+  background:linear-gradient(to right, rgb(191, 222, 124), rgb(255, 209, 92));
+  background-clip: text;
+  color: transparent;
+}
 @media only screen and (min-width: 768px) {
   .containerr {
     padding: 0 40px;

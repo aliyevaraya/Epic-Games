@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
-import {
-  MdKeyboardArrowDown,
-  MdKeyboardArrowUp,
-  MdFilterList,
-} from "react-icons/md";
+import { MdKeyboardArrowUp, MdFilterList } from "react-icons/md";
 
 const Wishlist = () => {
   const items = [
@@ -61,8 +57,20 @@ const Wishlist = () => {
       subFilter: ["Windows"],
     },
   ];
+  const options = [
+    "On Sale",
+    "Recently added",
+    "Alphabetical",
+    "Price: Low to High",
+    "Price: High to Low",
+  ];
+  const [selectedOption, setSelectedOption] = useState("On Sale");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
+    setIsDropdownOpen(false);
+  };
 
-  const [openSort, setOpenSort] = useState(false);
   const [openFilterIndex, setOpenFilterIndex] = useState(null);
   function handleToggleFilter(index) {
     setOpenFilterIndex(openFilterIndex === index ? null : index);
@@ -97,39 +105,31 @@ const Wishlist = () => {
             <div className="flex justify-between items-center mb-5">
               <div>
                 <span className="text-[#ffffffa6] mr-3">Sort by:</span>
-                <button className="relative">
-                  <span
-                    onClick={() => setOpenSort(!openSort)}
-                    className="flex items-center gap-1"
-                  >
-                    On Sale
-                    {openSort ? (
-                      <MdKeyboardArrowUp className="text-[20px]" />
-                    ) : (
-                      <MdKeyboardArrowDown className="text-[20px]" />
-                    )}
+                <button
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="relative"
+                >
+                  <span className="flex items-center gap-1">
+                    {selectedOption}
+                    <MdKeyboardArrowUp
+                      className={`[text-[20px] trans ${
+                        isDropdownOpen ? "rotate-180" : "rotate-0"
+                      }`}
+                    />
                   </span>
-                  <div
-                    className={`${
-                      openSort ? "flex" : "hidden"
-                    } flex-col text-left absolute mt-1 bg-[#303034] rounded-[12px] p-[6px] w-[150px] text-[14px]`}
-                  >
-                    <span className="p-2 hover:bg-[#ffffff26] rounded-[8px]">
-                      On Sale
-                    </span>
-                    <span className="p-2 hover:bg-[#ffffff26] rounded-[8px]">
-                      Recently added
-                    </span>
-                    <span className="p-2 hover:bg-[#ffffff26] rounded-[8px]">
-                      Alphabetical
-                    </span>
-                    <span className="p-2 hover:bg-[#ffffff26] rounded-[8px]">
-                      Price: Low to High
-                    </span>
-                    <span className="p-2 hover:bg-[#ffffff26] rounded-[8px]">
-                      Price: High to Low
-                    </span>
-                  </div>
+                  {isDropdownOpen && (
+                    <ul className="absolute left-0 p-1 bg-[#303034] text-white text-left rounded-xl leading-[1.3]">
+                      {options.map((option, index) => (
+                        <li
+                          key={index}
+                          onClick={() => handleOptionClick(option)}
+                          className="py-[10px] px-3 hover:bg-[#ffffff26] whitespace-nowrap rounded-lg cursor-pointer"
+                        >
+                          {option}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </button>
               </div>
               <div className="lg:hidden flex items-center gap-1 font-medium bg-[#ffffff26] p-1 px-2 rounded-md hover:bg-[#f0eded59]">
@@ -222,11 +222,11 @@ const Wishlist = () => {
                   className="flex justify-between items-center py-5 px-3 w-full"
                 >
                   <span>{filter.filter}</span>
-                  {openFilterIndex === i ? (
-                    <MdKeyboardArrowUp />
-                  ) : (
-                    <MdKeyboardArrowDown />
-                  )}
+                  <MdKeyboardArrowUp
+                    className={`[text-[20px] ${
+                      openFilterIndex === i ? "rotate-180" : "rotate-0"
+                    }`}
+                  />
                 </button>
                 {openFilterIndex === i && (
                   <ul>

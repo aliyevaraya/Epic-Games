@@ -5,8 +5,12 @@ import { Navigation } from "swiper/modules";
 import { SlArrowRight } from "react-icons/sl";
 import { IoMdAddCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { FAV } from "../../context/FavDataContext";
 
 function DiscoverSomething({ data }) {
+  const { addToFav } = useContext(FAV);
+
   return (
     <div className="text-white px-4 pb-[64px] relative">
       <h3 className="discover md:absolute md:top-3 flex items-center text-[20px] font-bold mb-4 mr-4 cursor-pointer">
@@ -53,6 +57,18 @@ function DiscoverSomething({ data }) {
                       <div className="hoverLay after:hover:opacity-[1]"></div>
                     </div>
                     <button
+                     onClick={(e) => {
+                      e.preventDefault();
+                      addToFav(
+                        game.id,
+                        game.keyImages[2].url,
+                        game.title,
+                        game.price?.appliedRules?.[0]?.discountSetting?.discountPercentage,
+                        game.price?.price?.discountPrice,
+                        game.price?.price?.originalPrice,
+                        game.price?.appliedRules?.[0]?.endDate
+                      );
+                    }}
                       className="opacity-0 group-hover:opacity-[1] text-[24px] absolute top-2 right-2 trans"
                       title="Add to wishlist"
                     >

@@ -1,10 +1,27 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { MdKeyboardArrowUp, MdFilterList } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { FAV } from "../../context/FavDataContext";
+import { Link, useParams } from "react-router-dom";
+import { BASKET } from "../../context/BasketContext";
 
 const Wishlist = () => {
-  let wishlistData = null;
+  const { type } = useParams();
+  const { fav, setFav } = useContext(FAV);
+  const { basket, addToCart } = useContext(BASKET);
+  let data = type === "wishlist" ? fav : type === "cart" ? basket : [];
+
+  console.log(data);
+  fav.map((game) => {
+    game.endSale = game.endSale
+      ? new Intl.DateTimeFormat("en-US", {
+          year: "2-digit",
+          month: "2-digit",
+          day: "2-digit",
+        }).format(new Date(game.endSale))
+      : "";
+  });
+
   const filters = [
     {
       filter: "Events",
@@ -76,9 +93,11 @@ const Wishlist = () => {
               </span>
             </a>
           </div>
-          <h1 className="text-[40px] font-bold">My Wishlist</h1>
+          <h1 className="text-[40px] font-bold">
+            {type === "wishlist" ? "Your Wishlist" : "Your Cart"}
+          </h1>
         </div>
-        {wishlistData ? (
+        {data.length > 0 ? (
           <div className="lg:flex gap-[30px] items-baseline">
             <div className=" w-full">
               <div className="flex justify-between items-center mb-5">
@@ -92,7 +111,7 @@ const Wishlist = () => {
                       {selectedOption}
                       <MdKeyboardArrowUp
                         className={`[text-[20px] trans ${
-                          isDropdownOpen ? "rotate-180" : "rotate-0"
+                          isDropdownOpen ? "rotate-0" : "rotate-180"
                         }`}
                       />
                     </span>
@@ -116,46 +135,54 @@ const Wishlist = () => {
                 </div>
               </div>
               <div>
-                {wishlistData.map((item, i) => (
-                  <div
-                    key={i}
-                    className="bg-[#202024] p-4 rounded-lg flex gap-4 mb-4"
-                  >
-                    <img
-                      src="https://cdn1.epicgames.com/offer/b61e8ddd14e94619b7a74cf9d73f86b5/EGS_EASPORTSFC25StandardEdition_EACanada_S1_2560x1440-f650d1a50a08e78279071d931145822a?resize=1&w=480&h=270&quality=medium"
-                      alt={item.title}
-                      className="w-[60px] h-[70px] object-cover rounded-md"
-                    />
-                    <div className="flex flex-col justify-between w-full overflow-hidden">
-                      <div className="flex flex-col md:flex-row md:justify-between">
-                        <div>
-                          <span className="bg-[#ffffff26] px-2 py-1 inline-block text-xs font-medium rounded-md mb-2">
-                            Base Game
-                          </span>
-                          <h2 className="text-[20px] font-bold truncate">
-                            {item.title}
-                          </h2>
-                        </div>
-                        <div>
-                          <div className="flex items-center justify-between xxs:justify-start md:justify-between gap-2 mt-5 mb-[10px]">
-                            <span className="text-[#26bbff] text-[12px] font-bold">
-                              {item.discount}
+                {data && data.length > 0 &&
+                  data.map((item, i) => (
+                    <div
+                      key={i}
+                      className="bg-[#202024] p-4 rounded-lg flex gap-4 mb-4"
+                    >
+                      <img
+                        src={item.img}
+                        alt={item.title}
+                        className="w-[60px] h-[70px] object-cover rounded-md"
+                      />
+                      <div className="flex flex-col justify-between w-full overflow-hidden">
+                        <div className="flex flex-col md:flex-row md:justify-between">
+                          <div>
+                            <span className="bg-[#ffffff26] px-2 py-1 inline-block text-xs font-medium rounded-md mb-2">
+                              Base Game
                             </span>
-                            <div className="flex flex-col xxs:flex-row xxs:justify-between xxs:items-center xxs:gap-2">
-                              <span className="line-through text-[14px] text-[#ffffffa6]">
-                                {item.oldPrice}
-                              </span>
-                              <span className="text-white font-bold">
-                                {item.newPrice}
-                              </span>
-                            </div>
+                            <h2 className="text-[20px] font-bold truncate">
+                              {item.title}
+                            </h2>
                           </div>
-                          <p className="text-[#ffffffa6] text-[12px]">
-                            Sale ends {item.offerEnds}
-                          </p>
+                          <div>
+                            <div className="flex items-center justify-between xxs:justify-start md:justify-between gap-2 mt-5 mb-[10px]">
+                              {item.discount ? (
+                                <span className="bg-[#26bbff] text-black text-[12px] font-medium px-1 rounded-lg">
+                                  -{item.discount}%
+                                </span>
+                              ) : (
+                                ""
+                              )}
+                              <div className="flex flex-col xxs:flex-row xxs:justify-between xxs:items-center xxs:gap-2">
+                                <span className="line-through text-[14px] text-[#ffffffa6]">
+                                  ${(item.discountPrice / 100).toFixed(2)}
+                                </span>
+                                <span className="text-white font-bold">
+                                  ${(item.price / 100).toFixed(2)}
+                                </span>
+                              </div>
+                            </div>
+                            {item.endSale ? (
+                              <p className="text-[#ffffffa6] text-[12px]">
+                                Sale ends {item.endSale}
+                              </p>
+                            ) : (
+                              ""
+                            )}
+                          </div>
                         </div>
-                      </div>
-                      {item.rewardInfo && (
                         <div className="flex items-center gap-1 mt-4">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -170,21 +197,40 @@ const Wishlist = () => {
                             ></path>
                           </svg>
                           <span className="text-sm mt-1 text-linear leading-[1.7]">
-                            {item.rewardInfo}
+                            Earn a boosted 10% back in Epic Rewards, offer ends
+                            Jan 9.
                           </span>
                         </div>
-                      )}
-                      <div className="flex flex-col justify-end xxs:flex-row gap-5 text-[14px] mt-5 font-semibold ">
-                        <button className="text-sm text-gray-400 hover:text-white">
-                          Remove
-                        </button>
-                        <button className="bg-[#26bbff] px-3 py-1 rounded-md text-black hover:bg-[#61cdff]">
-                          View In Cart
-                        </button>
+                        <div className="flex flex-col justify-end xxs:flex-row gap-5 text-[14px] mt-5 font-semibold ">
+                          <button
+                            onClick={() =>
+                              setFav(fav.filter((game) => game.id !== item.id))
+                            }
+                            className="text-sm text-[#ffffffa6] hover:text-white"
+                          >
+                            Remove
+                          </button>
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              addToCart(
+                                item.id,
+                                item.img,
+                                item.title,
+                                item.discount,
+                                item.discountPrice,
+                                item.price,
+                                item.endSale
+                              );
+                            }}
+                            className={`${type === "wishlist" ? "bg-[#26bbff] hover:bg-[#61cdff] text-black " : "text-[#ffffffa6]" } px-3 py-1 rounded-md `}
+                          >
+                            {type === "wishlist" ? "Add To Cart" : "Move to wishlist"}
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
             <div className="hidden lg:block lg:w-[250px]">
@@ -203,7 +249,7 @@ const Wishlist = () => {
                     <span>{filter.filter}</span>
                     <MdKeyboardArrowUp
                       className={`[text-[20px] ${
-                        openFilterIndex === i ? "rotate-180" : "rotate-0"
+                        openFilterIndex === i ? "rotate-0" : "rotate-180"
                       }`}
                     />
                   </button>
@@ -245,7 +291,9 @@ const Wishlist = () => {
               </g>
             </svg>
             <p className="text-[30px] lg:text-[40px] 2xl:text-[50px] lg:w-[700px] font-bold lg:leading-[45px] 2xl:leading-[55px] leading-[35px]">
-              You haven't added anything to your wishlist yet.
+              {type === "wishlist"
+                ? "You haven't added anything to your wishlist yet."
+                : "Your Cart is empty."}
             </p>
             <Link
               className="bg-[#26bbff] text-[14px] text-black font-semibold px-3 py-1 rounded-md"

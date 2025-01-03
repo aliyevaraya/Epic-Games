@@ -4,6 +4,7 @@ import { MdKeyboardArrowUp, MdFilterList } from "react-icons/md";
 import { FAV } from "../../context/FavDataContext";
 import { Link, useParams } from "react-router-dom";
 import { BASKET } from "../../context/BasketContext";
+import { Cookies } from "react-cookie";
 
 const Wishlist = () => {
   const { type } = useParams();
@@ -135,7 +136,8 @@ const Wishlist = () => {
                 </div>
               </div>
               <div>
-                {data && data.length > 0 &&
+                {data &&
+                  data.length > 0 &&
                   data.map((item, i) => (
                     <div
                       key={i}
@@ -203,9 +205,14 @@ const Wishlist = () => {
                         </div>
                         <div className="flex flex-col justify-end xxs:flex-row gap-5 text-[14px] mt-5 font-semibold ">
                           <button
-                            onClick={() =>
-                              setFav(fav.filter((game) => game.id !== item.id))
-                            }
+                            onClick={() => {
+                              const updatedFav = fav.filter(
+                                (game) => game.id !== item.id
+                              );
+                              setFav(updatedFav);
+                              const cookie = new Cookies();
+                              cookie.set("favorite", updatedFav);
+                            }}
                             className="text-sm text-[#ffffffa6] hover:text-white"
                           >
                             Remove
@@ -223,9 +230,15 @@ const Wishlist = () => {
                                 item.endSale
                               );
                             }}
-                            className={`${type === "wishlist" ? "bg-[#26bbff] hover:bg-[#61cdff] text-black " : "text-[#ffffffa6]" } px-3 py-1 rounded-md `}
+                            className={`${
+                              type === "wishlist"
+                                ? "bg-[#26bbff] hover:bg-[#61cdff] text-black "
+                                : "text-[#ffffffa6]"
+                            } px-3 py-1 rounded-md `}
                           >
-                            {type === "wishlist" ? "Add To Cart" : "Move to wishlist"}
+                            {type === "wishlist"
+                              ? "Add To Cart"
+                              : "Move to wishlist"}
                           </button>
                         </div>
                       </div>

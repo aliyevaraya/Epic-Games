@@ -5,12 +5,11 @@ import { Navigation } from "swiper/modules";
 import { SlArrowRight } from "react-icons/sl";
 import { IoMdAddCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { FAV } from "../../context/FavDataContext";
 
 function DiscoverSomething({ data }) {
   const { fav, addToFav } = useContext(FAV);
-  const [favorites, setFavorites] = useState({});
   return (
     <div className="text-white px-4 pb-[64px] relative">
       <h3 className="discover md:absolute md:top-3 flex items-center text-[20px] font-bold mb-4 mr-4 cursor-pointer">
@@ -36,7 +35,6 @@ function DiscoverSomething({ data }) {
       >
         {data &&
           data.map((game, index) => {
-            const isFavorite = favorites[game.id] || false;
             const price = game.price?.price?.originalPrice ?? game.price;
             const discountedPrice = game.price?.price?.discountPrice;
             let discount = null;
@@ -60,7 +58,6 @@ function DiscoverSomething({ data }) {
                     <button
                       onClick={(e) => {
                         e.preventDefault();
-                        // handleFavToggle(game);
                         addToFav(
                           game.id,
                           game.keyImages[2].url,

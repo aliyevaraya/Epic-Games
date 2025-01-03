@@ -1,13 +1,15 @@
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { DATA } from "../../context/DataContext";
 import { BASKET } from "../../context/BasketContext";
 import DetailSlider from "./DetailSlider";
+import { FAV } from "../../context/FavDataContext";
 
 function Detail() {
   const { id } = useParams();
-  const { addToCart } = useContext(BASKET);
-  const { newRelease} = useContext(DATA);
+  const { basket, addToBasket } = useContext(BASKET);
+  const { fav, addToFav } = useContext(FAV);
+  const { newRelease } = useContext(DATA);
   const game = newRelease.find((game) => game.id === id);
 
   if (game) {
@@ -55,27 +57,52 @@ function Detail() {
                   <button className="py-3 px-5 bg-[#26bbff] text-black rounded-[10px] hover:bg-[#61cdff]">
                     Buy Now
                   </button>
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      addToCart(
-                        game.id,
-                        game.keyImages[2].url,
-                        game.title,
-                        game.price?.appliedRules?.[0]?.discountSetting
-                          ?.discountPercentage,
-                        game.price?.price?.discountPrice,
-                        game.price?.price?.originalPrice,
-                        game.price?.appliedRules?.[0]?.endDate
-                      );
-                    }}
-                    className="py-3 px-5 bg-[#ffffff26] hover:bg-[#ffffff59] rounded-[10px]"
-                  >
-                    Add To Cart
-                  </button>
-                  <button className="py-3 px-5 bg-[#ffffff26] hover:bg-[#ffffff59] rounded-[10px]">
-                    Add to Wishlist
-                  </button>
+                  <div className="py-3 px-5 text-center bg-[#ffffff26] hover:bg-[#ffffff59] rounded-[10px]">
+                    {basket.find((item) => item.id === game.id) ? (
+                      <Link to="/cart">View in Cart</Link>
+                    ) : (
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          addToBasket(
+                            game.id,
+                            game.keyImages[2].url,
+                            game.title,
+                            game.price?.appliedRules?.[0]?.discountSetting
+                              ?.discountPercentage,
+                            game.price?.price?.discountPrice,
+                            game.price?.price?.originalPrice,
+                            game.price?.appliedRules?.[0]?.endDate
+                          );
+                        }}
+                      >
+                        Add to Cart
+                      </button>
+                    )}
+                  </div>
+                  <div className="py-3 px-5 text-center bg-[#ffffff26] hover:bg-[#ffffff59] rounded-[10px]">
+                    {fav.find((item) => item.id === game.id) ? (
+                      <Link to="/wishlist">View in Wishlist</Link>
+                    ) : (
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          addToFav(
+                            game.id,
+                            game.keyImages[2].url,
+                            game.title,
+                            game.price?.appliedRules?.[0]?.discountSetting
+                              ?.discountPercentage,
+                            game.price?.price?.discountPrice,
+                            game.price?.price?.originalPrice,
+                            game.price?.appliedRules?.[0]?.endDate
+                          );
+                        }}
+                      >
+                        Add to Wishlist
+                      </button>
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="py-5">
@@ -133,7 +160,9 @@ function Detail() {
                     </tr>
                     <tr>
                       <td className="py-[10px]">Release Date</td>
-                      <td className="text-right text-white">{game.releaseDate}</td>
+                      <td className="text-right text-white">
+                        {game.releaseDate}
+                      </td>
                     </tr>
                     <tr>
                       <td className="py-[10px]">Platform</td>

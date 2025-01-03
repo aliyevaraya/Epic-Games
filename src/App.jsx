@@ -17,8 +17,8 @@ function App() {
         <Route index element={<Main />} />
         <Route path="/support" element={<Support />} />
         <Route path="/game/:id" element={<Detail />} />
-        <Route path="/:type" element={<Wishlist type="wishlist"/>} />
-        <Route path="/:type" element={<Wishlist type="cart"/>} />
+        <Route path="/:type" element={<Wishlist />} />
+        {/* <Route path="/cart" element={<Wishlist type="cart"/>} /> */}
       </Route>
     </Routes>
   );

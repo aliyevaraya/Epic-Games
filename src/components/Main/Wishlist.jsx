@@ -9,11 +9,11 @@ import { Cookies } from "react-cookie";
 const Wishlist = () => {
   const { type } = useParams();
   const { fav, setFav } = useContext(FAV);
-  const { basket, addToCart } = useContext(BASKET);
+  const { basket, addToBasket } = useContext(BASKET);
   let data = type === "wishlist" ? fav : type === "cart" ? basket : [];
 
   console.log(data);
-  fav.map((game) => {
+  data.map((game) => {
     game.endSale = game.endSale
       ? new Intl.DateTimeFormat("en-US", {
           year: "2-digit",
@@ -143,11 +143,13 @@ const Wishlist = () => {
                       key={i}
                       className="bg-[#202024] p-4 rounded-lg flex gap-4 mb-4"
                     >
-                      <img
-                        src={item.img}
-                        alt={item.title}
-                        className="w-[60px] h-[70px] object-cover rounded-md"
-                      />
+                      <Link to={`/game/${item.id}`}>
+                        <img
+                          src={item.img}
+                          alt={item.title}
+                          className="w-[60px] h-[70px] object-cover rounded-md"
+                        />
+                      </Link>
                       <div className="flex flex-col justify-between w-full overflow-hidden">
                         <div className="flex flex-col md:flex-row md:justify-between">
                           <div>
@@ -169,10 +171,10 @@ const Wishlist = () => {
                               )}
                               <div className="flex flex-col xxs:flex-row xxs:justify-between xxs:items-center xxs:gap-2">
                                 <span className="line-through text-[14px] text-[#ffffffa6]">
-                                  ${(item.discountPrice / 100).toFixed(2)}
+                                  ${(item.price / 100).toFixed(2)}
                                 </span>
                                 <span className="text-white font-bold">
-                                  ${(item.price / 100).toFixed(2)}
+                                  ${(item.discountPrice / 100).toFixed(2)}
                                 </span>
                               </div>
                             </div>
@@ -217,29 +219,39 @@ const Wishlist = () => {
                           >
                             Remove
                           </button>
-                          <button
-                            onClick={(e) => {
-                              e.preventDefault();
-                              addToCart(
-                                item.id,
-                                item.img,
-                                item.title,
-                                item.discount,
-                                item.discountPrice,
-                                item.price,
-                                item.endSale
-                              );
-                            }}
+                          <div
                             className={`${
                               type === "wishlist"
                                 ? "bg-[#26bbff] hover:bg-[#61cdff] text-black "
                                 : "text-[#ffffffa6]"
                             } px-3 py-1 rounded-md `}
                           >
-                            {type === "wishlist"
-                              ? "Add To Cart"
-                              : "Move to wishlist"}
-                          </button>
+                            {type === "wishlist" ? (
+                              basket.find((game) => game.id === item.id) ? (
+                                <Link to="/cart">View in Cart</Link>
+                              ) : (
+                                <button
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    addToBasket(
+                                      item.id,
+                                      item.keyImages?.[2]?.url,
+                                      item.title,
+                                      item.price?.appliedRules?.[0]
+                                        ?.discountSetting?.discountPercentage,
+                                      item.price?.price?.discountPrice,
+                                      item.price?.price?.originalPrice,
+                                      item.price?.appliedRules?.[0]?.endDate
+                                    );
+                                  }}
+                                >
+                                  Add to Cart
+                                </button>
+                              )
+                            ) : (
+                              <button>Move to Wishlist</button>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>

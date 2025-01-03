@@ -5,12 +5,12 @@ import { Navigation } from "swiper/modules";
 import { SlArrowRight } from "react-icons/sl";
 import { IoMdAddCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FAV } from "../../context/FavDataContext";
 
 function DiscoverSomething({ data }) {
-  const { addToFav } = useContext(FAV);
-
+  const { fav, addToFav } = useContext(FAV);
+  const [favorites, setFavorites] = useState({});
   return (
     <div className="text-white px-4 pb-[64px] relative">
       <h3 className="discover md:absolute md:top-3 flex items-center text-[20px] font-bold mb-4 mr-4 cursor-pointer">
@@ -36,6 +36,7 @@ function DiscoverSomething({ data }) {
       >
         {data &&
           data.map((game, index) => {
+            const isFavorite = favorites[game.id] || false;
             const price = game.price?.price?.originalPrice ?? game.price;
             const discountedPrice = game.price?.price?.discountPrice;
             let discount = null;
@@ -57,22 +58,39 @@ function DiscoverSomething({ data }) {
                       <div className="hoverLay after:hover:opacity-[1]"></div>
                     </div>
                     <button
-                     onClick={(e) => {
-                      e.preventDefault();
-                      addToFav(
-                        game.id,
-                        game.keyImages[2].url,
-                        game.title,
-                        game.price?.appliedRules?.[0]?.discountSetting?.discountPercentage,
-                        game.price?.price?.discountPrice,
-                        game.price?.price?.originalPrice,
-                        game.price?.appliedRules?.[0]?.endDate
-                      );
-                    }}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        // handleFavToggle(game);
+                        addToFav(
+                          game.id,
+                          game.keyImages[2].url,
+                          game.title,
+                          game.price?.appliedRules?.[0]?.discountSetting
+                            ?.discountPercentage,
+                          game.price?.price?.discountPrice,
+                          game.price?.price?.originalPrice,
+                          game.price?.appliedRules?.[0]?.endDate
+                        );
+                      }}
                       className="opacity-0 group-hover:opacity-[1] text-[24px] absolute top-2 right-2 trans"
                       title="Add to wishlist"
                     >
-                      <IoMdAddCircle className="text-black" />
+                      {fav.find((item) => item.id === game.id) ? (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="bg-black w-[22px] h-[22px] p-1 rounded-full border"
+                          viewBox="-10 -10 468.8 468.8"
+                        >
+                          <path
+                            fill="currentColor"
+                            strokeWidth="10"
+                            stroke="currentColor"
+                            d="M142.8 323.85L35.7 216.75 0 252.45l142.8 142.8 306-306-35.7-35.7z"
+                          ></path>
+                        </svg>
+                      ) : (
+                        <IoMdAddCircle className="text-white border-2 bg-black text-[26px] rounded-full" />
+                      )}
                     </button>
                     <span className="text-[12px] text-[#ffffffa6] inline-block mt-2">
                       Base Game

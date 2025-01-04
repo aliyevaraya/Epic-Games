@@ -20,8 +20,6 @@ function Detail() {
       day: "2-digit",
     }).format(new Date(game && game.releaseDate));
   }
-console.log(game);
-
   return (
     game && (
       <div className="bg-[#101014] text-white">

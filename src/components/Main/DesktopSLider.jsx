@@ -7,15 +7,12 @@ import { sliderData } from "../../services/silderData";
 import { IoIosAddCircleOutline } from "react-icons/io";
 
 function DesktopSLider() {
-  sliderData.forEach((item, index) => {
-    console.log(`Item ${index + 1}:`, item);
-  });
   return (
     <Swiper
       cssMode={true}
-      // autoplay={{
-      //   delay: 7000,
-      // }}
+      autoplay={{
+        delay: 7000,
+      }}
       pagination={{
         clickable: true,
         renderBullet: (index, className) => {

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GoSearch } from "react-icons/go";
 import {
   MdKeyboardArrowUp,
@@ -6,55 +6,115 @@ import {
   MdOutlineCheckCircle,
 } from "react-icons/md";
 import { SlBasket } from "react-icons/sl";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { BASKET } from "../../context/BasketContext";
+import { DATA } from "../../context/DataContext";
 
 function Discover() {
+  const { sell, play, wishlist, newRelease } = useContext(DATA);
+  const allGames = [...wishlist, ...newRelease, ...play, ...sell];
   const { basket } = useContext(BASKET);
   const [discover, setDiscover] = useState(false);
-  const [search, setSearch] = useState(false);
+  const [toggleSearch, setToggleSearch] = useState(false);
+  const [search, setSearch] = useState("");
+  const [output, setOutput] = useState("");
+  const location = useLocation();
+
+  useEffect(() => {
+    setToggleSearch(false);
+    setSearch("");
+  }, [location.pathname]);
+  useEffect(() => {
+    setOutput(
+      search === ""
+        ? ""
+        : allGames.filter((game) =>
+            game.title.toLowerCase().startsWith(search.toLowerCase())
+          )
+    );
+  }, [search]);
 
   return (
     <>
       <div className={`sticky top-0 z-[3] bg-[#101014] text-white`}>
         <div className="containerr">
           <div
-            className={`h-[80px] m-auto flex items-center justify-between ${
-              search ? "bg-[#18181c]" : "bg-[transparent]"
+            className={`h-[80px] w-full m-auto flex items-center justify-between ${
+              toggleSearch ? "bg-[#18181c]" : "bg-[transparent]"
             }`}
           >
             <div
-              className={`flex justify-between items-center ${
-                search ? " w-full" : "w-fit"
-              }`}
+              className={`relative  
+               ${
+                 toggleSearch
+                   ? " w-full overflow-visible"
+                   : "w-fit overflow-hidden"
+               }`}
             >
-              <div
-                className={`h-[40px] px-3 my-[10px] trans flex items-center rounded-[50%] lg:rounded-3xl lg:bg-[#202024]  ${
-                  search ? "w-full rounded-sm" : "hover:bg-[#404044]"
-                }`}
-              >
-                <GoSearch
-                  onClick={() => setSearch(true)}
-                  className="opacity-[.65] cursor-pointer"
-                />
-                <input
-                  type="search"
+              <div className={`flex justify-between items-center `}>
+                <div
+                  className={`h-[40px] w-[40px] px-3 my-[10px] trans flex items-center rounded-[50%] lg:rounded-3xl lg:bg-[#202024]  ${
+                    toggleSearch ? "w-full rounded-sm" : "hover:bg-[#404044]"
+                  }`}
+                >
+                  <GoSearch
+                    onClick={() => setToggleSearch(true)}
+                    className="opacity-[.65] cursor-pointer"
+                  />
+                  <input
+                    value={search}
+                    onInput={(e) => setSearch(e.target.value)}
+                    type="text"
+                    className={`${
+                      toggleSearch ? "inline" : "hidden"
+                    } lg:inline bg-transparent outline-none pl-3 text-[14px] w-full`}
+                    placeholder="Search store"
+                  />
+                </div>
+                <MdClose
+                  onClick={() => setToggleSearch(false)}
                   className={`${
-                    search ? "inline" : "hidden"
-                  } lg:inline bg-transparent outline-none pl-3 text-[14px]`}
-                  placeholder="Search store"
+                    toggleSearch
+                      ? "block mr-4 text-[20px] cursor-pointer"
+                      : "hidden"
+                  }`}
                 />
               </div>
-              <MdClose
-                onClick={() => setSearch(false)}
-                className={`${
-                  search ? "block mr-4 text-[20px] cursor-pointer" : "hidden"
-                }`}
-              />
+              <div className="bg-[#18181c] w-full absolute left-0 py-2 px-4">
+                <ul className={`${toggleSearch ? "block" : "hidden"}`}>
+                  {output &&
+                    output.slice(0, 5).map((game, i) => (
+                      <li key={i}>
+                        <Link
+                          onClick={() => {
+                            setToggleSearch(false);
+                            setSearch("");
+                          }}
+                          to={`game/${game.id}`}
+                          className="flex gap-4 items-center my-3"
+                        >
+                          <div className="w-[30px] h-[40px]">
+                            <img
+                              className="w-full h-full object-cover rounded-md"
+                              src={game.keyImages[0].url}
+                              alt={game.title}
+                            />
+                          </div>
+                          <p className="text-[14px] truncate w-[70%]">
+                            {game.title}
+                          </p>
+                        </Link>
+                      </li>
+                    ))}
+                  <li className={`py-3 ${search ? "block" : "hidden"}`}>
+                    <Link className="text-[14px] opacity-[.5]">View more</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div
-              className={`h-[80px] lg:relative static flex flex-col items-center m-auto w-[80%] justify-center lg:items-start ml-[20px] ${
-                search ? "hidden" : "flex"
+              className={`h-[80px] lg:relative static flex flex-col items-center justify-center lg:items-start ml-[20px] ${
+                toggleSearch ? "hidden" : "flex"
               } `}
             >
               <button
@@ -71,7 +131,7 @@ function Discover() {
                 }
               </button>
               <div
-                className={`w-full lg:w-[200px] h-screen lg:h-auto 2xl:h-full absolute 2xl:static top-[100%] left-0 lg:top-[90%] lg:-left-[10px] z-[2] ${
+                className={`w-full lg:w-[200px] lg:h-auto 2xl:h-full absolute 2xl:static top-[100%] left-0 lg:top-[90%] lg:-left-[10px] z-[2] ${
                   discover ? "block" : "hidden 2xl:block "
                 }`}
               >
@@ -107,7 +167,7 @@ function Discover() {
             </div>
             <div
               className={`flex items-center gap-5 ${
-                search ? "hidden" : "block"
+                toggleSearch ? "hidden" : "block"
               }`}
             >
               <Link to={"wishlist"}>
@@ -131,8 +191,14 @@ function Discover() {
           </div>
         </div>
       </div>
-      {discover || search ? (
-        <div className="block lg:hidden fixed top-0 left-0 w-full h-screen bg-[#000000b3] z-[2]"></div>
+      {discover || toggleSearch ? (
+        <div
+          onClick={() => {
+            setToggleSearch(false);
+            setDiscover(false);
+          }}
+          className="block lg:hidden fixed top-0 left-0 w-full h-screen bg-[#000000b3] z-[2] cursor-pointer"
+        ></div>
       ) : (
         ""
       )}

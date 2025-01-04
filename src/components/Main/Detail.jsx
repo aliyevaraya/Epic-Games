@@ -68,6 +68,7 @@ function Detail() {
                             game.id,
                             game.keyImages[2].url,
                             game.title,
+                            game.price.price.discount,
                             game.price?.appliedRules?.[0]?.discountSetting
                               ?.discountPercentage,
                             game.price?.price?.discountPrice,

@@ -12,7 +12,7 @@ const Wishlist = () => {
   const { basket, setBasket, addToBasket } = useContext(BASKET);
   let data = type === "wishlist" ? fav : type === "cart" ? basket : [];
 
-  console.log(basket);
+  console.log(data);
   data.length &&
     data?.map((game) => {
       game.endSale = game.endSale
@@ -67,7 +67,6 @@ const Wishlist = () => {
     setSelectedOption(option);
     setIsDropdownOpen(false);
   };
-
   const [openFilterIndex, setOpenFilterIndex] = useState(null);
   function handleToggleFilter(index) {
     setOpenFilterIndex(openFilterIndex === index ? null : index);
@@ -100,42 +99,44 @@ const Wishlist = () => {
           </h1>
         </div>
         {data.length > 0 ? (
-          <div className="lg:flex gap-[30px] items-baseline">
-            <div className=" w-full">
-              <div className="flex justify-between items-center mb-5">
-                <div>
-                  <span className="text-[#ffffffa6] mr-3">Sort by:</span>
-                  <button
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="relative"
-                  >
-                    <span className="flex items-center gap-1">
-                      {selectedOption}
-                      <MdKeyboardArrowUp
-                        className={`[text-[20px] trans ${
-                          isDropdownOpen ? "rotate-0" : "rotate-180"
-                        }`}
-                      />
-                    </span>
-                    {isDropdownOpen && (
-                      <ul className="absolute left-0 p-1 bg-[#303034] text-white text-left rounded-xl leading-[1.3]">
-                        {options.map((option, index) => (
-                          <li
-                            key={index}
-                            onClick={() => handleOptionClick(option)}
-                            className="py-[10px] px-3 hover:bg-[#ffffff26] whitespace-nowrap rounded-lg cursor-pointer"
-                          >
-                            {option}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </button>
+          <div className={`lg:flex ${type === "wishlist" ? "items-baseline gap-[30px]" : "gap-[36px]"}`}>
+            <div className=" w-full lg:w-[calc(100%-300px)]">
+              {type === "wishlist" && (
+                <div className="flex justify-between items-center mb-5">
+                  <div>
+                    <span className="text-[#ffffffa6] mr-3">Sort by:</span>
+                    <button
+                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                      className="relative"
+                    >
+                      <span className="flex items-center gap-1">
+                        {selectedOption}
+                        <MdKeyboardArrowUp
+                          className={`[text-[20px] trans ${
+                            isDropdownOpen ? "rotate-0" : "rotate-180"
+                          }`}
+                        />
+                      </span>
+                      {isDropdownOpen && (
+                        <ul className="absolute left-0 p-1 bg-[#303034] text-white text-left rounded-xl leading-[1.3]">
+                          {options.map((option, index) => (
+                            <li
+                              key={index}
+                              onClick={() => handleOptionClick(option)}
+                              className="py-[10px] px-3 hover:bg-[#ffffff26] whitespace-nowrap rounded-lg cursor-pointer"
+                            >
+                              {option}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </button>
+                  </div>
+                  <div className="lg:hidden flex items-center gap-1 font-medium bg-[#ffffff26] p-1 px-2 rounded-md hover:bg-[#f0eded59]">
+                    Filters <MdFilterList />
+                  </div>
                 </div>
-                <div className="lg:hidden flex items-center gap-1 font-medium bg-[#ffffff26] p-1 px-2 rounded-md hover:bg-[#f0eded59]">
-                  Filters <MdFilterList />
-                </div>
-              </div>
+              )}
               <div>
                 {data.map((item, i) => (
                   <div
@@ -161,9 +162,9 @@ const Wishlist = () => {
                         </div>
                         <div>
                           <div className="flex items-center justify-between xxs:justify-start md:justify-between gap-2 mt-5 mb-[10px]">
-                            {item.discount ? (
+                            {item.discountPerc ? (
                               <span className="bg-[#26bbff] text-black text-[12px] font-medium px-1 rounded-lg">
-                                -{item.discount}%
+                                -{item.discountPerc}%
                               </span>
                             ) : (
                               ""
@@ -249,6 +250,7 @@ const Wishlist = () => {
                                       item.id,
                                       item.img,
                                       item.title,
+                                      item.discountPerc,
                                       item.discount,
                                       item.discountPrice,
                                       item.price,
@@ -273,6 +275,7 @@ const Wishlist = () => {
                                       item.id,
                                       item.img,
                                       item.title,
+                                      item.discountPerc,
                                       item.discount,
                                       item.discountPrice,
                                       item.price,
@@ -296,41 +299,67 @@ const Wishlist = () => {
                 ))}
               </div>
             </div>
-            <div className="hidden lg:block lg:w-[250px]">
-              <div className="font-bold py-5 px-3 border-b border-[#ffffff26]">
-                Filters
-              </div>
-              {filters.map((filter, i) => (
-                <div
-                  key={i}
-                  className="border-b border-[#ffffff26] text-[#ffffffa6] hover:text-white"
-                >
-                  <button
-                    onClick={() => handleToggleFilter(i)}
-                    className="flex justify-between items-center py-5 px-3 w-full"
-                  >
-                    <span>{filter.filter}</span>
-                    <MdKeyboardArrowUp
-                      className={`[text-[20px] ${
-                        openFilterIndex === i ? "rotate-0" : "rotate-180"
-                      }`}
-                    />
-                  </button>
-                  {openFilterIndex === i && (
-                    <ul>
-                      {filter.subFilter.map((item, j) => (
-                        <li
-                          key={j}
-                          className="rounded-md p-3 text-[#ffffffa6] hover:bg-[#ffffff26] mb-1 cursor-pointer"
-                        >
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+            {type === "wishlist" ? (
+              <div className="hidden lg:block lg:w-[250px]">
+                <div className="font-bold py-5 px-3 border-b border-[#ffffff26]">
+                  Filters
                 </div>
-              ))}
-            </div>
+                {filters.map((filter, i) => (
+                  <div
+                    key={i}
+                    className="border-b border-[#ffffff26] text-[#ffffffa6] hover:text-white"
+                  >
+                    <button
+                      onClick={() => handleToggleFilter(i)}
+                      className="flex justify-between items-center py-5 px-3 w-full"
+                    >
+                      <span>{filter.filter}</span>
+                      <MdKeyboardArrowUp
+                        className={`[text-[20px] ${
+                          openFilterIndex === i ? "rotate-0" : "rotate-180"
+                        }`}
+                      />
+                    </button>
+                    {openFilterIndex === i && (
+                      <ul>
+                        {filter.subFilter.map((item, j) => (
+                          <li
+                            key={j}
+                            className="rounded-md p-3 text-[#ffffffa6] hover:bg-[#ffffff26] mb-1 cursor-pointer"
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="w-full lg:w-[300px] text-[14px] font-medium">
+                <h4 className="font-bold text-[24px] mb-5">Games and Apps Summary</h4>
+                <div className="flex justify-between mt-[15px]">
+                  <span>Price</span>
+                  <span>${basket.reduce((total, item) => total + +((item.price / 100).toFixed(2)), 0)}</span>
+                </div>
+                <div className="flex justify-between mt-[15px]">
+                  <span>Sale Discount</span>
+                  <span className="">-${basket.reduce((total, item) => total + +((item.discount / 100).toFixed(2)), 0)}</span>
+                </div>
+                <div className="flex justify-between mt-[15px]">
+                  <span>Taxes</span>
+                  <span>Calculated at Checkout</span>
+                </div>
+                <hr className="border-[#ffffff26] mt-5 pt-5" />
+                <div className="flex justify-between font-semibold mb-6">
+                  <span>Subtotal</span>
+                  <span>${basket.reduce((total, item) => total + +((item.discountPrice / 100).toFixed(2)), 0)}</span>
+                </div>
+                <button className="w-full bg-[#26bbff] text-black py-3 rounded-lg hover:bg-[#72d3ff] trans">
+                  Check Out
+                </button>
+              </div>
+            )}
           </div>
         ) : (
           <div className="flex flex-col justify-center items-center text-center gap-3 w-full p-5 min-h-[350px]">

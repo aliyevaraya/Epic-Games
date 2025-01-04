@@ -64,6 +64,7 @@ function DiscoverSomething({ data }) {
                           game.title,
                           game.price?.appliedRules?.[0]?.discountSetting
                             ?.discountPercentage,
+                          game.price.price.discount,
                           game.price?.price?.discountPrice,
                           game.price?.price?.originalPrice,
                           game.price?.appliedRules?.[0]?.endDate

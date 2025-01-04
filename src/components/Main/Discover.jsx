@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { GoSearch } from "react-icons/go";
 import {
   MdKeyboardArrowDown,
@@ -8,8 +8,10 @@ import {
 } from "react-icons/md";
 import { SlBasket } from "react-icons/sl";
 import { Link } from "react-router-dom";
+import { BASKET } from "../../context/BasketContext";
 
 function Discover() {
+  const {basket} = useContext(BASKET)
   const [discover, setDiscover] = useState(false);
   const [search, setSearch] = useState(false);
 
@@ -105,7 +107,7 @@ function Discover() {
             </div>
             <div className="flex items-center gap-5">
                 <Link to={"wishlist"}><span className="hidden md:block">Wishlist</span> <MdOutlineCheckCircle className="md:hidden block text-[24px]"/></Link>
-                <Link to={"cart"}><span className="hidden md:block">Cart</span> <SlBasket className="md:hidden block text-[24px]"/> <span className="basket-count"></span></Link>
+                <Link to={"cart"} className="flex relative"><span className="hidden md:block">Cart</span> <SlBasket className="md:hidden block text-[24px]"/> <span className={`${basket.length ? "absolute -top-[5px] left-[5px] md:static block text-[10px] md:text-[14px]" : "hidden"} bg-[#26bbff] text-black font-bold px-2 md:px-3 rounded-2xl ml-3`}>{basket.length}</span></Link>
               </div>
           </div>
         </div>

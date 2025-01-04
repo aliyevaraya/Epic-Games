@@ -156,7 +156,7 @@ const Wishlist = () => {
                           <span className="bg-[#ffffff26] px-2 py-1 inline-block text-xs font-medium rounded-md mb-2">
                             Base Game
                           </span>
-                          <h2 className="text-[20px] font-bold truncate">
+                          <h2 className="text-[20px] font-bold truncate md:whitespace-normal">
                             {item.title}
                           </h2>
                         </div>
@@ -170,10 +170,10 @@ const Wishlist = () => {
                               ""
                             )}
                             <div className="flex flex-col xxs:flex-row xxs:justify-between xxs:items-center xxs:gap-2">
-                              <span className="line-through text-[14px] text-[#ffffffa6]">
+                              <span className={`${item.discountPrice === item.price ? "no-underline	text-white font-bold" : "line-through"} text-[14px] text-[#ffffffa6]`}>
                                 ${(item.price / 100).toFixed(2)}
                               </span>
-                              <span className="text-white font-bold">
+                              <span className={`text-white font-bold ${item.discountPrice === item.price ? "hidden" : "block"}`}>
                                 ${(item.discountPrice / 100).toFixed(2)}
                               </span>
                             </div>

@@ -1,17 +1,16 @@
 import { useContext, useState } from "react";
 import { GoSearch } from "react-icons/go";
 import {
-  MdKeyboardArrowDown,
   MdKeyboardArrowUp,
   MdClose,
-  MdOutlineCheckCircle
+  MdOutlineCheckCircle,
 } from "react-icons/md";
 import { SlBasket } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import { BASKET } from "../../context/BasketContext";
 
 function Discover() {
-  const {basket} = useContext(BASKET)
+  const { basket } = useContext(BASKET);
   const [discover, setDiscover] = useState(false);
   const [search, setSearch] = useState(false);
 
@@ -63,11 +62,13 @@ function Discover() {
                 className="2xl:hidden flex items-center p-[10px]"
               >
                 Discover
-                {discover ? (
-                  <MdKeyboardArrowUp className="block mt-1 ml-1" />
-                ) : (
-                  <MdKeyboardArrowDown className="block mt-1 ml-1" />
-                )}
+                {
+                  <MdKeyboardArrowUp
+                    className={`block mt-1 ml-1 trans ${
+                      discover ? "rotate-0" : "rotate-180"
+                    } `}
+                  />
+                }
               </button>
               <div
                 className={`w-full lg:w-[200px] h-screen lg:h-auto 2xl:h-full absolute 2xl:static top-[100%] left-0 lg:top-[90%] lg:-left-[10px] z-[2] ${
@@ -103,12 +104,30 @@ function Discover() {
                   </li>
                 </ul>
               </div>
-             
             </div>
-            <div className="flex items-center gap-5">
-                <Link to={"wishlist"}><span className="hidden md:block">Wishlist</span> <MdOutlineCheckCircle className="md:hidden block text-[24px]"/></Link>
-                <Link to={"cart"} className="flex relative"><span className="hidden md:block">Cart</span> <SlBasket className="md:hidden block text-[24px]"/> <span className={`${basket.length ? "absolute -top-[5px] left-[5px] md:static block text-[10px] md:text-[14px]" : "hidden"} bg-[#26bbff] text-black font-bold px-2 md:px-3 rounded-2xl ml-3`}>{basket.length}</span></Link>
-              </div>
+            <div
+              className={`flex items-center gap-5 ${
+                search ? "hidden" : "block"
+              }`}
+            >
+              <Link to={"wishlist"}>
+                <span className="hidden md:block">Wishlist</span>{" "}
+                <MdOutlineCheckCircle className="md:hidden block text-[24px]" />
+              </Link>
+              <Link to={"cart"} className="flex relative">
+                <span className="hidden md:block">Cart</span>{" "}
+                <SlBasket className="md:hidden block text-[24px]" />{" "}
+                <span
+                  className={`${
+                    basket.length
+                      ? "absolute -top-[5px] left-[5px] md:static block text-[10px] md:text-[14px]"
+                      : "hidden"
+                  } bg-[#26bbff] text-black font-bold px-2 md:px-3 rounded-2xl ml-3`}
+                >
+                  {basket.length}
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

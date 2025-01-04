@@ -3,9 +3,9 @@ import { DATA } from "../../context/DataContext";
 import { MdKeyboardArrowUp, MdKeyboardArrowLeft } from "react-icons/md";
 import { useParams } from "react-router-dom";
 
-function DetailSlider() {
+function DetailSlider({allGames}) {
   const { id } = useParams();
-  const { newRelease, video, sliderImg } = useContext(DATA);
+  const { video, sliderImg } = useContext(DATA);
   const gameVideo = video[0]?.outputs[7]?.url;
   const mediaItems = [
     { type: "video", src: gameVideo, img: "/images/fall-guys.jpg" },
@@ -13,7 +13,7 @@ function DetailSlider() {
   ];
   const [currentMedia, setCurrentMedia] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
-  const game = newRelease.find((game) => game.id === id);
+  const game = allGames.find((game) => game.id === id);
 
   return (
     <div className="w-full md:w-[calc(100%-300px)]">

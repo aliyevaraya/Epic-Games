@@ -5,6 +5,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { useContext } from "react";
 import { DATA } from "../../context/DataContext";
+import { Link } from "react-router-dom";
 
 function TopList() {
   const { sell, play, wishlist } = useContext(DATA);
@@ -44,29 +45,49 @@ function TopList() {
                 .map((game, index) => {
                   return (
                     <li key={index} className="px-4 border-[#404044] border-r">
-                      <div className="flex gap-2 p-[10px] rounded-md hover:bg-[#30303480]">
-                        <img
-                          className="!w-[48px] !h-[64px]"
-                          src={game.keyImages[0].url}
-                          alt={game.title}
-                        />
-                        <div className="overflow-hidden">
-                          <h6 className="font-bold mb-2 whitespace-nowrap text-ellipsis overflow-hidden">
-                            {game.title}
-                          </h6>
-                          <div className="text-[14px] font-medium flex items-center">
-                            <span className="px-2 bg-[#26bbff] text-[12px] text-black font-semibold rounded-lg">
-                              -60%
-                            </span>
-                            <div className=" flex flex-wrap justify-end">
-                              <span className="line-through text-[#ffffffa6] ml-2">
-                                $69.99
-                              </span>
-                              <span className="ml-2">$27.99</span>
+                      <Link to={`/game/${game.id}`}>
+                        <div className="flex gap-2 p-[10px] rounded-md hover:bg-[#30303480]">
+                          <img
+                            className="!w-[48px] !h-[64px]"
+                            src={game.keyImages[0].url}
+                            alt={game.title}
+                          />
+                          <div className="overflow-hidden">
+                            <h6 className="font-bold mb-2 whitespace-nowrap text-ellipsis overflow-hidden">
+                              {game.title}
+                            </h6>
+                            <div className="text-[14px] font-medium flex items-center">
+                              {game.price?.appliedRules?.[0] ? (
+                                <span className="px-2 bg-[#26bbff] text-[12px] text-black font-semibold rounded-lg">
+                                  -
+                                  {
+                                    game.price?.appliedRules?.[0]
+                                      ?.discountSetting?.discountPercentage
+                                  }
+                                  %
+                                </span>
+                              ) : (
+                                ""
+                              )}
+
+                              <div className=" flex flex-wrap justify-end">
+                                {game.price ? (
+                                  <span className={`${game.price?.price?.originalPrice === 0 ? "no-underline text-white" : "line-through"} text-[#ffffffa6] ml-2`}>
+                                    { game.price?.price?.originalPrice === 0 ? "Free" : "$" + (game.price?.price?.originalPrice / 100).toFixed(2)}
+                                  </span>
+                                ) : (
+                                  ""
+                                )}
+                                {
+                                  game.price ? (<span className={`${game.price?.price?.discountPrice === 0 ? "hidden" : ""} ml-2`}>
+                                    ${(game.price?.price?.discountPrice / 100).toFixed(2)}
+                                  </span>) : "Free"
+                                }
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </Link>
                     </li>
                   );
                 })}

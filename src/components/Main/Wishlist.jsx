@@ -99,7 +99,11 @@ const Wishlist = () => {
           </h1>
         </div>
         {data.length > 0 ? (
-          <div className={`lg:flex ${type === "wishlist" ? "items-baseline gap-[30px]" : "gap-[36px]"}`}>
+          <div
+            className={`lg:flex ${
+              type === "wishlist" ? "items-baseline gap-[30px]" : "gap-[36px]"
+            }`}
+          >
             <div className=" w-full lg:w-[calc(100%-300px)]">
               {type === "wishlist" && (
                 <div className="flex justify-between items-center mb-5">
@@ -156,9 +160,11 @@ const Wishlist = () => {
                           <span className="bg-[#ffffff26] px-2 py-1 inline-block text-xs font-medium rounded-md mb-2">
                             Base Game
                           </span>
-                          <h2 className="text-[20px] font-bold truncate md:whitespace-normal">
-                            {item.title}
-                          </h2>
+                          <Link to={`/game/${item.id}`}>
+                            <h2 className="text-[20px] font-bold truncate md:whitespace-normal hover:underline">
+                              {item.title}
+                            </h2>
+                          </Link>
                         </div>
                         <div>
                           <div className="flex items-center justify-between xxs:justify-start md:justify-between gap-2 mt-5 mb-[10px]">
@@ -170,12 +176,32 @@ const Wishlist = () => {
                               ""
                             )}
                             <div className="flex flex-col xxs:flex-row xxs:justify-between xxs:items-center xxs:gap-2">
-                              <span className={`${item.discountPrice === item.price ? "no-underline	text-white font-bold" : "line-through"} text-[14px] text-[#ffffffa6]`}>
+                             {
+                              item.price !== "Free" ? (
+                                <span
+                                className={`${
+                                  item.discountPrice === item.price
+                                    ? "no-underline	text-white font-bold"
+                                    : "line-through"
+                                } text-[14px] text-[#ffffffa6]`}
+                              >
                                 ${(item.price / 100).toFixed(2)}
                               </span>
-                              <span className={`text-white font-bold ${item.discountPrice === item.price ? "hidden" : "block"}`}>
+                              ) : "Free"
+                             }
+                              {
+                                item.discountPrice ? (
+                                  <span
+                                className={`text-white font-bold ${
+                                  item.discountPrice === item.price
+                                    ? "hidden"
+                                    : "block"
+                                }`}
+                              >
                                 ${(item.discountPrice / 100).toFixed(2)}
                               </span>
+                                ) : ""
+                              }
                             </div>
                           </div>
                           {item.endSale ? (
@@ -233,7 +259,7 @@ const Wishlist = () => {
                             type === "wishlist"
                               ? "bg-[#26bbff] hover:bg-[#61cdff] text-black "
                               : "text-[#ffffffa6]"
-                          } px-3 py-1 rounded-md `}
+                          } px-3 py-1 rounded-md text-center`}
                         >
                           {type === "wishlist" ? (
                             (() => {
@@ -337,14 +363,29 @@ const Wishlist = () => {
               </div>
             ) : (
               <div className="w-full lg:w-[300px] text-[14px] font-medium">
-                <h4 className="font-bold text-[24px] mb-5">Games and Apps Summary</h4>
+                <h4 className="font-bold text-[24px] mb-5">
+                  Games and Apps Summary
+                </h4>
                 <div className="flex justify-between mt-[15px]">
                   <span>Price</span>
-                  <span>${basket.reduce((total, item) => total + +((item.price / 100).toFixed(2)), 0)}</span>
+                  <span>
+                    $
+                    {basket.reduce(
+                      (total, item) => item.price !== "Free" ? total + +(item.price / 100).toFixed(2) : total,
+                      0
+                    )}
+                  </span>
                 </div>
                 <div className="flex justify-between mt-[15px]">
                   <span>Sale Discount</span>
-                  <span className="">-${basket.reduce((total, item) => total + +((item.discount / 100).toFixed(2)), 0)}</span>
+                  <span className="">
+                    -$
+                    {basket.reduce(
+                      (total, item) =>
+                        total + +(item.discount / 100).toFixed(2),
+                      0
+                    )}
+                  </span>
                 </div>
                 <div className="flex justify-between mt-[15px]">
                   <span>Taxes</span>
@@ -353,7 +394,14 @@ const Wishlist = () => {
                 <hr className="border-[#ffffff26] mt-5 pt-5" />
                 <div className="flex justify-between font-semibold mb-6">
                   <span>Subtotal</span>
-                  <span>${basket.reduce((total, item) => total + +((item.discountPrice / 100).toFixed(2)), 0)}</span>
+                  <span>
+                    $
+                    {basket.reduce(
+                      (total, item) =>
+                        total + +(item.discountPrice / 100).toFixed(2),
+                      0
+                    )}
+                  </span>
                 </div>
                 <button className="w-full bg-[#26bbff] text-black py-3 rounded-lg hover:bg-[#72d3ff] trans">
                   Check Out

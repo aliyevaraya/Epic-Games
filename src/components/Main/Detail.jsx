@@ -9,8 +9,9 @@ function Detail() {
   const { id } = useParams();
   const { basket, addToBasket } = useContext(BASKET);
   const { fav, addToFav } = useContext(FAV);
-  const { newRelease } = useContext(DATA);
-  const game = newRelease.find((game) => game.id === id);
+  const { sell, play, wishlist, newRelease } = useContext(DATA);
+  const allGames = [ ...wishlist, ...newRelease, ...play, ...sell];
+  const game = allGames.find((game) => game.id === id);
 
   if (game) {
     game.releaseDate = new Intl.DateTimeFormat("en-US", {
@@ -19,6 +20,7 @@ function Detail() {
       day: "2-digit",
     }).format(new Date(game && game.releaseDate));
   }
+console.log(game);
 
   return (
     game && (
@@ -32,7 +34,7 @@ function Detail() {
             <button className="opacity-[.6]">Achievements</button>
           </div>
           <div className="md:flex flex-row gap-6 relative">
-            <DetailSlider />
+            <DetailSlider allGames={allGames}/>
             <div className="md:sticky md:w-[400px] top-0 h-full">
               <div className="flex">
                 <div className="w-full rounded-xl overflow-hidden">
@@ -51,7 +53,7 @@ function Detail() {
                   Base Game
                 </span>
                 <span>
-                  {(game.price.price.originalPrice / 100).toFixed(2)}$
+                  {game.price?.price?.originalPrice ? (game.price.price.originalPrice / 100).toFixed(2) + "$" : "Free"}
                 </span>
                 <div className="flex flex-col w-full gap-2 text-[14px] font-medium">
                   <button className="py-3 px-5 bg-[#26bbff] text-black rounded-[10px] hover:bg-[#61cdff]">
@@ -69,10 +71,10 @@ function Detail() {
                             game.keyImages[2].url,
                             game.title,
                             game.price?.appliedRules?.[0]?.discountSetting
-                            ?.discountPercentage,
-                            game.price.price.discount,
-                            game.price?.price?.discountPrice,
-                            game.price?.price?.originalPrice,
+                            ?.discountPercentage || 0,
+                            game.price?.price?.discount || 0,
+                            game.price?.price?.discountPrice || 0,
+                            game.price?.price?.originalPrice || "Free",
                             game.price?.appliedRules?.[0]?.endDate
                           );
                         }}
@@ -93,10 +95,10 @@ function Detail() {
                             game.keyImages[2].url,
                             game.title,
                             game.price?.appliedRules?.[0]?.discountSetting
-                              ?.discountPercentage,
-                              game.price.price.discount,
-                            game.price?.price?.discountPrice,
-                            game.price?.price?.originalPrice,
+                            ?.discountPercentage || 0,
+                            game.price?.price?.discount || 0,
+                            game.price?.price?.discountPrice || 0,
+                            game.price?.price?.originalPrice || "Free",
                             game.price?.appliedRules?.[0]?.endDate
                           );
                         }}

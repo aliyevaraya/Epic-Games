@@ -8,14 +8,13 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { FAV } from "../../context/FavDataContext";
 
-function DiscoverSomething({ data }) {
+function DiscoverSomething({ data, title }) {
   const { fav, addToFav } = useContext(FAV);
+
   return (
     <div className="text-white px-4 pb-[64px] relative">
       <h3 className="discover md:absolute md:top-3 flex items-center text-[20px] font-bold mb-4 mr-4 cursor-pointer">
-        {data.some((item) => item.offerType)
-          ? "Top New Releases"
-          : "Discover Something New"}
+        {title}
         <SlArrowRight className="move-right text-[16px] ml-2 mt-1" />
       </h3>
       <Swiper
@@ -63,10 +62,10 @@ function DiscoverSomething({ data }) {
                           game.keyImages[2].url,
                           game.title,
                           game.price?.appliedRules?.[0]?.discountSetting
-                            ?.discountPercentage,
-                          game.price.price.discount,
-                          game.price?.price?.discountPrice,
-                          game.price?.price?.originalPrice,
+                            ?.discountPercentage || 0,
+                          game.price?.price?.discount || 0,
+                          game.price?.price?.discountPrice || 0,
+                          game.price?.price?.originalPrice || "Free",
                           game.price?.appliedRules?.[0]?.endDate
                         );
                       }}
@@ -111,11 +110,11 @@ function DiscoverSomething({ data }) {
                           discount ? "line-through" : ""
                         }`}
                       >
-                        {price > 100
-                          ? `$${(price / 100).toFixed(2)}`
-                          : price === "Free"
-                          ? "Free"
-                          : `$${price}`}
+                        {price
+                          ? price > 100
+                            ? `$${(price / 100).toFixed(2)}`
+                            : `$${price}`
+                          : "Free"}
                       </p>
                       <p className="text-[14px]">
                         {discount &&

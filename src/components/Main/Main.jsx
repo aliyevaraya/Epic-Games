@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import BigSlider from "./BigSlider";
-import Discover from "./Discover";
 import DiscoverSomething from "./DiscoverSomething";
 import LinkSlider from "./LinkSlider";
 import MiniSlider from "./MiniSlider";
@@ -16,11 +15,11 @@ function Main() {
       <div className="w-full containerr m-auto relative">
         <MiniSlider />
         <BigSlider />
-        <DiscoverSomething data={games}/>
+        <DiscoverSomething data={wishlist}  title={"Discover Something New"}/>
         <LinkSlider />
         <TopList />
         <LinkSlider />
-        <DiscoverSomething data={newRelease}/>
+        <DiscoverSomething data={newRelease} title={"Top New Releases"}/>
       </div>
     </main>
   );

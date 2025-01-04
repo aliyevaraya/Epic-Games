@@ -2,32 +2,35 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import { sliderData } from "../../services/silderData";
 import { IoIosAddCircleOutline } from "react-icons/io";
 
 function DesktopSLider() {
+  sliderData.forEach((item, index) => {
+    console.log(`Item ${index + 1}:`, item);
+  });
   return (
     <Swiper
       cssMode={true}
+      // autoplay={{
+      //   delay: 7000,
+      // }}
       pagination={{
-        pagination: true,
         clickable: true,
         renderBullet: (index, className) => {
+          const data = sliderData[index];
+          if (!data) return "";
           return `<div class="${className} custom-pagination">
                     <div class="flex items-center relative !z-[3]">
-                      <img src=${sliderData[index]?.image} />
-                      <span>${sliderData[index]?.title}</span>
+                      <img src=${data.image} alt="${data.title}"/>
+                      <span>${data.title}</span>
                     </div>
                     <div class="moving-overlay z-[1]"></div>
                 </div>`;
         },
       }}
-      autoplay={{
-          delay: 7000
-      }}
-
-      modules={[Autoplay, Navigation, Pagination]}
+      modules={[Autoplay, Pagination]}
       className="desktop-slider"
     >
       {sliderData.map((item, i) => (

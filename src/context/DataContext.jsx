@@ -5,7 +5,6 @@ import {
   getMostPlayed,
   getTopSeller,
   getWishlist,
-  games,
   getNewRelease,
   getVideos,
   getSliderImg
@@ -31,7 +30,7 @@ function DataContext({ children }) {
 
   return (
     <>
-      <DATA.Provider value={{ sell, play, wishlist, games, newRelease, video, sliderImg }}>
+      <DATA.Provider value={{ sell, play, wishlist, newRelease, video, sliderImg }}>
         {children}
       </DATA.Provider>
     </>

@@ -1,5 +1,4 @@
 import axios from "axios";
-import { games } from "./discover";
 
 async function getTopSeller() {
     const res = await axios.get("http://localhost:3300/elements")
@@ -27,4 +26,4 @@ async function getSliderImg() {
 }
 
 
-export {getTopSeller, getMostPlayed, getWishlist, games, getNewRelease, getVideos, getSliderImg}
+export {getTopSeller, getMostPlayed, getWishlist, getNewRelease, getVideos, getSliderImg}

@@ -1,27 +1,28 @@
 import { useContext, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { MdKeyboardArrowUp, MdFilterList } from "react-icons/md";
-import { FAV } from "../../context/FavDataContext";
 import { Link, useParams } from "react-router-dom";
+import { FAV } from "../../context/FavDataContext";
 import { BASKET } from "../../context/BasketContext";
 import { Cookies } from "react-cookie";
 
 const Wishlist = () => {
   const { type } = useParams();
-  const { fav, setFav } = useContext(FAV);
-  const { basket, addToBasket } = useContext(BASKET);
+  const { fav, setFav, addToFav } = useContext(FAV);
+  const { basket, setBasket, addToBasket } = useContext(BASKET);
   let data = type === "wishlist" ? fav : type === "cart" ? basket : [];
 
-  console.log(data);
-  data.map((game) => {
-    game.endSale = game.endSale
-      ? new Intl.DateTimeFormat("en-US", {
-          year: "2-digit",
-          month: "2-digit",
-          day: "2-digit",
-        }).format(new Date(game.endSale))
-      : "";
-  });
+  console.log(basket);
+  data.length &&
+    data?.map((game) => {
+      game.endSale = game.endSale
+        ? new Intl.DateTimeFormat("en-US", {
+            year: "2-digit",
+            month: "2-digit",
+            day: "2-digit",
+          }).format(new Date(game.endSale))
+        : "";
+    });
 
   const filters = [
     {
@@ -136,98 +137,109 @@ const Wishlist = () => {
                 </div>
               </div>
               <div>
-                {data &&
-                  data.length > 0 &&
-                  data.map((item, i) => (
-                    <div
-                      key={i}
-                      className="bg-[#202024] p-4 rounded-lg flex gap-4 mb-4"
-                    >
-                      <Link to={`/game/${item.id}`}>
-                        <img
-                          src={item.img}
-                          alt={item.title}
-                          className="w-[60px] h-[70px] object-cover rounded-md"
-                        />
-                      </Link>
-                      <div className="flex flex-col justify-between w-full overflow-hidden">
-                        <div className="flex flex-col md:flex-row md:justify-between">
-                          <div>
-                            <span className="bg-[#ffffff26] px-2 py-1 inline-block text-xs font-medium rounded-md mb-2">
-                              Base Game
-                            </span>
-                            <h2 className="text-[20px] font-bold truncate">
-                              {item.title}
-                            </h2>
-                          </div>
-                          <div>
-                            <div className="flex items-center justify-between xxs:justify-start md:justify-between gap-2 mt-5 mb-[10px]">
-                              {item.discount ? (
-                                <span className="bg-[#26bbff] text-black text-[12px] font-medium px-1 rounded-lg">
-                                  -{item.discount}%
-                                </span>
-                              ) : (
-                                ""
-                              )}
-                              <div className="flex flex-col xxs:flex-row xxs:justify-between xxs:items-center xxs:gap-2">
-                                <span className="line-through text-[14px] text-[#ffffffa6]">
-                                  ${(item.price / 100).toFixed(2)}
-                                </span>
-                                <span className="text-white font-bold">
-                                  ${(item.discountPrice / 100).toFixed(2)}
-                                </span>
-                              </div>
-                            </div>
-                            {item.endSale ? (
-                              <p className="text-[#ffffffa6] text-[12px]">
-                                Sale ends {item.endSale}
-                              </p>
+                {data.map((item, i) => (
+                  <div
+                    key={i}
+                    className="bg-[#202024] p-4 rounded-lg flex gap-4 mb-4"
+                  >
+                    <Link to={`/game/${item.id}`}>
+                      <img
+                        src={item.img}
+                        alt={item.title}
+                        className="w-[60px] h-[70px] object-cover rounded-md"
+                      />
+                    </Link>
+                    <div className="flex flex-col justify-between w-full overflow-hidden">
+                      <div className="flex flex-col md:flex-row md:justify-between">
+                        <div>
+                          <span className="bg-[#ffffff26] px-2 py-1 inline-block text-xs font-medium rounded-md mb-2">
+                            Base Game
+                          </span>
+                          <h2 className="text-[20px] font-bold truncate">
+                            {item.title}
+                          </h2>
+                        </div>
+                        <div>
+                          <div className="flex items-center justify-between xxs:justify-start md:justify-between gap-2 mt-5 mb-[10px]">
+                            {item.discount ? (
+                              <span className="bg-[#26bbff] text-black text-[12px] font-medium px-1 rounded-lg">
+                                -{item.discount}%
+                              </span>
                             ) : (
                               ""
                             )}
+                            <div className="flex flex-col xxs:flex-row xxs:justify-between xxs:items-center xxs:gap-2">
+                              <span className="line-through text-[14px] text-[#ffffffa6]">
+                                ${(item.price / 100).toFixed(2)}
+                              </span>
+                              <span className="text-white font-bold">
+                                ${(item.discountPrice / 100).toFixed(2)}
+                              </span>
+                            </div>
                           </div>
+                          {item.endSale ? (
+                            <p className="text-[#ffffffa6] text-[12px]">
+                              Sale ends {item.endSale}
+                            </p>
+                          ) : (
+                            ""
+                          )}
                         </div>
-                        <div className="flex items-center gap-1 mt-4">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="w-[20px] h-[20px]"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10.3827 3.07523C10.2512 2.71987 9.74862 2.71987 9.61712 3.07523L8.69694 5.562C8.1595 7.01439 7.01439 8.1595 5.562 8.69694L3.07523 9.61712C2.71987 9.74862 2.71987 10.2512 3.07523 10.3827L5.562 11.3029C7.01439 11.8403 8.1595 12.9855 8.69694 14.4378L9.61712 16.9246C9.74862 17.28 10.2512 17.28 10.3827 16.9246L11.3029 14.4378C11.8403 12.9855 12.9855 11.8403 14.4378 11.3029L16.9246 10.3827C17.28 10.2512 17.28 9.74862 16.9246 9.61712L14.4378 8.69694C12.9855 8.1595 11.8403 7.01439 11.3029 5.562L10.3827 3.07523Z"
-                              fill="#e3d669"
-                            ></path>
-                          </svg>
-                          <span className="text-sm mt-1 text-linear leading-[1.7]">
-                            Earn a boosted 10% back in Epic Rewards, offer ends
-                            Jan 9.
-                          </span>
-                        </div>
-                        <div className="flex flex-col justify-end xxs:flex-row gap-5 text-[14px] mt-5 font-semibold ">
-                          <button
-                            onClick={() => {
+                      </div>
+                      <div className="flex items-center gap-1 mt-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="w-[20px] h-[20px]"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM10.3827 3.07523C10.2512 2.71987 9.74862 2.71987 9.61712 3.07523L8.69694 5.562C8.1595 7.01439 7.01439 8.1595 5.562 8.69694L3.07523 9.61712C2.71987 9.74862 2.71987 10.2512 3.07523 10.3827L5.562 11.3029C7.01439 11.8403 8.1595 12.9855 8.69694 14.4378L9.61712 16.9246C9.74862 17.28 10.2512 17.28 10.3827 16.9246L11.3029 14.4378C11.8403 12.9855 12.9855 11.8403 14.4378 11.3029L16.9246 10.3827C17.28 10.2512 17.28 9.74862 16.9246 9.61712L14.4378 8.69694C12.9855 8.1595 11.8403 7.01439 11.3029 5.562L10.3827 3.07523Z"
+                            fill="#e3d669"
+                          ></path>
+                        </svg>
+                        <span className="text-sm mt-1 text-linear leading-[1.7]">
+                          Earn a boosted 10% back in Epic Rewards, offer ends
+                          Jan 9.
+                        </span>
+                      </div>
+                      <div className="flex flex-col justify-end xxs:flex-row gap-5 text-[14px] mt-5 font-semibold ">
+                        <button
+                          onClick={() => {
+                            if (type === "wishlist") {
                               const updatedFav = fav.filter(
                                 (game) => game.id !== item.id
                               );
                               setFav(updatedFav);
                               const cookie = new Cookies();
                               cookie.set("favorite", updatedFav);
-                            }}
-                            className="text-sm text-[#ffffffa6] hover:text-white"
-                          >
-                            Remove
-                          </button>
-                          <div
-                            className={`${
-                              type === "wishlist"
-                                ? "bg-[#26bbff] hover:bg-[#61cdff] text-black "
-                                : "text-[#ffffffa6]"
-                            } px-3 py-1 rounded-md `}
-                          >
-                            {type === "wishlist" ? (
-                              basket.find((game) => game.id === item.id) ? (
+                            } else {
+                              const updatedBasket = basket.filter(
+                                (game) => game.id !== item.id
+                              );
+                              setBasket(updatedBasket);
+                              const cookie = new Cookies();
+                              cookie.set("basket", updatedBasket);
+                            }
+                          }}
+                          className="text-sm text-[#ffffffa6] hover:text-white"
+                        >
+                          Remove
+                        </button>
+                        <div
+                          className={`${
+                            type === "wishlist"
+                              ? "bg-[#26bbff] hover:bg-[#61cdff] text-black "
+                              : "text-[#ffffffa6]"
+                          } px-3 py-1 rounded-md `}
+                        >
+                          {type === "wishlist" ? (
+                            (() => {
+                              const game = basket.find(
+                                (game) => game.id === item.id
+                              );
+                              return game ? (
                                 <Link to="/cart">View in Cart</Link>
                               ) : (
                                 <button
@@ -235,27 +247,53 @@ const Wishlist = () => {
                                     e.preventDefault();
                                     addToBasket(
                                       item.id,
-                                      item.keyImages?.[2]?.url,
+                                      item.img,
                                       item.title,
-                                      item.price?.appliedRules?.[0]
-                                        ?.discountSetting?.discountPercentage,
-                                      item.price?.price?.discountPrice,
-                                      item.price?.price?.originalPrice,
-                                      item.price?.appliedRules?.[0]?.endDate
+                                      item.discount,
+                                      item.discountPrice,
+                                      item.price,
+                                      item.endSale
                                     );
                                   }}
                                 >
                                   Add to Cart
                                 </button>
-                              )
-                            ) : (
-                              <button>Move to Wishlist</button>
-                            )}
-                          </div>
+                              );
+                            })()
+                          ) : (
+                            <button
+                              onClick={(e) => {
+                                const game = fav.find(
+                                  (game) => game.id === item.id
+                                );
+                                e.preventDefault();
+                                game
+                                  ? ""
+                                  : addToFav(
+                                      item.id,
+                                      item.img,
+                                      item.title,
+                                      item.discount,
+                                      item.discountPrice,
+                                      item.price,
+                                      item.endSale
+                                    );
+                                const updatedBasket = basket.filter(
+                                  (game) => game.id !== item.id
+                                );
+                                setBasket(updatedBasket);
+                                const cookie = new Cookies();
+                                cookie.set("basket", updatedBasket);
+                              }}
+                            >
+                              Move to Wishlist
+                            </button>
+                          )}
                         </div>
                       </div>
                     </div>
-                  ))}
+                  </div>
+                ))}
               </div>
             </div>
             <div className="hidden lg:block lg:w-[250px]">

@@ -88,17 +88,17 @@ function Detail() {
                       <button
                         onClick={(e) => {
                           e.preventDefault();
-                          addToFav(
-                            game.id,
-                            game.keyImages[2].url,
-                            game.title,
-                            game.price?.appliedRules?.[0]?.discountSetting
-                            ?.discountPercentage || 0,
-                            game.price?.price?.discount || 0,
-                            game.price?.price?.discountPrice || 0,
-                            game.price?.price?.originalPrice || "Free",
-                            game.price?.appliedRules?.[0]?.endDate
-                          );
+                          addToFav({
+                            id: game.id,
+                            img: game.keyImages[2].url,
+                            title: game.title,
+                            discountPerc: game.price?.appliedRules?.[0]?.discountSetting?.discountPercentage || 0,
+                            discount: game.price?.price?.discount || 0,
+                            discountPrice: game.price?.price?.discountPrice || 0,
+                            price: game.price?.price?.originalPrice || "Free",
+                            endSale: game.price?.appliedRules?.[0]?.endDate,
+                            addedAt: new Date().toISOString(),
+                          });
                         }}
                       >
                         Add to Wishlist

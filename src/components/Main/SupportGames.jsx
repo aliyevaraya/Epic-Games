@@ -31,7 +31,7 @@ const supportGames = [
   },
 ];
 function SupportGames() {
-  const [showGames, setShowGames] = useState(false);
+  const [setShowGames] = useState(false);
   return (
     <section>
       <div className="text-[22px] mb-[15px]">Games</div>

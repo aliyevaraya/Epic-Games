@@ -7,14 +7,14 @@ function FavDataContext({ children }) {
   const cookie = new Cookies();
 
   const [fav, setFav] = useState(cookie.get("favorite") || []);
-  function addToFav(id, img, title, discountPerc, discount, discountPrice, price, endSale) {
+  function addToFav({id, img, title, discountPerc, discount, discountPrice, price, endSale, addedAt}) {
     setFav((favs) => {
       const game = favs.find((item) => item.id === id);
       const updatedFavs = game
         ? favs.filter((item) => item.id !== id)
         : [
             ...favs,
-            { id, img, title, discountPerc, discount, discountPrice, price, endSale },
+            { id, img, title, discountPerc, discount, discountPrice, price, endSale, addedAt },
           ];
           cookie.set("favorite", updatedFavs);
           return updatedFavs;

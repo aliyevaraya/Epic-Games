@@ -1,18 +1,18 @@
 import { useContext, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { MdKeyboardArrowUp, MdFilterList } from "react-icons/md";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FAV } from "../../context/FavDataContext";
 import { BASKET } from "../../context/BasketContext";
 import { Cookies } from "react-cookie";
 
 const Wishlist = () => {
-  const { type } = useParams();
   const { fav, setFav, addToFav } = useContext(FAV);
   const { basket, setBasket, addToBasket } = useContext(BASKET);
-  let data = type === "wishlist" ? fav : type === "cart" ? basket : [];
+  const location = useLocation();
+  const currentPath = location.pathname.split("/")[1];
+  let data = currentPath === "wishlist" ? fav : basket;
 
-  console.log(data);
   data.length &&
     data?.map((game) => {
       game.endSale = game.endSale
@@ -23,7 +23,6 @@ const Wishlist = () => {
           }).format(new Date(game.endSale))
         : "";
     });
-
   const filters = [
     {
       filter: "Events",
@@ -55,7 +54,6 @@ const Wishlist = () => {
     },
   ];
   const options = [
-    "On Sale",
     "Recently added",
     "Alphabetical",
     "Price: Low to High",
@@ -71,6 +69,15 @@ const Wishlist = () => {
   function handleToggleFilter(index) {
     setOpenFilterIndex(openFilterIndex === index ? null : index);
   }
+  if (selectedOption === "Price: Low to High") {
+    data = [...data].sort((a, b) => a.discountPrice - b.discountPrice);
+  } else if (selectedOption === "Price: High to Low")
+    data = [...data].sort((a, b) => b.discountPrice - a.discountPrice);
+  else if (selectedOption === "Alphabetical")
+    data = [...data].sort((a, b) => a.title.localeCompare(b.title));
+  else if (selectedOption === "Recently added")
+    data = [...data].sort((a, b) => new Date(b.addedAt) - new Date(a.addedAt));
+  console.log(data);
 
   return (
     <div className="bg-[#121212] text-white pb-[60px]">
@@ -95,17 +102,19 @@ const Wishlist = () => {
             </a>
           </div>
           <h1 className="text-[40px] font-bold">
-            {type === "wishlist" ? "Your Wishlist" : "Your Cart"}
+            {currentPath === "wishlist" ? "Your Wishlist" : "Your Cart"}
           </h1>
         </div>
         {data.length > 0 ? (
           <div
             className={`lg:flex ${
-              type === "wishlist" ? "items-baseline gap-[30px]" : "gap-[36px]"
+              currentPath === "wishlist"
+                ? "items-baseline gap-[30px]"
+                : "gap-[36px]"
             }`}
           >
             <div className=" w-full lg:w-[calc(100%-300px)]">
-              {type === "wishlist" && (
+              {currentPath === "wishlist" && (
                 <div className="flex justify-between items-center mb-5">
                   <div>
                     <span className="text-[#ffffffa6] mr-3">Sort by:</span>
@@ -176,32 +185,32 @@ const Wishlist = () => {
                               ""
                             )}
                             <div className="flex flex-col xxs:flex-row xxs:justify-between xxs:items-center xxs:gap-2">
-                             {
-                              item.price !== "Free" ? (
+                              {item.price !== "Free" ? (
                                 <span
-                                className={`${
-                                  item.discountPrice === item.price
-                                    ? "no-underline	text-white font-bold"
-                                    : "line-through"
-                                } text-[14px] text-[#ffffffa6]`}
-                              >
-                                ${(item.price / 100).toFixed(2)}
-                              </span>
-                              ) : "Free"
-                             }
-                              {
-                                item.discountPrice ? (
-                                  <span
-                                className={`text-white font-bold ${
-                                  item.discountPrice === item.price
-                                    ? "hidden"
-                                    : "block"
-                                }`}
-                              >
-                                ${(item.discountPrice / 100).toFixed(2)}
-                              </span>
-                                ) : ""
-                              }
+                                  className={`${
+                                    item.discountPrice === item.price
+                                      ? "no-underline	text-white font-bold"
+                                      : "line-through"
+                                  } text-[14px] text-[#ffffffa6]`}
+                                >
+                                  ${(item.price / 100).toFixed(2)}
+                                </span>
+                              ) : (
+                                "Free"
+                              )}
+                              {item.discountPrice ? (
+                                <span
+                                  className={`text-white font-bold ${
+                                    item.discountPrice === item.price
+                                      ? "hidden"
+                                      : "block"
+                                  }`}
+                                >
+                                  ${(item.discountPrice / 100).toFixed(2)}
+                                </span>
+                              ) : (
+                                ""
+                              )}
                             </div>
                           </div>
                           {item.endSale ? (
@@ -234,7 +243,7 @@ const Wishlist = () => {
                       <div className="flex flex-col justify-end xxs:flex-row gap-5 text-[14px] mt-5 font-semibold ">
                         <button
                           onClick={() => {
-                            if (type === "wishlist") {
+                            if (currentPath === "wishlist") {
                               const updatedFav = fav.filter(
                                 (game) => game.id !== item.id
                               );
@@ -256,12 +265,12 @@ const Wishlist = () => {
                         </button>
                         <div
                           className={`${
-                            type === "wishlist"
+                            currentPath === "wishlist"
                               ? "bg-[#26bbff] hover:bg-[#61cdff] text-black "
                               : "text-[#ffffffa6]"
                           } px-3 py-1 rounded-md text-center`}
                         >
-                          {type === "wishlist" ? (
+                          {currentPath === "wishlist" ? (
                             (() => {
                               const game = basket.find(
                                 (game) => game.id === item.id
@@ -297,16 +306,17 @@ const Wishlist = () => {
                                 e.preventDefault();
                                 game
                                   ? ""
-                                  : addToFav(
-                                      item.id,
-                                      item.img,
-                                      item.title,
-                                      item.discountPerc,
-                                      item.discount,
-                                      item.discountPrice,
-                                      item.price,
-                                      item.endSale
-                                    );
+                                  : addToFav({
+                                      id: item.id,
+                                      img: item.img,
+                                      title: item.title,
+                                      discountPerc: item.discountPerc,
+                                      discount: sitem.discount,
+                                      discountPrice: item.discountPrice,
+                                      price: item.price,
+                                      endSale: item.endSale,
+                                      addedAt: new Date().toISOString(),
+                                    });
                                 const updatedBasket = basket.filter(
                                   (game) => game.id !== item.id
                                 );
@@ -325,7 +335,7 @@ const Wishlist = () => {
                 ))}
               </div>
             </div>
-            {type === "wishlist" ? (
+            {currentPath === "wishlist" ? (
               <div className="hidden lg:block lg:w-[250px]">
                 <div className="font-bold py-5 px-3 border-b border-[#ffffff26]">
                   Filters
@@ -370,21 +380,28 @@ const Wishlist = () => {
                   <span>Price</span>
                   <span>
                     $
-                    {basket.reduce(
-                      (total, item) => item.price !== "Free" ? total + +(item.price / 100).toFixed(2) : total,
-                      0
-                    )}
+                    {basket
+                      .reduce(
+                        (total, item) =>
+                          item.price !== "Free"
+                            ? total + +(item.price / 100).toFixed(2)
+                            : total,
+                        0
+                      )
+                      .toFixed(2)}
                   </span>
                 </div>
                 <div className="flex justify-between mt-[15px]">
                   <span>Sale Discount</span>
                   <span className="">
                     -$
-                    {basket.reduce(
-                      (total, item) =>
-                        total + +(item.discount / 100).toFixed(2),
-                      0
-                    )}
+                    {basket
+                      .reduce(
+                        (total, item) =>
+                          total + +(item.discount / 100).toFixed(2),
+                        0
+                      )
+                      .toFixed(2)}
                   </span>
                 </div>
                 <div className="flex justify-between mt-[15px]">
@@ -396,11 +413,13 @@ const Wishlist = () => {
                   <span>Subtotal</span>
                   <span>
                     $
-                    {basket.reduce(
-                      (total, item) =>
-                        total + +(item.discountPrice / 100).toFixed(2),
-                      0
-                    )}
+                    {basket
+                      .reduce(
+                        (total, item) =>
+                          total + +(item.discountPrice / 100).toFixed(2),
+                        0
+                      )
+                      .toFixed(2)}
                   </span>
                 </div>
                 <button className="w-full bg-[#26bbff] text-black py-3 rounded-lg hover:bg-[#72d3ff] trans">
@@ -431,7 +450,7 @@ const Wishlist = () => {
               </g>
             </svg>
             <p className="text-[30px] lg:text-[40px] 2xl:text-[50px] lg:w-[700px] font-bold lg:leading-[45px] 2xl:leading-[55px] leading-[35px]">
-              {type === "wishlist"
+              {currentPath === "wishlist"
                 ? "You haven't added anything to your wishlist yet."
                 : "Your Cart is empty."}
             </p>

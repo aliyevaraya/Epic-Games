@@ -236,6 +236,9 @@
   background-clip: text;
   color: transparent;
 }
+#support-top.error{
+  background-image: linear-gradient(rgba(16, 16, 20, 0) 0%, rgb(16, 16, 20) 100%), url("images/error.jpg");
+}
 @media only screen and (min-width: 768px) {
   .containerr {
     padding: 0 40px;

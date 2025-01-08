@@ -5,6 +5,7 @@ import Main from "./components/Main/Main";
 import Support from "./components/Main/Support";
 import Detail from "./components/Main/Detail";
 import Wishlist from "./components/Main/Wishlist";
+import Error from "./components/Main/Error";
 
 function App() {
   const { pathname } = useLocation();
@@ -17,7 +18,9 @@ function App() {
         <Route index element={<Main />} />
         <Route path="/support" element={<Support />} />
         <Route path="/game/:id" element={<Detail />} />
-        <Route path="/:type" element={<Wishlist />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/cart" element={<Wishlist />} />
+        <Route path='*' element={<Error />} />
       </Route>
     </Routes>
   );

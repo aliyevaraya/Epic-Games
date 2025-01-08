@@ -32,7 +32,7 @@ function DiscoverSomething({ data, title }) {
         }}
         className="discover-slider"
       >
-        {data &&
+        {data ?
           data.map((game, index) => {
             const price = game.price?.price?.originalPrice ?? game.price;
             const discountedPrice = game.price?.price?.discountPrice;
@@ -61,12 +61,15 @@ function DiscoverSomething({ data, title }) {
                           id: game.id,
                           img: game.keyImages[2].url,
                           title: game.title,
-                          discountPerc: game.price?.appliedRules?.[0]?.discountSetting?.discountPercentage || 0,
+                          discountPerc:
+                            game.price?.appliedRules?.[0]?.discountSetting
+                              ?.discountPercentage || 0,
                           discount: game.price?.price?.discount || 0,
                           discountPrice: game.price?.price?.discountPrice || 0,
                           price: game.price?.price?.originalPrice || "Free",
                           endSale: game.price?.appliedRules?.[0]?.endDate,
-                          addedAt: new Date().toISOString(), 
+                          addedAt: new Date().toISOString(),
+                          tags: game.tags,
                         });
                       }}
                       className="opacity-0 group-hover:opacity-[1] text-[24px] absolute top-2 right-2 trans"
@@ -126,7 +129,7 @@ function DiscoverSomething({ data, title }) {
                 </Link>
               </SwiperSlide>
             );
-          })}
+          }) : ""}
       </Swiper>
     </div>
   );

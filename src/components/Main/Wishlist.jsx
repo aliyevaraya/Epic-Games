@@ -64,6 +64,7 @@ const Wishlist = () => {
   const [selectedTags, setSelectedTags] = useState([]);
   const [openFilters, setOpenFilters] = useState([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [mobFilter, setMobFilter] = useState(false);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -104,10 +105,6 @@ const Wishlist = () => {
           (a, b) => new Date(b.addedAt) - new Date(a.addedAt)
         )
       : filteredData;
-
-
-  console.log(selectedTags);
-  console.log(filteredData);
 
   return (
     <div className="bg-[#121212] text-white pb-[60px]">
@@ -175,7 +172,7 @@ const Wishlist = () => {
                       )}
                     </button>
                   </div>
-                  <div className="lg:hidden flex items-center gap-1 font-medium bg-[#ffffff26] p-1 px-2 rounded-md hover:bg-[#f0eded59]">
+                  <div onClick={() => setMobFilter(!mobFilter)} className="lg:hidden flex items-center gap-1 font-medium bg-[#ffffff26] p-1 px-2 rounded-md hover:bg-[#f0eded59] cursor-pointer">
                     Filters <MdFilterList />
                   </div>
                 </div>
@@ -394,8 +391,8 @@ const Wishlist = () => {
               </div>
             </div>
             {currentPath === "wishlist" ? (
-              <div className="hidden lg:block lg:w-[250px]">
-                <div className="font-bold py-5 px-3 border-b border-[#ffffff26]">
+              <div className={`lg:w-[250px] ${mobFilter ? "block  max-lg:fixed w-full no-scrollbar md:w-[350px] lg:w-[270px] max-lg:h-screen right-0 top-0 max-lg:bg-[#18181c] max-lg:z-[5] max-lg:overflow-y-auto" : "hidden lg:block"}`}>
+                <div className={`font-bold border-b border-[#ffffff26] ${mobFilter ? "px-10 py-7 mt-10" : "py-5 px-3"}`}>
                   Filters
                 </div>
                 {filters.map((filter, i) => (
@@ -407,7 +404,7 @@ const Wishlist = () => {
                       onClick={() => {
                         handleToggleFilter(i);
                       }}
-                      className="flex justify-between items-center py-5 px-3 w-full"
+                      className={`flex justify-between items-center w-full ${mobFilter ? "px-10 py-7" : "py-5 px-3"}` }
                     >
                       <span>{filter.filter}</span>
                       <MdKeyboardArrowUp
@@ -426,7 +423,7 @@ const Wishlist = () => {
                             key={j}
                             className={`rounded-md p-3 text-[#ffffffa6] hover:bg-[#ffffff26] mb-1 cursor-pointer ${
                               selectedTags.includes(filter) ? "border" : ""
-                            }`}
+                            } ${mobFilter ? "px-10 " : "py-5 px-3"}`}
                           >
                             {filter}
                           </li>
@@ -435,6 +432,7 @@ const Wishlist = () => {
                     )}
                   </div>
                 ))}
+                <button onClick={() => setMobFilter(false)} className={`border w-[150px] py-3 rounded-lg my-[60px] ml-5 hover:opacity-[.6] ${mobFilter ? "block" : "hidden"}`}>Close</button>
               </div>
             ) : (
               <div className="w-full lg:w-[300px] text-[14px] font-medium">

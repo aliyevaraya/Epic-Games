@@ -88,7 +88,7 @@ const Wishlist = () => {
     selectedTags.length === 0
       ? true
       : selectedTags.every((selectedTag) =>
-          game.tags.some((tag) => tag.name === selectedTag)
+          game.tags?.some((tag) => tag.name === selectedTag)
         )
   );
 

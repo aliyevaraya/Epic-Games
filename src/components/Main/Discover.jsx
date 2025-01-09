@@ -43,9 +43,9 @@ function Discover() {
               toggleSearch ? "bg-[#18181c]" : "bg-[transparent]"
             }`}
           >
-            <div className="flex items-center">
+            <div className="flex items-center w-full">
               <div
-                className={`relative  overflow-visible
+                className={`relative overflow-visible
                ${
                  toggleSearch
                    ? " w-full overflow-visible"
@@ -81,7 +81,9 @@ function Discover() {
                     />
                   </div>
                   <MdClose
-                    onClick={() => setToggleSearch(false)}
+                    onClick={() => {setToggleSearch(false)
+                      setSearch("")
+                    }}
                     className={`${
                       toggleSearch
                         ? "block mr-4 text-[20px] cursor-pointer"

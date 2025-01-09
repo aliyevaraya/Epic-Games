@@ -6,7 +6,7 @@ import {
 } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-function MobileMenu({showMenu, setShowMenu}) {
+function MobileMenu({ showMenu, setShowMenu }) {
   const [dropdown, setDropdown] = useState(false);
   return (
     <div
@@ -15,7 +15,7 @@ function MobileMenu({showMenu, setShowMenu}) {
       }`}
     >
       <div className="flex justify-between items-center p-4 h-[4.5rem]">
-        <Link>
+        <Link onClick={() => setShowMenu(false)} to={"/"}>
           <img width="54px" src="/images/Store.svg" alt="store img" />
         </Link>
         <div className="flex gap-5 items-center">
@@ -58,7 +58,9 @@ function MobileMenu({showMenu, setShowMenu}) {
           <ul className="p-4 sm:p-[4rem]">
             <li className="text-[32px] font-bold mb-[32px]">Menu</li>
             <li className="py-3 px-2">
-              <Link to={"/support"}>Support</Link>
+              <Link onClick={() => setShowMenu(false)} to={"/support"}>
+                Support
+              </Link>
             </li>
             <li onClick={() => setDropdown(!dropdown)} className="py-3 px-2">
               <Link className="flex justify-between items-center">

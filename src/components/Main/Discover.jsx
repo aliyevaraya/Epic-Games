@@ -96,9 +96,9 @@ function Discover() {
                     search.length || toggleSearch ? "block" : "hidden"
                   } bg-[#18181c] w-full lg:w-[500px] absolute left-0 lg:top-[120%] rounded-md py-2 px-4`}
                 >
-                  <ul>
+                  <ul className="max-h-[300px] overflow-y-auto no-scrollbar">
                     {output &&
-                      output.slice(0, 5).map((game, i) => (
+                      output.map((game, i) => (
                         <li key={i}>
                           <Link
                             onClick={() => {
@@ -106,7 +106,7 @@ function Discover() {
                               setSearch("");
                             }}
                             to={`game/${game.id}`}
-                            className="flex gap-4 items-center my-3 text-[14px]"
+                            className="flex gap-4 items-center p-1 m-1 text-[14px] hover:bg-[#ffffff26] rounded-md"
                           >
                             <div className="w-[30px] h-[40px]">
                               <img
@@ -124,9 +124,6 @@ function Discover() {
                         output.length < 5 ? "hidden" : "block"
                       }`}
                     >
-                      <Link className="text-[14px] opacity-[.5]">
-                        View more
-                      </Link>
                     </li>
                     <li
                       className={`${

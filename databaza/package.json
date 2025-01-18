@@ -1,0 +1,23 @@
+{
+  "name": "restful-api-vercel",
+  "version": "1.0.0",
+  "description": "This is a ready RESTful API created with the JSON Server package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "restful",
+    "rest",
+    "api",
+    "vercel",
+    "json",
+    "server"
+  ],
+  "author": "Ivo Culic",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "json-server": "^0.17.1"
+  }
+}

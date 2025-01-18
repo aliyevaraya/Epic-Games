@@ -14,7 +14,7 @@ function Footer() {
           <FaTwitter className="hover:text-[#0078f2] trans" />
           <FaYoutube className="hover:text-[#0078f2] trans" />
         </div>
-        <div className="text-[38px]">
+        <div className="text-[38px] cursor-pointer">
           <LiaCaretSquareUp onClick={handleScrollToTop} className="hover:text-[#0078f2] trans" />
         </div>
       </div>

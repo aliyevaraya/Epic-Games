@@ -1,11 +1,11 @@
 import axios from "axios";
 
 async function getTopSeller() {
-    const res = await axios.get("http://localhost:3300/elements")
+    const res = await axios.get("https://databaza.vercel.app/topSellers")
     return res.data
 }
 async function getMostPlayed() {
-    const res = await axios.get("http://localhost:3000/elements")
+    const res = await axios.get("https://databaza.vercel.app/mostPlayed")
     return res.data
 }
 async function getWishlist() {
@@ -13,16 +13,16 @@ async function getWishlist() {
     return res.data
 }
 async function getNewRelease() {
-    const res = await axios.get("http://localhost:3334/elements")
+    const res = await axios.get("https://databaza.vercel.app/newReleases")
     return res.data
 }
 async function getVideos() {
-    const res = await axios.get("http://localhost:4000/videos")
-    return res.data
+    const res = await axios.get("https://databaza.vercel.app/video")
+    return res.data.videos
 }
 async function getSliderImg() {
-    const res = await axios.get("http://localhost:4000/images")
-    return res.data
+    const res = await axios.get("https://databaza.vercel.app/video")
+    return res.data.images
 }
 
 

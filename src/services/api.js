@@ -2,19 +2,19 @@ import axios from "axios";
 
 async function getTopSeller() {
     const res = await axios.get("https://databaza.vercel.app/topSellers")
-    return res.data
+    return res.data.elements
 }
 async function getMostPlayed() {
     const res = await axios.get("https://databaza.vercel.app/mostPlayed")
-    return res.data
+    return res.data.elements
 }
 async function getWishlist() {
-    const res = await axios.get("http://localhost:3330/elements")
-    return res.data
+    const res = await axios.get("https://databaza.vercel.app/topWishlisted")
+    return res.data.elements
 }
 async function getNewRelease() {
     const res = await axios.get("https://databaza.vercel.app/newReleases")
-    return res.data
+    return res.data.elements
 }
 async function getVideos() {
     const res = await axios.get("https://databaza.vercel.app/video")
